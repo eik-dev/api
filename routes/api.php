@@ -30,3 +30,23 @@ Route::get('/summary', function () {
         ]
     ]);
 });
+
+Route::get('/verify', function (Request $request) {
+    $id = $request->query('id');
+    return response()->json([
+        'name' => 'frida mutui nyuvi',
+        'member' => 'EIK/1/4247',
+        'date' => '08/04/2024',
+        'id' => $id
+    ]);
+});
+
+Route::get('/download/certificate', function (Request $request) {
+    $id = $request->query('id');
+    return response()->json([
+        'name' => 'frida mutui nyuvi',
+        'member' => 'EIK/1/4247',
+        'date' => '08/04/2024',
+        'id' => $id
+    ]);
+});
