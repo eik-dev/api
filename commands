@@ -1,0 +1,15 @@
+php artisan route:list
+php artisan route:cache
+php artisan route:clear
+php artisan optimize
+
+php artisan migrate
+php artisan make:model Books -m
+php artisan make:controller BookController
+php artisan make:seeder BooksSeeder
+php artisan db:seed --class=BooksSeeder
+
+php artisan serve
+
+composer require laravel/breeze --dev
+php artisan breeze:install
