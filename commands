@@ -4,6 +4,7 @@ php artisan route:clear
 php artisan optimize
 
 php artisan migrate
+php artisan migrate --path=/database/migrations/name_of_your_migration_file.php
 php artisan make:model Books -m
 php artisan make:controller BookController
 php artisan make:seeder BooksSeeder
@@ -13,3 +14,9 @@ php artisan serve
 
 composer require laravel/breeze --dev
 php artisan breeze:install
+
+mysqldump -u sammy -p laravel books > ./books.sql 
+
+mikito/public/archive/cvs
+SESSION_DOMAIN=localhost
+SANCTUM_STATEFUL_DOMAINS=localhost:3000
