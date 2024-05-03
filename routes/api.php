@@ -3,15 +3,12 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\LoginController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\StatsController;
 
-Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
-    return $request->user();
-});
-
+Route::get('/user', [UserController::class, 'show']);
 
 Route::get('/version', function () {
     return ['Laravel' => app()->version()];
@@ -43,9 +40,16 @@ Route::get('/books/{id}', [BookController::class, 'show']);
 Route::put('/books/{id}', [BookController::class, 'update']);
 Route::delete('/books/{id}', [BookController::class, 'destroy']);
 
-Route::post('/login', [LoginController::class, 'store']);
+Route::post('/register', [UserController::class, 'onboard']);
 
 Route::get('/files', [FileController::class, 'index']);
 Route::post('/files/{destination}', [FileController::class, 'store']);
 
 Route::get('/summary', [StatsController::class, 'summary']);
+
+Route::post('/login', [UserController::class, 'store']);
+Route::get('/logout', [UserController::class, 'destroy']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/user', [UserController::class, 'show']);
+});
