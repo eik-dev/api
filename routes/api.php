@@ -40,16 +40,15 @@ Route::get('/books/{id}', [BookController::class, 'show']);
 Route::put('/books/{id}', [BookController::class, 'update']);
 Route::delete('/books/{id}', [BookController::class, 'destroy']);
 
-Route::post('/register', [UserController::class, 'onboard']);
-
 Route::get('/files', [FileController::class, 'index']);
 Route::post('/files/{destination}', [FileController::class, 'store']);
 
 Route::get('/summary', [StatsController::class, 'summary']);
 
+Route::post('/register', [UserController::class, 'onboard']);
 Route::post('/login', [UserController::class, 'store']);
-Route::get('/logout', [UserController::class, 'destroy']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'show']);
+    Route::get('/logout', [UserController::class, 'destroy']);
 });

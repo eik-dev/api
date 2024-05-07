@@ -10,7 +10,6 @@ use App\Http\Requests\Auth\LoginRequest;
 use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
-use App\Models\Admin;
 
 /**
  * Handle user registration, login, and session management.
@@ -111,11 +110,49 @@ class UserController extends Controller
 
             $user = User::create($credentials);
 
+            if ($request->role=='Individual') {
+                $individual = Individual::create($request->profile,$user->id);
+            } else if ($request->role=='Firm') {
+                $firm = Firm::create($request->profile);
+            }
+
             return response()->json([
-                'user' => $user,
+                'success' => true
             ]);
         } catch (\Exception $e) {
-            return response()->json([ 'error' => true, 'message' => $e->getMessage() ]);
+            return response()->json([ 
+                'error' => true,
+                'message' => $e->getMessage(),
+                'request' => $request->all()
+            ], 401);
+        }
+    }
+
+    /**
+     * Verify user email
+     */
+    public function verify(Request $request)
+    {
+        try{
+            $user = User::where('email',$request->email)->first();
+            if ($user) {
+                $user->email_verified_at = now();
+                $user->save();
+                return response()->json([
+                    'success' => true
+                ]);
+            } else {
+                return response()->json([
+                    'error' => true,
+                    'message' => 'User not found'
+                ], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([ 
+                'error' => true,
+                'message' => $e->getMessage(),
+                'request' => $request->all()
+            ], 401);
         }
     }
 }
