@@ -14,22 +14,11 @@ class UserSeeder extends Seeder
     {
         $users = [
             [
-                'name' => 'Admin User',
+                'name' => 'Samson Mongare',
+                'username' => 'Alpha',
                 'role' => 'Admin',
-                'email' => 'admin@eik.co.ke',
-                'password' => bcrypt('admin'),
-            ],
-            [
-                'name' => 'Firm User',
-                'role' => 'Firm',
-                'email' => 'firm@eik.co.ke',
-                'password' => bcrypt('firm'),
-            ],
-            [
-                'name' => 'Member User',
-                'role' => 'Individual',
-                'email' => 'individual@eik.co.ke',
-                'password' => bcrypt('individual'),
+                'email' => 'developers@eik.co.ke',
+                'password' => bcrypt('@Admin123'),
             ],
         ];
         foreach ($users as $user) {

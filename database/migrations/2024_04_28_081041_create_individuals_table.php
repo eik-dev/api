@@ -14,18 +14,16 @@ return new class extends Migration
         Schema::create('individuals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('userID')->constrained('users');
+            $table->foreignId('user_id')->constrained('users');
             $table->string('category');
-            $table->string('username');
             $table->string('firm')->nullable();
             $table->string('alternate')->nullable();
             $table->string('nationality')->nullable();
-            $table->integer('nationalID');
+            $table->integer('nationalID')->unique();
             $table->string('postal')->nullable();
             $table->string('town')->nullable();
             $table->string('county')->nullable();
-            $table->string('nema')->nullable();
-            $table->string('kra')->nullable();
+            $table->string('kra')->nullable()->unique();
             $table->integer('phone')->nullable();
             $table->longText('bio')->nullable();
         });

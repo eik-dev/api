@@ -14,6 +14,10 @@ return new class extends Migration
         Schema::create('files', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('folder');
+            $table->string('name');
+            $table->string('url');
         });
     }
 

@@ -10,7 +10,6 @@ class Individual extends Model
     use HasFactory;
     protected $fillable = [
         'category',
-        'username',
         'firm',
         'alternate',
         'nationality',
@@ -18,7 +17,6 @@ class Individual extends Model
         'postal',
         'town',
         'county',
-        'nema',
         'kra',
         'phone',
         'bio'
@@ -27,9 +25,8 @@ class Individual extends Model
     public static function create($profile,$id)
     {
         $individual = new Individual();
-        $individual->userID = $id;
+        $individual->user_id = $id;
         $individual->category = $profile['category'];
-        $individual->username = $profile['username'];
         $individual->firm = $profile['firm'];
         $individual->alternate = $profile['alternate'];
         $individual->nationality = $profile['nationality'];
@@ -37,11 +34,15 @@ class Individual extends Model
         $individual->postal = $profile['postal'];
         $individual->town = $profile['town'];
         $individual->county = $profile['county'];
-        $individual->nema = $profile['nema'];
         $individual->kra = $profile['kra'];
         $individual->phone = $profile['phone'];
         $individual->bio = $profile['note'];
         $individual->save();
         return $individual;
+    }
+
+    public function certificates()
+    {
+        return $this->hasOne(Certificates::class);
     }
 }

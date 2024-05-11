@@ -8,5 +8,21 @@ use Illuminate\Database\Eloquent\Model;
 class Files extends Model
 {
     use HasFactory;
-    
+    protected $fillable = [
+        'user_id',
+        'folder',
+        'name',
+        'url'
+    ];
+
+    public static function create($record)
+    {
+        $file = new Files();
+        $file->user_id = $record['user_id'];
+        $file->folder = $record['folder'];
+        $file->name = $record['name'];
+        $file->url = $record['url'];
+        $file->save();
+        return $file;
+    }
 }
