@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use App\Models\Certificates;
 use App\Models\Individual;
 use App\Models\Firm;
+use App\Models\Education;
+use App\Models\Profession;
+use App\Models\Training;
 
 //populates dashboard with stats
 class ProfileController extends Controller
@@ -17,19 +20,31 @@ class ProfileController extends Controller
     {
         try{
             $user = $request->user();
+            $cert = Certificates::where('user_id',$user->id)->first();
             if ($user) {
                 if ($user->role=='Individual') {
                     $profile = Individual::where('user_id',$user->id)->first();
+                    $education = Education::where('user_id',$user->id)->get();
+                    $profession = Profession::where('user_id',$user->id)->get();
+                    $profile->name = $user->name;
+                    $profile->email = $user->email;
+                    $profile->nema = $user->nema;
+                    return response()->json([
+                        'profile' => $profile,
+                        'certificate' => $cert,
+                        'education' => $education,
+                        'profession' => $profession
+                    ]);
                 } else if ($user->role=='Firm') {
                     $profile = Firm::where('user_id',$user->id)->first();
+                    $profile->name = $user->name;
+                    $profile->email = $user->email;
+                    $profile->nema = $user->nema;
+                    return response()->json([
+                        'profile' => $profile,
+                        'certificate' => $cert,
+                    ]);
                 }
-                $profile->name = $user->name;
-                $profile->email = $user->email;
-                $cert = Certificates::where('user_id',$user->id)->first();
-                return response()->json([
-                    'profile' => $profile,
-                    'certificate' => $cert
-                ]);
             } else {
                 return response()->json([
                     'error' => 'User not found',
@@ -49,17 +64,22 @@ class ProfileController extends Controller
         try{
             $user = $request->user();
             if ($user) {
-                if ($user->role=='Individual') {
-                    $profile = Individual::where('user_id',$user->id)->first();
-                } else if ($user->role=='Firm') {
-                    $profile = Firm::where('user_id',$user->id)->first();
+                $profile = Individual::where('user_id',$user->id)->first();
+                if ($section=='bio'){
+                    $profile->update($request->all());
+                    return response()->json([
+                        'message' => 'Profile Bio updated successfully',
+                    ]);
+                } else if ($section=='education'){
+                    $education = Education::where('user_id',$user->id)->first();
+                    $education->update($request->all());
+                    return response()->json($education);
+                } else if ($section=='profession'){
+                    $profession = Profession::where('user_id',$user->id)->first();
+                    $profession->update($request->all());
+                    return response()->json($profession);
+                } else if ($section=='files'){
                 }
-                $profile->name = $request->name;
-                $profile->email = $request->email;
-                $profile->save();
-                return response()->json([
-                    'profile' => $profile
-                ]);
             } else {
                 return response()->json([
                     'error' => 'User not found',

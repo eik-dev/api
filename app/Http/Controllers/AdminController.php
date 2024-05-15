@@ -6,11 +6,33 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
+use App\Models\Files;
 use App\Models\Certificates;
+use App\Http\Controllers\EmailController;
 
 //populates dashboard with stats
 class AdminController extends Controller
 {
+    /**
+     * Read an admin based on id
+     */
+    public function show(Request $request){
+        $user = $request->user();
+        if ($user) {
+            if ($user->role=='Admin') {
+                $admin = User::find($request->id);
+                return response()->json($admin);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } else {
+            return response()->json([
+                'error' => 'Unauthorized',
+            ], 401);
+        }
+    }
     /**
      * Add new admins
      */
@@ -19,14 +41,42 @@ class AdminController extends Controller
         if ($user) {
             if ($user->role=='Admin') {
                 $admin = User::create([
-                    'name' => $request->name,
+                    'name' => $request->fullName,
                     'username' => $request->username,
                     'role' => 'Admin',
                     'email' => $request->email,
-                    'password' => bcrypt('Admin123'),
+                    'password' => '@Admin123',
                 ]);
+                EmailController::sendNewAdminEmail($request->email);
                 return response()->json([
-                    'admin' => $admin
+                    'message' => 'Admin added successfully',
+                ]);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } else {
+            return response()->json([
+                'error' => 'Unauthorized',
+            ], 401);
+        }
+    }
+
+    /**
+     * Modify existing admin
+     */
+    public function update(Request $request){
+        $user = $request->user();
+        if ($user) {
+            if ($user->role=='Admin') {
+                $admin = User::find($request->id);
+                $admin->name = $request->fullName;
+                $admin->username = $request->username;
+                $admin->email = $request->email;
+                $admin->save();
+                return response()->json([
+                    'message' => 'Admin updated successfully',
                 ]);
             } else {
                 return response()->json([
@@ -60,6 +110,29 @@ class AdminController extends Controller
             ], 401);
         }
     }
+    /**
+     * Delete admin
+     */
+    public function destroy(Request $request){
+        $user = $request->user();
+        if ($user) {
+            if ($user->role=='Admin') {
+                $admin = User::find($request->id);
+                $admin->delete();
+                return response()->json([
+                    'message' => 'Admin deleted successfully',
+                ]);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } else {
+            return response()->json([
+                'error' => 'Unauthorized',
+            ], 401);
+        }
+    }
 
     /**
      * Get all members
@@ -69,9 +142,16 @@ class AdminController extends Controller
             $user = $request->user();
             if ($user) {
                 if ($user->role=='Admin') {
-                    $members = User::where('role', 'Individual')
+                    $members = $request->id?
+                    User::where('id', $request->id)
                     ->with('certificates:user_id,number')
-                    ->get();
+                    ->with('individual:user_id,category,firm,alternate,nationality,nationalID,postal,town,county,kra,phone')
+                    ->get()
+                    :
+                    User::where('role', 'Individual')
+                    ->with('certificates:user_id,number')
+                    ->get()
+                    ;
                     return response()->json($members);
                 } else {
                     return response()->json([
@@ -88,6 +168,94 @@ class AdminController extends Controller
             return response()->json([ 'error' => $e->getMessage() ],401);
         }
     }
+
+    /**
+     * Update member details
+     */
+    public function updateMember(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                $member = $user->role=='Admin'?User::find($request->id):$user;
+                $member->name = $request->fullName;
+                $member->email = $request->email;
+                $member->nema = $request->nema;
+                $member->save();
+                $individual = $user->role=='Admin'?Individual::where('user_id', $request->id)->first():Individual::where('user_id', $user->id)->first();
+                $individual->category = $request->individual['category'];
+                $individual->firm = $request->individual['firm'];
+                $individual->alternate = $request->individual['alternate'];
+                $individual->nationality = $request->individual['nationality'];
+                $individual->nationalID = $request->individual['nationalID'];
+                $individual->postal = $request->individual['postal'];
+                $individual->town = $request->individual['town'];
+                $individual->county = $request->individual['county'];
+                $individual->kra = $request->individual['kra'];
+                $individual->phone = $request->individual['phone'];
+                $individual->save();
+                return response()->json([
+                    'message' => 'Member updated successfully',
+                ]);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        }
+        catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage(), 'request' => $request->all() ],401);
+        }
+    }
+
+    /**
+     * Delete member
+     */
+    public function deleteMember(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                if ($user->role=='Admin') {
+                    $individual = Individual::where('user_id', $request->id)->first();
+                    $individual->delete();
+                    $certificates = Certificates::where('user_id', $request->id)->first();
+                    $certificates->delete();
+                    $files = Files::where('user_id', $request->id)->get();
+                    foreach ($files as $file) {
+                        $file->delete();
+                    }
+                    $member = User::find($request->id);
+                    $member->delete();
+                    //delete folder with name user id from public/uploads
+                    $path = public_path('uploads/'.$request->id);
+                    // // if (is_dir($path)) {
+                    // //     $files = scandir($path);
+                    // //     foreach ($files as $file) {
+                    // //         if (is_file($path.'/'.$file)) {
+                    // //             unlink($path.'/'.$file);
+                    // //         }
+                    // //     }
+                    // //     rmdir($path);
+                    // // }
+                    EmailController::sendDeleteUserEmail($member->email);
+                    return response()->json([
+                        'message' => 'Member deleted successfully',
+                    ]);
+                } else {
+                    return response()->json([
+                        'error' => 'Unauthorized',
+                    ], 401);
+                }
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        }
+        catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
+    }
+                    
 
     /**
      * Verify user

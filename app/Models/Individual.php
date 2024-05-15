@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Models\Profession;
+use App\Models\Education;
 
 class Individual extends Model
 {
@@ -22,7 +24,7 @@ class Individual extends Model
         'bio'
     ];
 
-    public static function create($profile,$id)
+    public static function create($profile,$id, $education, $profession)
     {
         $individual = new Individual();
         $individual->user_id = $id;
@@ -38,6 +40,8 @@ class Individual extends Model
         $individual->phone = $profile['phone'];
         $individual->bio = $profile['note'];
         $individual->save();
+        if (count($education)>0)   Education::create($education,$id);
+        if (count($profession)>0)  Profession::create($profession,$id);
         return $individual;
     }
 

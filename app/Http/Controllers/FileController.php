@@ -58,8 +58,30 @@ class FileController extends Controller
         }
     }
 
-    public function destroy($id)
+    public function destroy(Request $request, $folder)
     {
-        return response()->noContent();
+        try{
+            $user = $request->user();
+            if($user){
+                $id = $user->id;
+                $record = Files::where('user_id', $id)->where('folder', $folder)->where('url', $request->url)->first();
+                if ($record) {
+                    $path = public_path("uploads/$id/$folder/" . str_replace(' ', '_', $record->name));
+                    if (file_exists($path)) {
+                        unlink($path);
+                        $record->delete();
+                        return response()->json(['message' => 'File deleted successfully']);
+                    } else{
+                        return response()->json(['error' => 'File not found'], 404);
+                    }
+                } else {
+                    return response()->json(['error' => 'File not found'], 404);
+                }
+            } else {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
     }
 }

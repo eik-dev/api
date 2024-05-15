@@ -11,7 +11,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FirmController;
 use App\Http\Controllers\CertificatesController;
-use App\Http\Controllers\EmailController;
 use App\Http\Controllers\ResetController;
 
 Route::get('/user', [UserController::class, 'show']);
@@ -36,17 +35,25 @@ Route::get('/certificate/verify', [CertificatesController::class, 'verify']);
 
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'show']);
+    Route::get('/logout', [UserController::class, 'destroy']);
+    //profile related routes
     Route::get('/profile', [ProfileController::class, 'show']);
     Route::get('/profile/{id}', [ProfileController::class, 'show']);
     Route::post('/profile/edit/{section}', [ProfileController::class, 'update']);
-    Route::get('/logout', [UserController::class, 'destroy']);
+    //files related routes
     Route::post('/files/{folder}', [FileController::class, 'store']);
     Route::get('/files/{folder}', [FileController::class, 'show']);
+    Route::get('/file/delete/{folder}', [FileController::class, 'destroy']);
     //admin related routes
     Route::get('/summary', [StatsController::class, 'summary']);
     Route::get('/admins', [AdminController::class, 'index']);
     Route::post('/admin/add', [AdminController::class, 'store']);
+    Route::post('/admin/modify', [AdminController::class, 'update']);
+    Route::get('/admin/read', [AdminController::class, 'show']);
+    Route::get('/admin/delete', [AdminController::class, 'destroy']);
     Route::get('/admin/members', [AdminController::class, 'members']);
+    Route::post('/admin/members', [AdminController::class, 'updateMember']);
+    Route::get('/admin/member/delete', [AdminController::class, 'deleteMember']);
     Route::get('/admin/firms', [AdminController::class, 'firms']);
     Route::get('/user/verify', [AdminController::class, 'verify']);
     //firm related routes

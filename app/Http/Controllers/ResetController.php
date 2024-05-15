@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Reset;
+use App\Http\Controllers\EmailController;
 
 class ResetController extends Controller
 {
@@ -16,9 +17,8 @@ class ResetController extends Controller
         try{
             $user = User::where('email',$request->email)->first();
             if ($user) {
-                $emailController = new EmailController();
                 $record = Reset::create($request->email);
-                $emailController->sendRecoveryEmail($request->email, $record->token);
+                EmailController::sendRecoveryEmail($request->email, $record->token);
                 return response()->json([
                     'success' => 'Email sent successfully'
                 ]);

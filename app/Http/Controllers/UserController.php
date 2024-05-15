@@ -104,7 +104,7 @@ class UserController extends Controller
             if (Auth::attempt($credentials)) {
                 $user = Auth::user();
                 if ($request->role=='Individual') {
-                    Individual::create($request->profile,$user->id);
+                    Individual::create($request->profile,$user->id,$request->education,$request->profession);
                 } else if ($request->role=='Firm') {
                     Firm::create($request->profile, $user->id);
                 }
@@ -122,6 +122,7 @@ class UserController extends Controller
         } catch (\Exception $e) {
             return response()->json([ 
                 'error' => $e->getMessage(),
+                'request'=>$request->all()
             ], 401);
         }
     }

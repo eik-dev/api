@@ -11,11 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('resets', function (Blueprint $table) {
+        Schema::create('professions', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
-            $table->string('email')->unique();
-            $table->string('token');
+            $table->foreignId('user_id')->constrained('users');
+            $table->string('Organization');
+            $table->string('Location');
+            $table->string('Position');
+            $table->date('start');
+            $table->date('end');
         });
     }
 
@@ -24,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('resets');
+        Schema::dropIfExists('professions');
     }
 };

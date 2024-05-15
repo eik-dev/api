@@ -25,6 +25,10 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/login',
             'api/recover',
             'api/register',
+            'api/admin/add',
+            'api/admin/modify',
+            'api/admin/members',
+            'api/profile/edit/*'
         ]);
 
         //
