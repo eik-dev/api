@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\UserController;
@@ -12,8 +11,11 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\FirmController;
 use App\Http\Controllers\CertificatesController;
 use App\Http\Controllers\ResetController;
+use App\Http\Controllers\PaymentController;
 
 Route::get('/user', [UserController::class, 'show']);
+Route::post('/pay/mpesa', [PaymentController::class, 'mpesaSTK']);
+Route::post('/mpesa/callback', [PaymentController::class, 'logCallback']);
 
 Route::get('/version', function () {
     return ['Laravel' => app()->version()];
@@ -62,4 +64,5 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/certificates', [CertificatesController::class, 'index']);
     Route::get('/request', [CertificatesController::class, 'store']);
     Route::get('/certificate/validate', [CertificatesController::class, 'validate']);
+    //payment related routes
 });
