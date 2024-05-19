@@ -10,6 +10,7 @@ use App\Http\Controllers\EmailController;
 use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
+use App\Models\Files;
 
 /**
  * Handle user registration, login, and session management.
@@ -57,11 +58,14 @@ class UserController extends Controller
     public function show(Request $request)
     {
         $user = $request->user(); // Get the authenticated user
+        $photo = Files::where('user_id',$user->id)->where('folder','profile')->first();
 
         if ($user) {
             return response()->json([
                 'user' => [
                     'role' => $user->role,
+                    'name' => $user->name,
+                    'photo' => $photo ? $photo->url : null,
                 ],
             ]);
         } else {
@@ -112,7 +116,6 @@ class UserController extends Controller
                 $token = $user->createToken('auth_token')->plainTextToken;
     
                 return response()->json([
-                    'success' => true,
                     'token' => $token
                 ]);
             }

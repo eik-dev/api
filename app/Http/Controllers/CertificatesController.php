@@ -75,6 +75,7 @@ class CertificatesController extends Controller
                 $cert = Certificates::create($number, $user->id);
                 return response()->json([
                     'message'=>'Certificate requested',
+                    'cert'=> $cert
                 ]);
             } else {
                 return response()->json(['error' => 'Unauthorized'], 401);
