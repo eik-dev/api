@@ -20,12 +20,13 @@ class ProfileController extends Controller
     {
         try{
             $user = $request->user();
-            $cert = Certificates::where('user_id',$user->id)->first();
+            $id = ($request->id && $user->role=='Admin')?$request->id:$user->id;
+            $cert = Certificates::where('user_id',$id)->first();
             if ($user) {
-                if ($user->role=='Individual') {
-                    $profile = Individual::where('user_id',$user->id)->first();
-                    $education = Education::where('user_id',$user->id)->get();
-                    $profession = Profession::where('user_id',$user->id)->get();
+                if ($user->role=='Individual' || $request->role=='Individual') {
+                    $profile = Individual::where('user_id',$id)->first();
+                    $education = Education::where('user_id',$id)->get();
+                    $profession = Profession::where('user_id',$id)->get();
                     $profile->name = $user->name;
                     $profile->email = $user->email;
                     $profile->nema = $user->nema;
@@ -33,10 +34,11 @@ class ProfileController extends Controller
                         'profile' => $profile,
                         'certificate' => $cert,
                         'education' => $education,
-                        'profession' => $profession
+                        'profession' => $profession,
+                        'id'=> $id
                     ]);
-                } else if ($user->role=='Firm') {
-                    $profile = Firm::where('user_id',$user->id)->first();
+                } else if ($user->role=='Firm' || $request->role=='Firm') {
+                    $profile = Firm::where('user_id',$id)->first();
                     $profile->name = $user->name;
                     $profile->email = $user->email;
                     $profile->nema = $user->nema;

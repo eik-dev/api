@@ -40,7 +40,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/logout', [UserController::class, 'destroy']);
     //profile related routes
     Route::get('/profile', [ProfileController::class, 'show']);
-    Route::get('/profile/{id}', [ProfileController::class, 'show']);
     Route::post('/profile/edit/{section}', [ProfileController::class, 'update']);
     //files related routes
     Route::post('/files/{folder}', [FileController::class, 'store']);

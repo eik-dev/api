@@ -153,6 +153,15 @@ class AdminController extends Controller
                     ->get()
                     ;
                     return response()->json($members);
+                } else if ($user->role=='Firm'){
+                    $members = User::where('role', 'Individual')
+                    ->with('certificates:user_id,number')
+                    ->with(['individual' => function ($query) use ($user) {
+                        $kra = Firm::where('user_id', $user->id)->first()->kra;
+                        $query->where('firm', $kra);
+                    }, 'individual:user_id,category,firm,alternate'])
+                    ->get();
+                    return response()->json($members);
                 } else {
                     return response()->json([
                         'error' => 'Unauthorized',
@@ -161,6 +170,7 @@ class AdminController extends Controller
             } else {
                 return response()->json([
                     'error' => 'Unauthorized',
+                    'role' => $user->role
                 ], 401);
             }
         }

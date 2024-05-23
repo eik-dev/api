@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('username')->unique()->nullable();
             $table->string('role');
             $table->string('email')->unique();
-            $table->string('nema')->unique()->nullable();
+            $table->string('nema')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
@@ -30,7 +30,7 @@ return new class extends Migration
             $table->string('ip_address', 45)->nullable();
             $table->text('user_agent')->nullable();
             $table->longText('payload');
-            $table->integer('last_activity')->index();
+            $table->string('last_activity')->index();
         });
     }
 

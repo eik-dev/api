@@ -16,8 +16,8 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('user_id')->constrained('users');
             $table->string('number')->unique();
-            $table->timestamp('expiry')->nullable();
-            $table->timestamp('verified')->nullable();
+            $table->date('expiry')->nullable();
+            $table->date('verified')->nullable();
         });
     }
 

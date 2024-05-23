@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->foreignId('user_id')->constrained('users');
             $table->string('folder');
+            $table->string('title')->nullable();
             $table->string('name');
             $table->string('url');
         });

@@ -46,8 +46,8 @@ class FileController extends Controller
     {
         try{
             $user = $request->user();
+            $id = ($request->id && $user->role=='Admin')?$request->id:$user->id;
             if($user){
-                $id = $user->id;
                 $files = Files::where('user_id', $id)->where('folder', $folder)->select('name', 'url')->get();
                 return response()->json($files);
             } else {

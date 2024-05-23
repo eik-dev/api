@@ -11,6 +11,7 @@ class Education extends Model
     public $timestamps = false;
     protected $fillable = [
         'user_id',
+        'Title',
         'Institution',
         'Certification',
         'start',
@@ -21,6 +22,7 @@ class Education extends Model
         for ($i=0; $i < count($educations); $i++) { 
             $education = new Education();
             $education->user_id = $id;
+            $education->Title = $educations[$i]['Title'];
             $education->Institution = $educations[$i]['Institution'];
             $education->Certification = $educations[$i]['Certification'];
             $education->start = $educations[$i]['start'];

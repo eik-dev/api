@@ -17,8 +17,11 @@ return new class extends Migration
             $table->string('Organization');
             $table->string('Location');
             $table->string('Position');
-            $table->date('start');
-            $table->date('end');
+            $table->text('Duties');
+            $table->string('Email');
+            $table->string('Phone');
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
         });
     }
 

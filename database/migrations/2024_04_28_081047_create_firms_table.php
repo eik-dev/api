@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('firms', function (Blueprint $table) {
             $table->id();
+            $table->string('kra')->unique();
             $table->timestamps();
             $table->foreignId('user_id')->constrained('users');
             $table->string('category');
             $table->string('alternate')->nullable();
-            $table->string('naionality')->nullable();
+            $table->string('nationality')->nullable();
             $table->string('postal')->nullable();
             $table->string('town')->nullable();
             $table->string('county')->nullable();
-            $table->string('kra')->unique();
-            $table->integer('phone')->nullable();
+            $table->string('phone')->nullable();
             $table->longText('bio')->nullable();
         });
     }

@@ -11,6 +11,7 @@ class Files extends Model
     protected $fillable = [
         'user_id',
         'folder',
+        'title',
         'name',
         'url'
     ];
@@ -20,6 +21,7 @@ class Files extends Model
         $file = new Files();
         $file->user_id = $record['user_id'];
         $file->folder = $record['folder'];
+        $file->title = $record['title'];
         $file->name = $record['name'];
         $file->url = $record['url'];
         $file->save();

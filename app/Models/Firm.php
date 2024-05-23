@@ -10,11 +10,12 @@ class Firm extends Model
     use HasFactory;
     protected $fillable = [
         'category',
+        'kra',
         'alternate',
+        'nationality',
         'postal',
         'town',
         'county',
-        'kra',
         'phone',
         'bio'
     ];
@@ -24,11 +25,12 @@ class Firm extends Model
         $firm = new Firm();
         $firm->user_id = $id;
         $firm->category = $profile['category'];
+        $firm->kra = $profile['kra'];
+        $firm->kra = $profile['nationality'];
         $firm->alternate = $profile['alternate'];
         $firm->postal = $profile['postal'];
         $firm->town = $profile['town'];
         $firm->county = $profile['county'];
-        $firm->kra = $profile['kra'];
         $firm->phone = $profile['phone'];
         $firm->bio = $profile['note'];
         $firm->save();

@@ -24,14 +24,14 @@ return new class extends Migration
         Schema::create('job_batches', function (Blueprint $table) {
             $table->string('id')->primary();
             $table->string('name');
-            $table->integer('total_jobs');
-            $table->integer('pending_jobs');
-            $table->integer('failed_jobs');
+            $table->string('total_jobs');
+            $table->string('pending_jobs');
+            $table->string('failed_jobs');
             $table->longText('failed_job_ids');
             $table->mediumText('options')->nullable();
-            $table->integer('cancelled_at')->nullable();
-            $table->integer('created_at');
-            $table->integer('finished_at')->nullable();
+            $table->string('cancelled_at')->nullable();
+            $table->string('created_at');
+            $table->string('finished_at')->nullable();
         });
 
         Schema::create('failed_jobs', function (Blueprint $table) {

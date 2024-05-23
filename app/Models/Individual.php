@@ -19,7 +19,6 @@ class Individual extends Model
         'postal',
         'town',
         'county',
-        'kra',
         'phone',
         'bio'
     ];
@@ -36,7 +35,6 @@ class Individual extends Model
         $individual->postal = $profile['postal'];
         $individual->town = $profile['town'];
         $individual->county = $profile['county'];
-        $individual->kra = $profile['kra'];
         $individual->phone = $profile['phone'];
         $individual->bio = $profile['note'];
         $individual->save();

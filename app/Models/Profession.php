@@ -14,6 +14,9 @@ class Profession extends Model
         'Organization',
         'Location',
         'Position',
+        'Duties',
+        'Email',
+        'Phone',
         'start',
         'end'
     ];
@@ -26,6 +29,9 @@ class Profession extends Model
             $profession->Organization = $professions[$i]['Organization'];
             $profession->Location = $professions[$i]['Location'];
             $profession->Position = $professions[$i]['Position'];
+            $profession->Duties = $professions[$i]['note'];
+            $profession->Email = $professions[$i]['email'];
+            $profession->Phone = $professions[$i]['phone'];
             $profession->start = $professions[$i]['start'];
             $profession->end = $professions[$i]['end'];
             $profession->save();
