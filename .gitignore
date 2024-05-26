@@ -3,6 +3,7 @@
 /public/build
 /public/hot
 /public/uploads
+/public/uploads.zip
 /public/storage
 /storage/*.key
 /vendor
@@ -10,7 +11,8 @@
 .env.backup
 .env.production
 .phpunit.result.cache
-Homestead.json
+Homestead.json/public/uploads
+
 Homestead.yaml
 auth.json
 npm-debug.log

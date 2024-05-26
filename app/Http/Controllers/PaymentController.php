@@ -52,7 +52,7 @@ class PaymentController extends Controller
                     "Password" => $password,
                     "Timestamp" => $timestamp,
                     "TransactionType" => "CustomerPayBillOnline",
-                    "Amount" => 5,
+                    "Amount" => $request->amount,
                     "PartyA" => $contact,
                     "PartyB" => $this->shortcode,
                     "PhoneNumber" => $contact,
@@ -65,7 +65,7 @@ class PaymentController extends Controller
             if ($response->ResponseCode=="0"){
                 Mpesa::create([
                     'phone' => $contact,
-                    'amount' => 5,
+                    'amount' => $request->amount,
                     'AccountReference' => 'Registration Fee',
                     'CheckoutRequestID' => $response->CheckoutRequestID
                 ]);
