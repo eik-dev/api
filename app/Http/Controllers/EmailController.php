@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Mail\recover;
 use App\Mail\NewAdmin;
 use App\Mail\DeleteUser;
+use App\Mail\VerifyUser;
 
 class EmailController extends Controller
 {
@@ -22,5 +23,9 @@ class EmailController extends Controller
     public static function sendDeleteUserEmail($email)
     {
         Mail::to($email)->send(new DeleteUser());
+    }
+    public static function sendVerifyUserEmail($email)
+    {
+        Mail::to($email)->send(new VerifyUser());
     }
 }

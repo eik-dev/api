@@ -8,6 +8,7 @@ use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Education;
 use App\Models\Profession;
+use App\Models\User;
 use App\Models\Training;
 
 //populates dashboard with stats
@@ -27,9 +28,16 @@ class ProfileController extends Controller
                     $profile = Individual::where('user_id',$id)->first();
                     $education = Education::where('user_id',$id)->get();
                     $profession = Profession::where('user_id',$id)->get();
-                    $profile->name = $user->name;
-                    $profile->email = $user->email;
-                    $profile->nema = $user->nema;
+                    if ($request->id && $user->role=='Admin'){
+                        $userDetails = User::where('id',$id)->first();
+                        $profile->name = $userDetails->name;
+                        $profile->email = $userDetails->email;
+                        $profile->nema = $userDetails->nema;
+                    } else {
+                        $profile->name = $user->name;
+                        $profile->email = $user->email;
+                        $profile->nema = $user->nema;
+                    }
                     return response()->json([
                         'profile' => $profile,
                         'certificate' => $cert,

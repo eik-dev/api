@@ -1,3 +1,4 @@
+userID [273] failed to migrate error :: Missing user_details
 userID [1096] failed to migrate error :: 1062 (23000): Duplicate entry 'contedesign89@gmail.com' for key 'users_email_unique'
 userID [1237] failed to migrate error :: 1062 (23000): Duplicate entry '22137430' for key 'individuals_nationalid_unique'
 userID [1252] failed to migrate error :: 1062 (23000): Duplicate entry '14542094' for key 'individuals_nationalid_unique'
@@ -6,19 +7,19 @@ userID [1747] failed to migrate error :: 1062 (23000): Duplicate entry '27163144
 userID [2159] failed to migrate error :: 1062 (23000): Duplicate entry '14664094' for key 'individuals_nationalid_unique'
 userID [2160] failed to migrate error :: 1062 (23000): Duplicate entry 'jtmbau@yahoo.com' for key 'users_email_unique'
 userID [2475] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'firms_kra_unique'
-userID [2527] failed to migrate error :: 1062 (23000): Duplicate entry 'evans' for key 'users_username_unique'
-userID [2532] failed to migrate error :: 1062 (23000): Duplicate entry 'sunabuje' for key 'users_username_unique'
+userID [2527] failed to migrate error :: Missing user_details
+userID [2532] failed to migrate error :: Missing user_details
 userID [2544] failed to migrate error :: 1062 (23000): Duplicate entry 'P051177193K' for key 'firms_kra_unique'
 userID [2546] failed to migrate error :: 1062 (23000): Duplicate entry '30217321 ' for key 'individuals_nationalid_unique'
-userID [2560] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [2560] failed to migrate error :: Missing user_details
 userID [2565] failed to migrate error :: 1062 (23000): Duplicate entry '8212820' for key 'individuals_nationalid_unique'
-userID [2567] failed to migrate error :: 1062 (23000): Duplicate entry 'spacemouldarchitectsltd@gmail.com' for key 'users_username_unique'
-userID [2588] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [2567] failed to migrate error :: Missing user_details
+userID [2588] failed to migrate error :: Missing user_details
 userID [2594] failed to migrate error :: 1062 (23000): Duplicate entry '28699193' for key 'individuals_nationalid_unique'
-userID [2631] failed to migrate error :: 1062 (23000): Duplicate entry 'Cathyyaa' for key 'users_username_unique'
-userID [2634] failed to migrate error :: 1062 (23000): Duplicate entry 'Mwakina' for key 'users_username_unique'
+userID [2631] failed to migrate error :: Missing user_details
+userID [2634] failed to migrate error :: Missing user_details
 userID [2658] failed to migrate error :: 1062 (23000): Duplicate entry '28834489' for key 'individuals_nationalid_unique'
-userID [2660] failed to migrate error :: 1062 (23000): Duplicate entry 'tomenda' for key 'users_username_unique'
+userID [2660] failed to migrate error :: Missing user_details
 userID [2673] failed to migrate error :: 1062 (23000): Duplicate entry '25007090' for key 'individuals_nationalid_unique'
 userID [2677] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
 userID [2679] failed to migrate error :: 1062 (23000): Duplicate entry '14423210' for key 'individuals_nationalid_unique'
@@ -26,1154 +27,1157 @@ userID [2695] failed to migrate error :: 1062 (23000): Duplicate entry 'P0515157
 userID [2699] failed to migrate error :: 1062 (23000): Duplicate entry '1831297' for key 'individuals_nationalid_unique'
 userID [2700] failed to migrate error :: 1062 (23000): Duplicate entry '9603148' for key 'individuals_nationalid_unique'
 userID [2702] failed to migrate error :: 1062 (23000): Duplicate entry '24429819' for key 'individuals_nationalid_unique'
-userID [2717] failed to migrate error :: 1062 (23000): Duplicate entry 'sammykim' for key 'users_username_unique'
-userID [2718] failed to migrate error :: 1062 (23000): Duplicate entry 'Maroko' for key 'users_username_unique'
+userID [2717] failed to migrate error :: Missing user_details
+userID [2718] failed to migrate error :: Missing user_details
 userID [2725] failed to migrate error :: 1062 (23000): Duplicate entry '29885712' for key 'individuals_nationalid_unique'
-userID [2731] failed to migrate error :: 1062 (23000): Duplicate entry 'mirriamchebungei' for key 'users_username_unique'
-userID [2736] failed to migrate error :: 1062 (23000): Duplicate entry 'njoka' for key 'users_username_unique'
-userID [2737] failed to migrate error :: 1062 (23000): Duplicate entry 'AMBROSE' for key 'users_username_unique'
+userID [2731] failed to migrate error :: Missing user_details
+userID [2736] failed to migrate error :: Missing user_details
+userID [2737] failed to migrate error :: Missing user_details
 userID [2745] failed to migrate error :: 1062 (23000): Duplicate entry '27798300' for key 'individuals_nationalid_unique'
-userID [2766] failed to migrate error :: 1062 (23000): Duplicate entry 'Susan' for key 'users_username_unique'
+userID [2766] failed to migrate error :: Missing user_details
 userID [2769] failed to migrate error :: 1062 (23000): Duplicate entry 'P051716922k' for key 'firms_kra_unique'
 userID [2800] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'firms_kra_unique'
-userID [2802] failed to migrate error :: 1062 (23000): Duplicate entry 'Mobonyo' for key 'users_username_unique'
-userID [2809] failed to migrate error :: 1062 (23000): Duplicate entry 'ORUMI' for key 'users_username_unique'
-userID [2810] failed to migrate error :: 1062 (23000): Duplicate entry 'Orumi' for key 'users_username_unique'
-userID [2812] failed to migrate error :: 1062 (23000): Duplicate entry 'ORUMI' for key 'users_username_unique'
-userID [2814] failed to migrate error :: 1062 (23000): Duplicate entry 'etcon' for key 'users_username_unique'
+userID [2802] failed to migrate error :: Missing user_details
+userID [2809] failed to migrate error :: Missing user_details
+userID [2810] failed to migrate error :: Missing user_details
+userID [2812] failed to migrate error :: Missing user_details
+userID [2814] failed to migrate error :: Missing user_details
 userID [2817] failed to migrate error :: 1062 (23000): Duplicate entry '24070617' for key 'individuals_nationalid_unique'
 userID [2828] failed to migrate error :: 1062 (23000): Duplicate entry '32558924' for key 'individuals_nationalid_unique'
-userID [2829] failed to migrate error :: 1062 (23000): Duplicate entry 'DIANA MWAURA' for key 'users_username_unique'
-userID [2851] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [2829] failed to migrate error :: Missing user_details
+userID [2851] failed to migrate error :: Missing user_details
 userID [2854] failed to migrate error :: 1062 (23000): Duplicate entry '7226758' for key 'individuals_nationalid_unique'
-userID [2855] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [2868] failed to migrate error :: 1062 (23000): Duplicate entry 'troplife' for key 'users_username_unique'
+userID [2855] failed to migrate error :: Missing user_details
+userID [2868] failed to migrate error :: Missing user_details
 userID [2887] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [2904] failed to migrate error :: 1062 (23000): Duplicate entry 'admin' for key 'users_username_unique'
+userID [2904] failed to migrate error :: Missing user_details
 userID [2906] failed to migrate error :: 1062 (23000): Duplicate entry '0263041' for key 'individuals_nationalid_unique'
-userID [2922] failed to migrate error :: 1062 (23000): Duplicate entry 'Asienga' for key 'users_username_unique'
-userID [2924] failed to migrate error :: 1062 (23000): Duplicate entry 'kaigwarap' for key 'users_username_unique'
-userID [2925] failed to migrate error :: 1062 (23000): Duplicate entry 'veronica' for key 'users_username_unique'
-userID [2933] failed to migrate error :: 1062 (23000): Duplicate entry 'Asienga' for key 'users_username_unique'
+userID [2922] failed to migrate error :: Missing user_details
+userID [2924] failed to migrate error :: Missing user_details
+userID [2925] failed to migrate error :: Missing user_details
+userID [2933] failed to migrate error :: Missing user_details
 userID [2939] failed to migrate error :: 1062 (23000): Duplicate entry '23788337' for key 'individuals_nationalid_unique'
-userID [2944] failed to migrate error :: 1062 (23000): Duplicate entry 'Sylvester Bett' for key 'users_username_unique'
-userID [2946] failed to migrate error :: 1062 (23000): Duplicate entry 'Philip' for key 'users_username_unique'
-userID [2951] failed to migrate error :: 1062 (23000): Duplicate entry 'KARIAGA' for key 'users_username_unique'
+userID [2944] failed to migrate error :: Missing user_details
+userID [2946] failed to migrate error :: Missing user_details
+userID [2951] failed to migrate error :: Missing user_details
 userID [2994] failed to migrate error :: 1062 (23000): Duplicate entry '10749448' for key 'individuals_nationalid_unique'
 userID [2995] failed to migrate error :: 1062 (23000): Duplicate entry '10566404' for key 'individuals_nationalid_unique'
-userID [3025] failed to migrate error :: 1062 (23000): Duplicate entry 'Dr. James Chege' for key 'users_username_unique'
+userID [3025] failed to migrate error :: Missing user_details
 userID [3037] failed to migrate error :: 1062 (23000): Duplicate entry '0756910' for key 'individuals_nationalid_unique'
-userID [3052] failed to migrate error :: 1062 (23000): Duplicate entry 'michael' for key 'users_username_unique'
-userID [3054] failed to migrate error :: 1062 (23000): Duplicate entry 'Mutua Kinyili' for key 'users_username_unique'
+userID [3052] failed to migrate error :: Missing user_details
+userID [3054] failed to migrate error :: Missing user_details
 userID [3069] failed to migrate error :: 1062 (23000): Duplicate entry '2093117' for key 'individuals_nationalid_unique'
 userID [3085] failed to migrate error :: 1062 (23000): Duplicate entry 'P051304683F' for key 'firms_kra_unique'
 userID [3095] failed to migrate error :: 1062 (23000): Duplicate entry '22965805' for key 'individuals_nationalid_unique'
 userID [3106] failed to migrate error :: 1062 (23000): Duplicate entry '32509987' for key 'individuals_nationalid_unique'
-userID [3123] failed to migrate error :: 1062 (23000): Duplicate entry 'johnmoturi' for key 'users_username_unique'
-userID [3128] failed to migrate error :: 1062 (23000): Duplicate entry 'gwaruikabuthia' for key 'users_username_unique'
+userID [3123] failed to migrate error :: Missing user_details
+userID [3128] failed to migrate error :: Missing user_details
 userID [3131] failed to migrate error :: 1062 (23000): Duplicate entry '0301256' for key 'individuals_nationalid_unique'
 userID [3132] failed to migrate error :: 1062 (23000): Duplicate entry '24549742' for key 'individuals_nationalid_unique'
 userID [3147] failed to migrate error :: 1062 (23000): Duplicate entry '25177754' for key 'individuals_nationalid_unique'
-userID [3149] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3163] failed to migrate error :: 1062 (23000): Duplicate entry 'jomanyara' for key 'users_username_unique'
+userID [3149] failed to migrate error :: Missing user_details
+userID [3163] failed to migrate error :: Missing user_details
 userID [3214] failed to migrate error :: 1062 (23000): Duplicate entry '25345760' for key 'individuals_nationalid_unique'
 userID [3221] failed to migrate error :: 1062 (23000): Duplicate entry '0438527' for key 'individuals_nationalid_unique'
-userID [3224] failed to migrate error :: 1062 (23000): Duplicate entry 'benard' for key 'users_username_unique'
-userID [3230] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3224] failed to migrate error :: Missing user_details
+userID [3230] failed to migrate error :: Missing user_details
 userID [3247] failed to migrate error :: 1062 (23000): Duplicate entry 'justneolife@gmail.com' for key 'users_email_unique'
-userID [3254] failed to migrate error :: 1062 (23000): Duplicate entry 'wamuyu gathinji' for key 'users_username_unique'
-userID [3284] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3293] failed to migrate error :: 1062 (23000): Duplicate entry 'VIVIAN' for key 'users_username_unique'
-userID [3299] failed to migrate error :: 1062 (23000): Duplicate entry 'Moses' for key 'users_username_unique'
-userID [3319] failed to migrate error :: 1062 (23000): Duplicate entry 'john' for key 'users_username_unique'
-userID [3321] failed to migrate error :: 1062 (23000): Duplicate entry 'Lawrence' for key 'users_username_unique'
-userID [3330] failed to migrate error :: 1062 (23000): Duplicate entry 'VIVIAN' for key 'users_username_unique'
-userID [3346] failed to migrate error :: 1062 (23000): Duplicate entry 'mitchel kutwo' for key 'users_username_unique'
-userID [3357] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3360] failed to migrate error :: 1062 (23000): Duplicate entry 'millicent' for key 'users_username_unique'
-userID [3362] failed to migrate error :: 1062 (23000): Duplicate entry 'pabuor' for key 'users_username_unique'
-userID [3383] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3398] failed to migrate error :: 1062 (23000): Duplicate entry 'Macladine' for key 'users_username_unique'
-userID [3421] failed to migrate error :: 1062 (23000): Duplicate entry 'wairimu' for key 'users_username_unique'
+userID [3254] failed to migrate error :: Missing user_details
+userID [3284] failed to migrate error :: Missing user_details
+userID [3293] failed to migrate error :: Missing user_details
+userID [3299] failed to migrate error :: Missing user_details
+userID [3319] failed to migrate error :: Missing user_details
+userID [3321] failed to migrate error :: Missing user_details
+userID [3330] failed to migrate error :: Missing user_details
+userID [3346] failed to migrate error :: Missing user_details
+userID [3357] failed to migrate error :: Missing user_details
+userID [3360] failed to migrate error :: Missing user_details
+userID [3362] failed to migrate error :: Missing user_details
+userID [3383] failed to migrate error :: Missing user_details
+userID [3398] failed to migrate error :: Missing user_details
+userID [3421] failed to migrate error :: Missing user_details
 userID [3427] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [3432] failed to migrate error :: 1062 (23000): Duplicate entry 'james' for key 'users_username_unique'
-userID [3437] failed to migrate error :: 1062 (23000): Duplicate entry 'Munira' for key 'users_username_unique'
+userID [3432] failed to migrate error :: Missing user_details
+userID [3437] failed to migrate error :: Missing user_details
 userID [3438] failed to migrate error :: 1062 (23000): Duplicate entry '26104267' for key 'individuals_nationalid_unique'
 userID [3447] failed to migrate error :: 1062 (23000): Duplicate entry '31600865' for key 'individuals_nationalid_unique'
-userID [3457] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3460] failed to migrate error :: 1062 (23000): Duplicate entry 'charles' for key 'users_username_unique'
-userID [3461] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3457] failed to migrate error :: Missing user_details
+userID [3460] failed to migrate error :: Missing user_details
+userID [3461] failed to migrate error :: Missing user_details
 userID [3464] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'firms_kra_unique'
-userID [3468] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3472] failed to migrate error :: 1062 (23000): Duplicate entry 'Davis Kwemoi' for key 'users_username_unique'
+userID [3468] failed to migrate error :: Missing user_details
+userID [3472] failed to migrate error :: Missing user_details
 userID [3476] failed to migrate error :: 1062 (23000): Duplicate entry '10415105' for key 'individuals_nationalid_unique'
 userID [3479] failed to migrate error :: 1062 (23000): Duplicate entry 'P051372001I' for key 'firms_kra_unique'
 userID [3481] failed to migrate error :: 1062 (23000): Duplicate entry '25528566' for key 'individuals_nationalid_unique'
-userID [3483] failed to migrate error :: 1062 (23000): Duplicate entry 'm.amuge@yahoo.com' for key 'users_username_unique'
+userID [3483] failed to migrate error :: Missing user_details
 userID [3486] failed to migrate error :: 1062 (23000): Duplicate entry '21914800' for key 'individuals_nationalid_unique'
 userID [3488] failed to migrate error :: 1062 (23000): Duplicate entry 'P051178911X' for key 'firms_kra_unique'
-userID [3491] failed to migrate error :: 1062 (23000): Duplicate entry 'wasomi' for key 'users_username_unique'
-userID [3493] failed to migrate error :: 1062 (23000): Duplicate entry 'Vivian' for key 'users_username_unique'
-userID [3497] failed to migrate error :: 1062 (23000): Duplicate entry 'violet' for key 'users_username_unique'
+userID [3491] failed to migrate error :: Missing user_details
+userID [3493] failed to migrate error :: Missing user_details
+userID [3497] failed to migrate error :: Missing user_details
 userID [3498] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
 userID [3533] failed to migrate error :: 1062 (23000): Duplicate entry '11197758' for key 'individuals_nationalid_unique'
 userID [3536] failed to migrate error :: 1062 (23000): Duplicate entry '22408974' for key 'individuals_nationalid_unique'
 userID [3540] failed to migrate error :: 1062 (23000): Duplicate entry '21697012' for key 'individuals_nationalid_unique'
-userID [3545] failed to migrate error :: 1062 (23000): Duplicate entry 'fowiti' for key 'users_username_unique'
-userID [3546] failed to migrate error :: 1062 (23000): Duplicate entry 'esther' for key 'users_username_unique'
-userID [3547] failed to migrate error :: 1062 (23000): Duplicate entry 'fowiti' for key 'users_username_unique'
+userID [3545] failed to migrate error :: Missing user_details
+userID [3546] failed to migrate error :: Missing user_details
+userID [3547] failed to migrate error :: Missing user_details
 userID [3557] failed to migrate error :: 1062 (23000): Duplicate entry '29352775' for key 'individuals_nationalid_unique'
 userID [3561] failed to migrate error :: 1062 (23000): Duplicate entry '27338836' for key 'individuals_nationalid_unique'
 userID [3562] failed to migrate error :: 1062 (23000): Duplicate entry 'P051526615C' for key 'firms_kra_unique'
-userID [3570] failed to migrate error :: 1062 (23000): Duplicate entry 'Jthiaine' for key 'users_username_unique'
-userID [3572] failed to migrate error :: 1062 (23000): Duplicate entry 'ZENA' for key 'users_username_unique'
-userID [3574] failed to migrate error :: 1062 (23000): Duplicate entry 'Muthoni' for key 'users_username_unique'
+userID [3570] failed to migrate error :: Missing user_details
+userID [3572] failed to migrate error :: Missing user_details
+userID [3574] failed to migrate error :: Missing user_details
 userID [3576] failed to migrate error :: 1062 (23000): Duplicate entry '30062488' for key 'individuals_nationalid_unique'
-userID [3577] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3584] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3587] failed to migrate error :: 1062 (23000): Duplicate entry 'eliud mwaura' for key 'users_username_unique'
-userID [3588] failed to migrate error :: 1062 (23000): Duplicate entry 'ZENA' for key 'users_username_unique'
-userID [3594] failed to migrate error :: 1062 (23000): Duplicate entry 'evans' for key 'users_username_unique'
-userID [3601] failed to migrate error :: 1062 (23000): Duplicate entry 'TOM MISENYA' for key 'users_username_unique'
-userID [3603] failed to migrate error :: 1062 (23000): Duplicate entry 'TOM MISENYA' for key 'users_username_unique'
+userID [3577] failed to migrate error :: Missing user_details
+userID [3584] failed to migrate error :: Missing user_details
+userID [3587] failed to migrate error :: Missing user_details
+userID [3588] failed to migrate error :: Missing user_details
+userID [3594] failed to migrate error :: Missing user_details
+userID [3601] failed to migrate error :: Missing user_details
+userID [3603] failed to migrate error :: Missing user_details
 userID [3605] failed to migrate error :: 1062 (23000): Duplicate entry '27971019' for key 'individuals_nationalid_unique'
 userID [3608] failed to migrate error :: 1062 (23000): Duplicate entry '21192463' for key 'individuals_nationalid_unique'
-userID [3611] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3611] failed to migrate error :: Missing user_details
 userID [3612] failed to migrate error :: 1062 (23000): Duplicate entry 'A005402309E' for key 'individuals_nationalid_unique'
 userID [3615] failed to migrate error :: 1062 (23000): Duplicate entry '9680531' for key 'individuals_nationalid_unique'
-userID [3616] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3617] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3616] failed to migrate error :: Missing user_details
+userID [3617] failed to migrate error :: Missing user_details
 userID [3621] failed to migrate error :: 1062 (23000): Duplicate entry '28982731' for key 'individuals_nationalid_unique'
 userID [3622] failed to migrate error :: 1062 (23000): Duplicate entry '28982731' for key 'individuals_nationalid_unique'
 userID [3623] failed to migrate error :: 1062 (23000): Duplicate entry '28982731' for key 'individuals_nationalid_unique'
-userID [3631] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3631] failed to migrate error :: Missing user_details
 userID [3635] failed to migrate error :: 1062 (23000): Duplicate entry '30608167' for key 'individuals_nationalid_unique'
 userID [3639] failed to migrate error :: 1062 (23000): Duplicate entry '6458176' for key 'individuals_nationalid_unique'
-userID [3641] failed to migrate error :: 1062 (23000): Duplicate entry 'kalwendy' for key 'users_username_unique'
-userID [3644] failed to migrate error :: 1062 (23000): Duplicate entry 'kalwendy' for key 'users_username_unique'
+userID [3641] failed to migrate error :: Missing user_details
+userID [3644] failed to migrate error :: Missing user_details
 userID [3647] failed to migrate error :: 1062 (23000): Duplicate entry '31582149' for key 'individuals_nationalid_unique'
 userID [3648] failed to migrate error :: 1062 (23000): Duplicate entry '28527443' for key 'individuals_nationalid_unique'
 userID [3656] failed to migrate error :: 1062 (23000): Duplicate entry '32399974' for key 'individuals_nationalid_unique'
 userID [3660] failed to migrate error :: 1062 (23000): Duplicate entry '24134107' for key 'individuals_nationalid_unique'
-userID [3661] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3661] failed to migrate error :: Missing user_details
 userID [3664] failed to migrate error :: 1062 (23000): Duplicate entry 'P051363988R' for key 'firms_kra_unique'
 userID [3668] failed to migrate error :: 1062 (23000): Duplicate entry '11116259' for key 'individuals_nationalid_unique'
 userID [3670] failed to migrate error :: 1062 (23000): Duplicate entry '22414568' for key 'individuals_nationalid_unique'
-userID [3672] failed to migrate error :: 1062 (23000): Duplicate entry 'Stella' for key 'users_username_unique'
-userID [3677] failed to migrate error :: 1062 (23000): Duplicate entry 'Michael' for key 'users_username_unique'
+userID [3672] failed to migrate error :: Missing user_details
+userID [3677] failed to migrate error :: Missing user_details
 userID [3684] failed to migrate error :: 1062 (23000): Duplicate entry 'P051506973S' for key 'firms_kra_unique'
-userID [3695] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3695] failed to migrate error :: Missing user_details
 userID [3697] failed to migrate error :: 1062 (23000): Duplicate entry '6141149' for key 'individuals_nationalid_unique'
-userID [3700] failed to migrate error :: 1062 (23000): Duplicate entry 'rotich' for key 'users_username_unique'
-userID [3703] failed to migrate error :: 1062 (23000): Duplicate entry 'Njoroge1993' for key 'users_username_unique'
-userID [3704] failed to migrate error :: 1062 (23000): Duplicate entry 'maritim' for key 'users_username_unique'
-userID [3706] failed to migrate error :: 1062 (23000): Duplicate entry 'sharon' for key 'users_username_unique'
+userID [3700] failed to migrate error :: Missing user_details
+userID [3703] failed to migrate error :: Missing user_details
+userID [3704] failed to migrate error :: Missing user_details
+userID [3706] failed to migrate error :: Missing user_details
 userID [3711] failed to migrate error :: 1062 (23000): Duplicate entry '30816516' for key 'individuals_nationalid_unique'
-userID [3714] failed to migrate error :: 1062 (23000): Duplicate entry 'felix' for key 'users_username_unique'
-userID [3724] failed to migrate error :: 1062 (23000): Duplicate entry 'ROBJIRU@YAHOO.COM' for key 'users_username_unique'
-userID [3728] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3742] failed to migrate error :: 1062 (23000): Duplicate entry 'cnjeru' for key 'users_username_unique'
+userID [3714] failed to migrate error :: Missing user_details
+userID [3724] failed to migrate error :: Missing user_details
+userID [3728] failed to migrate error :: Missing user_details
+userID [3742] failed to migrate error :: Missing user_details
 userID [3744] failed to migrate error :: 1062 (23000): Duplicate entry '4855060' for key 'individuals_nationalid_unique'
-userID [3745] failed to migrate error :: 1062 (23000): Duplicate entry 'zena' for key 'users_username_unique'
+userID [3745] failed to migrate error :: Missing user_details
 userID [3746] failed to migrate error :: 1062 (23000): Duplicate entry '25984477' for key 'individuals_nationalid_unique'
-userID [3747] failed to migrate error :: 1062 (23000): Duplicate entry 'johnmoturi ' for key 'users_username_unique'
+userID [3747] failed to migrate error :: Missing user_details
 userID [3756] failed to migrate error :: 1062 (23000): Duplicate entry '20116361' for key 'individuals_nationalid_unique'
-userID [3764] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3765] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3772] failed to migrate error :: 1062 (23000): Duplicate entry 'Victor Ogowe' for key 'users_username_unique'
-userID [3776] failed to migrate error :: 1062 (23000): Duplicate entry 'MAIRA JOSEPH' for key 'users_username_unique'
+userID [3764] failed to migrate error :: Missing user_details
+userID [3765] failed to migrate error :: Missing user_details
+userID [3772] failed to migrate error :: Missing user_details
+userID [3776] failed to migrate error :: Missing user_details
 userID [3786] failed to migrate error :: 1062 (23000): Duplicate entry '31778864' for key 'individuals_nationalid_unique'
-userID [3792] failed to migrate error :: 1062 (23000): Duplicate entry 'ndirangukeru' for key 'users_username_unique'
+userID [3792] failed to migrate error :: Missing user_details
 userID [3795] failed to migrate error :: 1062 (23000): Duplicate entry '27303715' for key 'individuals_nationalid_unique'
-userID [3803] failed to migrate error :: 1062 (23000): Duplicate entry 'john' for key 'users_username_unique'
+userID [3803] failed to migrate error :: Missing user_details
 userID [3805] failed to migrate error :: 1062 (23000): Duplicate entry '0094349' for key 'individuals_nationalid_unique'
-userID [3823] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3823] failed to migrate error :: Missing user_details
 userID [3830] failed to migrate error :: 1062 (23000): Duplicate entry '9215560' for key 'individuals_nationalid_unique'
-userID [3833] failed to migrate error :: 1062 (23000): Duplicate entry 'Nextgen' for key 'users_username_unique'
-userID [3839] failed to migrate error :: 1062 (23000): Duplicate entry 'NGUMBAU' for key 'users_username_unique'
+userID [3833] failed to migrate error :: Missing user_details
+userID [3839] failed to migrate error :: Missing user_details
 userID [3840] failed to migrate error :: 1062 (23000): Duplicate entry 'isaya.sijali@kalro.org' for key 'users_email_unique'
-userID [3846] failed to migrate error :: 1062 (23000): Duplicate entry 'MWADIME' for key 'users_username_unique'
-userID [3855] failed to migrate error :: 1062 (23000): Duplicate entry 'Mary' for key 'users_username_unique'
-userID [3864] failed to migrate error :: 1062 (23000): Duplicate entry 'robjiru@yahoo.com' for key 'users_username_unique'
-userID [3875] failed to migrate error :: 1062 (23000): Duplicate entry 'Jenniffer Vera' for key 'users_username_unique'
+userID [3846] failed to migrate error :: Missing user_details
+userID [3855] failed to migrate error :: Missing user_details
+userID [3864] failed to migrate error :: Missing user_details
+userID [3875] failed to migrate error :: Missing user_details
 userID [3877] failed to migrate error :: 1062 (23000): Duplicate entry '20073122' for key 'individuals_nationalid_unique'
-userID [3890] failed to migrate error :: 1062 (23000): Duplicate entry 'Mwakina' for key 'users_username_unique'
+userID [3890] failed to migrate error :: Missing user_details
 userID [3902] failed to migrate error :: 1062 (23000): Duplicate entry '2495559' for key 'individuals_nationalid_unique'
-userID [3906] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [3906] failed to migrate error :: Missing user_details
 userID [3911] failed to migrate error :: 1062 (23000): Duplicate entry '23069616' for key 'individuals_nationalid_unique'
-userID [3918] failed to migrate error :: 1062 (23000): Duplicate entry 'Albert' for key 'users_username_unique'
-userID [3929] failed to migrate error :: 1062 (23000): Duplicate entry 'PAUL' for key 'users_username_unique'
-userID [3939] failed to migrate error :: 1062 (23000): Duplicate entry 'fwamba' for key 'users_username_unique'
+userID [3918] failed to migrate error :: Missing user_details
+userID [3929] failed to migrate error :: Missing user_details
+userID [3939] failed to migrate error :: Missing user_details
 userID [3945] failed to migrate error :: 1062 (23000): Duplicate entry '7226752' for key 'individuals_nationalid_unique'
 userID [3955] failed to migrate error :: 1062 (23000): Duplicate entry '22151320' for key 'individuals_nationalid_unique'
 userID [3957] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [3965] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [3970] failed to migrate error :: 1062 (23000): Duplicate entry 'Loice' for key 'users_username_unique'
+userID [3965] failed to migrate error :: Missing user_details
+userID [3970] failed to migrate error :: Missing user_details
 userID [3973] failed to migrate error :: 1062 (23000): Duplicate entry '22785383' for key 'individuals_nationalid_unique'
 userID [3981] failed to migrate error :: 1062 (23000): Duplicate entry 'A00166986' for key 'individuals_nationalid_unique'
-userID [3984] failed to migrate error :: 1062 (23000): Duplicate entry 'Joshua' for key 'users_username_unique'
-userID [3990] failed to migrate error :: 1062 (23000): Duplicate entry 'PAUL' for key 'users_username_unique'
-userID [4003] failed to migrate error :: 1062 (23000): Duplicate entry 'nicholasngece' for key 'users_username_unique'
-userID [4009] failed to migrate error :: 1062 (23000): Duplicate entry 'kiogam' for key 'users_username_unique'
-userID [4012] failed to migrate error :: 1062 (23000): Duplicate entry 'Benson2018' for key 'users_username_unique'
-userID [4013] failed to migrate error :: 1062 (23000): Duplicate entry 'Benson2018' for key 'users_username_unique'
-userID [4014] failed to migrate error :: 1062 (23000): Duplicate entry 'mary kamau ' for key 'users_username_unique'
-userID [4031] failed to migrate error :: 1062 (23000): Duplicate entry 'paul' for key 'users_username_unique'
-userID [4039] failed to migrate error :: 1062 (23000): Duplicate entry 'mercy khagali' for key 'users_username_unique'
-userID [4043] failed to migrate error :: 1062 (23000): Duplicate entry 'douglasmwagwi@gmail.com' for key 'users_username_unique'
-userID [4052] failed to migrate error :: 1062 (23000): Duplicate entry 'albert' for key 'users_username_unique'
-userID [4065] failed to migrate error :: 1062 (23000): Duplicate entry 'gmaina' for key 'users_username_unique'
-userID [4066] failed to migrate error :: 1062 (23000): Duplicate entry 'MERUAKI' for key 'users_username_unique'
-userID [4068] failed to migrate error :: 1062 (23000): Duplicate entry 'Erick,Nyagol' for key 'users_username_unique'
+userID [3984] failed to migrate error :: Missing user_details
+userID [3990] failed to migrate error :: Missing user_details
+userID [4003] failed to migrate error :: Missing user_details
+userID [4009] failed to migrate error :: Missing user_details
+userID [4012] failed to migrate error :: Missing user_details
+userID [4013] failed to migrate error :: Missing user_details
+userID [4014] failed to migrate error :: Missing user_details
+userID [4031] failed to migrate error :: Missing user_details
+userID [4039] failed to migrate error :: Missing user_details
+userID [4043] failed to migrate error :: Missing user_details
+userID [4052] failed to migrate error :: Missing user_details
+userID [4065] failed to migrate error :: Missing user_details
+userID [4066] failed to migrate error :: Missing user_details
+userID [4068] failed to migrate error :: Missing user_details
 userID [4069] failed to migrate error :: 1062 (23000): Duplicate entry '11493739' for key 'individuals_nationalid_unique'
-userID [4071] failed to migrate error :: 1062 (23000): Duplicate entry 'CARO' for key 'users_username_unique'
-userID [4078] failed to migrate error :: 1062 (23000): Duplicate entry 'Michael' for key 'users_username_unique'
-userID [4080] failed to migrate error :: 1062 (23000): Duplicate entry 'ESTHER' for key 'users_username_unique'
-userID [4083] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4084] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4091] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4094] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [4071] failed to migrate error :: Missing user_details
+userID [4078] failed to migrate error :: Missing user_details
+userID [4080] failed to migrate error :: Missing user_details
+userID [4083] failed to migrate error :: Missing user_details
+userID [4084] failed to migrate error :: Missing user_details
+userID [4091] failed to migrate error :: Missing user_details
+userID [4094] failed to migrate error :: Missing user_details
 userID [4096] failed to migrate error :: 1062 (23000): Duplicate entry '25762756' for key 'individuals_nationalid_unique'
-userID [4106] failed to migrate error :: 1062 (23000): Duplicate entry 'ngatia' for key 'users_username_unique'
+userID [4106] failed to migrate error :: Missing user_details
 userID [4107] failed to migrate error :: 1062 (23000): Duplicate entry '24710129' for key 'individuals_nationalid_unique'
 userID [4108] failed to migrate error :: 1062 (23000): Duplicate entry '24710129' for key 'individuals_nationalid_unique'
-userID [4111] failed to migrate error :: 1062 (23000): Duplicate entry 'domitore' for key 'users_username_unique'
+userID [4111] failed to migrate error :: Missing user_details
 userID [4114] failed to migrate error :: 1062 (23000): Duplicate entry '11604439' for key 'individuals_nationalid_unique'
-userID [4115] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4116] failed to migrate error :: 1062 (23000): Duplicate entry 'fredricklagat' for key 'users_username_unique'
-userID [4122] failed to migrate error :: 1062 (23000): Duplicate entry 'ALEX' for key 'users_username_unique'
-userID [4129] failed to migrate error :: 1062 (23000): Duplicate entry 'smuthike' for key 'users_username_unique'
-userID [4131] failed to migrate error :: 1062 (23000): Duplicate entry 'fredricklagat' for key 'users_username_unique'
-userID [4133] failed to migrate error :: 1062 (23000): Duplicate entry 'ochidan' for key 'users_username_unique'
-userID [4134] failed to migrate error :: 1062 (23000): Duplicate entry 'ochidan' for key 'users_username_unique'
-userID [4137] failed to migrate error :: 1062 (23000): Duplicate entry 'Cynthia Karoki' for key 'users_username_unique'
-userID [4138] failed to migrate error :: 1062 (23000): Duplicate entry 'Cynthia Karoki' for key 'users_username_unique'
+userID [4115] failed to migrate error :: Missing user_details
+userID [4116] failed to migrate error :: Missing user_details
+userID [4122] failed to migrate error :: Missing user_details
+userID [4129] failed to migrate error :: Missing user_details
+userID [4131] failed to migrate error :: Missing user_details
+userID [4133] failed to migrate error :: Missing user_details
+userID [4134] failed to migrate error :: Missing user_details
+userID [4137] failed to migrate error :: Missing user_details
+userID [4138] failed to migrate error :: Missing user_details
 userID [4142] failed to migrate error :: 1062 (23000): Duplicate entry '25660052' for key 'individuals_nationalid_unique'
 userID [4143] failed to migrate error :: 1062 (23000): Duplicate entry '25660052' for key 'individuals_nationalid_unique'
 userID [4144] failed to migrate error :: 1062 (23000): Duplicate entry '24541322' for key 'individuals_nationalid_unique'
-userID [4145] failed to migrate error :: 1062 (23000): Duplicate entry 'Eva Wahu' for key 'users_username_unique'
+userID [4145] failed to migrate error :: Missing user_details
 userID [4147] failed to migrate error :: 1062 (23000): Duplicate entry '31875431' for key 'individuals_nationalid_unique'
-userID [4148] failed to migrate error :: 1062 (23000): Duplicate entry 'sharone.chelangat@gmail.com' for key 'users_username_unique'
+userID [4148] failed to migrate error :: Missing user_details
 userID [4160] failed to migrate error :: 1062 (23000): Duplicate entry '3021829' for key 'individuals_nationalid_unique'
 userID [4161] failed to migrate error :: 1062 (23000): Duplicate entry '13667164' for key 'individuals_nationalid_unique'
-userID [4164] failed to migrate error :: 1062 (23000): Duplicate entry 'info@syagga.co.ke' for key 'users_username_unique'
+userID [4164] failed to migrate error :: Missing user_details
 userID [4174] failed to migrate error :: 1062 (23000): Duplicate entry '32493620' for key 'individuals_nationalid_unique'
 userID [4177] failed to migrate error :: 1062 (23000): Duplicate entry '25157592' for key 'individuals_nationalid_unique'
-userID [4178] failed to migrate error :: 1062 (23000): Duplicate entry 'mary' for key 'users_username_unique'
-userID [4179] failed to migrate error :: 1062 (23000): Duplicate entry 'mary' for key 'users_username_unique'
-userID [4185] failed to migrate error :: 1062 (23000): Duplicate entry 'SAMSONBOKEA' for key 'users_username_unique'
-userID [4186] failed to migrate error :: 1062 (23000): Duplicate entry 'Nduhiu' for key 'users_username_unique'
+userID [4178] failed to migrate error :: Missing user_details
+userID [4179] failed to migrate error :: Missing user_details
+userID [4185] failed to migrate error :: Missing user_details
+userID [4186] failed to migrate error :: Missing user_details
 userID [4189] failed to migrate error :: 1062 (23000): Duplicate entry '32132268' for key 'individuals_nationalid_unique'
-userID [4194] failed to migrate error :: 1062 (23000): Duplicate entry 'janet' for key 'users_username_unique'
-userID [4195] failed to migrate error :: 1062 (23000): Duplicate entry 'bkaroki' for key 'users_username_unique'
+userID [4194] failed to migrate error :: Missing user_details
+userID [4195] failed to migrate error :: Missing user_details
 userID [4200] failed to migrate error :: 1062 (23000): Duplicate entry '7868586' for key 'individuals_nationalid_unique'
 userID [4204] failed to migrate error :: 1062 (23000): Duplicate entry '10415105' for key 'individuals_nationalid_unique'
-userID [4207] failed to migrate error :: 1062 (23000): Duplicate entry 'Evans' for key 'users_username_unique'
+userID [4207] failed to migrate error :: Missing user_details
 userID [4208] failed to migrate error :: 1062 (23000): Duplicate entry '24927505' for key 'individuals_nationalid_unique'
-userID [4209] failed to migrate error :: 1062 (23000): Duplicate entry 'ali' for key 'users_username_unique'
+userID [4209] failed to migrate error :: Missing user_details
 userID [4211] failed to migrate error :: 1062 (23000): Duplicate entry '32512145' for key 'individuals_nationalid_unique'
-userID [4214] failed to migrate error :: 1062 (23000): Duplicate entry 'info@syagga.co.ke' for key 'users_username_unique'
-userID [4217] failed to migrate error :: 1062 (23000): Duplicate entry 'MAURICE' for key 'users_username_unique'
+userID [4214] failed to migrate error :: Missing user_details
+userID [4217] failed to migrate error :: Missing user_details
 userID [4223] failed to migrate error :: 1062 (23000): Duplicate entry 'awemac_ken@yahoo.com' for key 'users_email_unique'
 userID [4227] failed to migrate error :: 1062 (23000): Duplicate entry '14421673' for key 'individuals_nationalid_unique'
-userID [4229] failed to migrate error :: 1062 (23000): Duplicate entry 'GTBSLTD' for key 'users_username_unique'
-userID [4230] failed to migrate error :: 1062 (23000): Duplicate entry 'GTBSLTD' for key 'users_username_unique'
+userID [4229] failed to migrate error :: Missing user_details
+userID [4230] failed to migrate error :: Missing user_details
 userID [4231] failed to migrate error :: 1062 (23000): Duplicate entry '0693186' for key 'individuals_nationalid_unique'
-userID [4238] failed to migrate error :: 1062 (23000): Duplicate entry 'SeanAvery' for key 'users_username_unique'
+userID [4238] failed to migrate error :: Missing user_details
 userID [4241] failed to migrate error :: 1062 (23000): Duplicate entry '28679113' for key 'individuals_nationalid_unique'
 userID [4244] failed to migrate error :: 1062 (23000): Duplicate entry '30556495' for key 'individuals_nationalid_unique'
-userID [4245] failed to migrate error :: 1062 (23000): Duplicate entry 'fowiti' for key 'users_username_unique'
-userID [4246] failed to migrate error :: 1062 (23000): Duplicate entry 'runo' for key 'users_username_unique'
+userID [4245] failed to migrate error :: Missing user_details
+userID [4246] failed to migrate error :: Missing user_details
 userID [4248] failed to migrate error :: 1062 (23000): Duplicate entry 'kiptoovk@gmail.com' for key 'users_email_unique'
-userID [4250] failed to migrate error :: 1062 (23000): Duplicate entry 'bonifacemusembi' for key 'users_username_unique'
-userID [4253] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4254] failed to migrate error :: 1062 (23000): Duplicate entry 'kariuki' for key 'users_username_unique'
+userID [4250] failed to migrate error :: Missing user_details
+userID [4253] failed to migrate error :: Missing user_details
+userID [4254] failed to migrate error :: Missing user_details
 userID [4258] failed to migrate error :: 1062 (23000): Duplicate entry 'p051349845p' for key 'firms_kra_unique'
 userID [4259] failed to migrate error :: 1062 (23000): Duplicate entry '21697012' for key 'individuals_nationalid_unique'
 userID [4260] failed to migrate error :: 1062 (23000): Duplicate entry '21697012' for key 'individuals_nationalid_unique'
 userID [4264] failed to migrate error :: 1062 (23000): Duplicate entry '0756910' for key 'individuals_nationalid_unique'
-userID [4273] failed to migrate error :: 1062 (23000): Duplicate entry 'Nancy' for key 'users_username_unique'
-userID [4278] failed to migrate error :: 1062 (23000): Duplicate entry 'PAUL' for key 'users_username_unique'
-userID [4283] failed to migrate error :: 1062 (23000): Duplicate entry 'KamauBG' for key 'users_username_unique'
-userID [4284] failed to migrate error :: 1062 (23000): Duplicate entry 'KamauBG' for key 'users_username_unique'
-userID [4285] failed to migrate error :: 1062 (23000): Duplicate entry 'George' for key 'users_username_unique'
-userID [4288] failed to migrate error :: 1062 (23000): Duplicate entry 'chumo' for key 'users_username_unique'
+userID [4273] failed to migrate error :: Missing user_details
+userID [4278] failed to migrate error :: Missing user_details
+userID [4283] failed to migrate error :: Missing user_details
+userID [4284] failed to migrate error :: Missing user_details
+userID [4285] failed to migrate error :: Missing user_details
+userID [4288] failed to migrate error :: Missing user_details
 userID [4303] failed to migrate error :: 1062 (23000): Duplicate entry '13233972' for key 'individuals_nationalid_unique'
-userID [4310] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4315] failed to migrate error :: 1062 (23000): Duplicate entry 'joseph' for key 'users_username_unique'
-userID [4325] failed to migrate error :: 1062 (23000): Duplicate entry 'betty' for key 'users_username_unique'
+userID [4310] failed to migrate error :: Missing user_details
+userID [4315] failed to migrate error :: Missing user_details
+userID [4325] failed to migrate error :: Missing user_details
 userID [4328] failed to migrate error :: 1062 (23000): Duplicate entry '26903355' for key 'individuals_nationalid_unique'
 userID [4329] failed to migrate error :: 1062 (23000): Duplicate entry '7771309' for key 'individuals_nationalid_unique'
 userID [4337] failed to migrate error :: 1062 (23000): Duplicate entry '13490438' for key 'individuals_nationalid_unique'
-userID [4342] failed to migrate error :: 1062 (23000): Duplicate entry 'SHARON' for key 'users_username_unique'
-userID [4343] failed to migrate error :: 1062 (23000): Duplicate entry 'Tunje' for key 'users_username_unique'
-userID [4344] failed to migrate error :: 1062 (23000): Duplicate entry 'Tunje' for key 'users_username_unique'
+userID [4342] failed to migrate error :: Missing user_details
+userID [4343] failed to migrate error :: Missing user_details
+userID [4344] failed to migrate error :: Missing user_details
 userID [4347] failed to migrate error :: 1062 (23000): Duplicate entry '13702490' for key 'individuals_nationalid_unique'
-userID [4356] failed to migrate error :: 1062 (23000): Duplicate entry 'Joel Mwando' for key 'users_username_unique'
-userID [4357] failed to migrate error :: 1062 (23000): Duplicate entry 'douglasmwagwi@gmail.com' for key 'users_username_unique'
+userID [4356] failed to migrate error :: Missing user_details
+userID [4357] failed to migrate error :: Missing user_details
 userID [4358] failed to migrate error :: 1062 (23000): Duplicate entry '20782205' for key 'individuals_nationalid_unique'
 userID [4360] failed to migrate error :: 1062 (23000): Duplicate entry '11847741' for key 'individuals_nationalid_unique'
 userID [4363] failed to migrate error :: 1062 (23000): Duplicate entry '20583528' for key 'individuals_nationalid_unique'
-userID [4367] failed to migrate error :: 1062 (23000): Duplicate entry 'mkithinji2016@gmail.com' for key 'users_username_unique'
-userID [4368] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [4367] failed to migrate error :: Missing user_details
+userID [4368] failed to migrate error :: Missing user_details
 userID [4374] failed to migrate error :: 1062 (23000): Duplicate entry '31730110' for key 'individuals_nationalid_unique'
 userID [4376] failed to migrate error :: 1062 (23000): Duplicate entry '25007090' for key 'individuals_nationalid_unique'
-userID [4382] failed to migrate error :: 1062 (23000): Duplicate entry 'Angela' for key 'users_username_unique'
-userID [4383] failed to migrate error :: 1062 (23000): Duplicate entry 'Spatial ' for key 'users_username_unique'
+userID [4382] failed to migrate error :: Missing user_details
+userID [4383] failed to migrate error :: Missing user_details
 userID [4386] failed to migrate error :: 1062 (23000): Duplicate entry 'P000618406u' for key 'firms_kra_unique'
 userID [4388] failed to migrate error :: 1062 (23000): Duplicate entry 'P051361684D' for key 'firms_kra_unique'
-userID [4389] failed to migrate error :: 1062 (23000): Duplicate entry 'paswani' for key 'users_username_unique'
-userID [4397] failed to migrate error :: 1062 (23000): Duplicate entry 'James' for key 'users_username_unique'
+userID [4389] failed to migrate error :: Missing user_details
+userID [4397] failed to migrate error :: Missing user_details
 userID [4401] failed to migrate error :: 1062 (23000): Duplicate entry '11253372' for key 'individuals_nationalid_unique'
 userID [4408] failed to migrate error :: 1062 (23000): Duplicate entry '11892653' for key 'individuals_nationalid_unique'
-userID [4415] failed to migrate error :: 1062 (23000): Duplicate entry 'Jimmyk' for key 'users_username_unique'
+userID [4415] failed to migrate error :: Missing user_details
 userID [4417] failed to migrate error :: 1062 (23000): Duplicate entry '10028876' for key 'individuals_nationalid_unique'
-userID [4435] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4438] failed to migrate error :: 1062 (23000): Duplicate entry 'Lucy' for key 'users_username_unique'
+userID [4435] failed to migrate error :: Missing user_details
+userID [4438] failed to migrate error :: Missing user_details
 userID [4440] failed to migrate error :: 1062 (23000): Duplicate entry '29400576' for key 'individuals_nationalid_unique'
-userID [4442] failed to migrate error :: 1062 (23000): Duplicate entry 'john2008muriuki@gmail.com' for key 'users_username_unique'
-userID [4444] failed to migrate error :: 1062 (23000): Duplicate entry 'john2008muriuki@gmail.com' for key 'users_username_unique'
-userID [4452] failed to migrate error :: 1062 (23000): Duplicate entry 'KEZIAH' for key 'users_username_unique'
-userID [4453] failed to migrate error :: 1062 (23000): Duplicate entry 'KEZIAH' for key 'users_username_unique'
-userID [4459] failed to migrate error :: 1062 (23000): Duplicate entry 'ABONGO' for key 'users_username_unique'
+userID [4442] failed to migrate error :: Missing user_details
+userID [4444] failed to migrate error :: Missing user_details
+userID [4452] failed to migrate error :: Missing user_details
+userID [4453] failed to migrate error :: Missing user_details
+userID [4459] failed to migrate error :: Missing user_details
 userID [4460] failed to migrate error :: 1062 (23000): Duplicate entry '4835586' for key 'individuals_nationalid_unique'
 userID [4462] failed to migrate error :: 1062 (23000): Duplicate entry '22281575' for key 'individuals_nationalid_unique'
 userID [4470] failed to migrate error :: 1062 (23000): Duplicate entry '32592154' for key 'individuals_nationalid_unique'
-userID [4473] failed to migrate error :: 1062 (23000): Duplicate entry 'Rotich' for key 'users_username_unique'
-userID [4476] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4481] failed to migrate error :: 1062 (23000): Duplicate entry 'Ruto' for key 'users_username_unique'
+userID [4473] failed to migrate error :: Missing user_details
+userID [4476] failed to migrate error :: Missing user_details
+userID [4481] failed to migrate error :: Missing user_details
 userID [4484] failed to migrate error :: 1062 (23000): Duplicate entry '3463140' for key 'individuals_nationalid_unique'
-userID [4489] failed to migrate error :: 1062 (23000): Duplicate entry 'mbubicha' for key 'users_username_unique'
-userID [4499] failed to migrate error :: 1062 (23000): Duplicate entry 'nema' for key 'users_username_unique'
-userID [4511] failed to migrate error :: 1062 (23000): Duplicate entry 'albertkipsoi63' for key 'users_username_unique'
-userID [4513] failed to migrate error :: 1062 (23000): Duplicate entry 'moraa' for key 'users_username_unique'
-userID [4518] failed to migrate error :: 1062 (23000): Duplicate entry 'assuredenvironmentalservices' for key 'users_username_unique'
-userID [4520] failed to migrate error :: 1062 (23000): Duplicate entry 'David' for key 'users_username_unique'
-userID [4530] failed to migrate error :: 1062 (23000): Duplicate entry 'Justus Eregae' for key 'users_username_unique'
+userID [4489] failed to migrate error :: Missing user_details
+userID [4499] failed to migrate error :: Missing user_details
+userID [4511] failed to migrate error :: Missing user_details
+userID [4513] failed to migrate error :: Missing user_details
+userID [4518] failed to migrate error :: Missing user_details
+userID [4520] failed to migrate error :: Missing user_details
+userID [4530] failed to migrate error :: Missing user_details
 userID [4537] failed to migrate error :: 1062 (23000): Duplicate entry 'kennthiwa@gmail.com' for key 'users_email_unique'
-userID [4538] failed to migrate error :: 1062 (23000): Duplicate entry 'rachaelkatumi@gmail.com' for key 'users_username_unique'
-userID [4539] failed to migrate error :: 1062 (23000): Duplicate entry 'rachaelkatumi@gmail.com' for key 'users_username_unique'
-userID [4549] failed to migrate error :: 1062 (23000): Duplicate entry 'maingi' for key 'users_username_unique'
+userID [4538] failed to migrate error :: Missing user_details
+userID [4539] failed to migrate error :: Missing user_details
+userID [4549] failed to migrate error :: Missing user_details
 userID [4552] failed to migrate error :: 1062 (23000): Duplicate entry '11603756' for key 'individuals_nationalid_unique'
 userID [4553] failed to migrate error :: 1062 (23000): Duplicate entry '26309189' for key 'individuals_nationalid_unique'
 userID [4557] failed to migrate error :: 1062 (23000): Duplicate entry '30158423' for key 'individuals_nationalid_unique'
-userID [4566] failed to migrate error :: 1062 (23000): Duplicate entry 'sheila' for key 'users_username_unique'
+userID [4566] failed to migrate error :: Missing user_details
 userID [4569] failed to migrate error :: 1062 (23000): Duplicate entry '31923091.' for key 'individuals_nationalid_unique'
-userID [4571] failed to migrate error :: 1062 (23000): Duplicate entry 'rodula' for key 'users_username_unique'
-userID [4572] failed to migrate error :: 1062 (23000): Duplicate entry 'ntaraassociates' for key 'users_username_unique'
-userID [4583] failed to migrate error :: 1062 (23000): Duplicate entry 'ambutu' for key 'users_username_unique'
+userID [4571] failed to migrate error :: Missing user_details
+userID [4572] failed to migrate error :: Missing user_details
+userID [4583] failed to migrate error :: Missing user_details
 userID [4590] failed to migrate error :: 1062 (23000): Duplicate entry '14719722' for key 'individuals_nationalid_unique'
-userID [4592] failed to migrate error :: 1062 (23000): Duplicate entry 'CHEPKEMOI MONICAH' for key 'users_username_unique'
+userID [4592] failed to migrate error :: Missing user_details
 userID [4600] failed to migrate error :: 1062 (23000): Duplicate entry '32609510' for key 'individuals_nationalid_unique'
-userID [4612] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4613] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4614] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4617] failed to migrate error :: 1062 (23000): Duplicate entry 'Evelyne ' for key 'users_username_unique'
-userID [4624] failed to migrate error :: 1062 (23000): Duplicate entry 'cachieng' for key 'users_username_unique'
-userID [4626] failed to migrate error :: 1062 (23000): Duplicate entry 'SUSAN' for key 'users_username_unique'
-userID [4628] failed to migrate error :: 1062 (23000): Duplicate entry 'OMOLLO SHELTON' for key 'users_username_unique'
+userID [4612] failed to migrate error :: Missing user_details
+userID [4613] failed to migrate error :: Missing user_details
+userID [4614] failed to migrate error :: Missing user_details
+userID [4617] failed to migrate error :: Missing user_details
+userID [4624] failed to migrate error :: Missing user_details
+userID [4626] failed to migrate error :: Missing user_details
+userID [4628] failed to migrate error :: Missing user_details
 userID [4631] failed to migrate error :: 1062 (23000): Duplicate entry '5209788' for key 'individuals_nationalid_unique'
-userID [4633] failed to migrate error :: 1062 (23000): Duplicate entry 'bwachira' for key 'users_username_unique'
-userID [4647] failed to migrate error :: 1062 (23000): Duplicate entry 'tkosiom' for key 'users_username_unique'
-userID [4658] failed to migrate error :: 1062 (23000): Duplicate entry 'phineas mwiti' for key 'users_username_unique'
+userID [4633] failed to migrate error :: Missing user_details
+userID [4647] failed to migrate error :: Missing user_details
+userID [4658] failed to migrate error :: Missing user_details
 userID [4670] failed to migrate error :: 1062 (23000): Duplicate entry 'A003546299N' for key 'individuals_nationalid_unique'
 userID [4672] failed to migrate error :: 1062 (23000): Duplicate entry '36776834' for key 'individuals_nationalid_unique'
 userID [4673] failed to migrate error :: 1062 (23000): Duplicate entry '32612893' for key 'individuals_nationalid_unique'
-userID [4675] failed to migrate error :: 1062 (23000): Duplicate entry 'obaigwa' for key 'users_username_unique'
-userID [4691] failed to migrate error :: 1062 (23000): Duplicate entry 'JOSEPH' for key 'users_username_unique'
-userID [4693] failed to migrate error :: 1062 (23000): Duplicate entry 'Mercy' for key 'users_username_unique'
-userID [4696] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4699] failed to migrate error :: 1062 (23000): Duplicate entry 'Elizabeth' for key 'users_username_unique'
+userID [4675] failed to migrate error :: Missing user_details
+userID [4691] failed to migrate error :: Missing user_details
+userID [4693] failed to migrate error :: Missing user_details
+userID [4696] failed to migrate error :: Missing user_details
+userID [4699] failed to migrate error :: Missing user_details
 userID [4706] failed to migrate error :: 1062 (23000): Duplicate entry '28237234' for key 'individuals_nationalid_unique'
-userID [4707] failed to migrate error :: 1062 (23000): Duplicate entry 'Jane' for key 'users_username_unique'
-userID [4711] failed to migrate error :: 1062 (23000): Duplicate entry 'MOBONYO' for key 'users_username_unique'
+userID [4707] failed to migrate error :: Missing user_details
+userID [4711] failed to migrate error :: Missing user_details
 userID [4721] failed to migrate error :: 1062 (23000): Duplicate entry '13540804' for key 'individuals_nationalid_unique'
 userID [4732] failed to migrate error :: 1062 (23000): Duplicate entry '23746992' for key 'individuals_nationalid_unique'
 userID [4739] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'firms_kra_unique'
 userID [4750] failed to migrate error :: 1062 (23000): Duplicate entry '32464180' for key 'individuals_nationalid_unique'
-userID [4752] failed to migrate error :: 1062 (23000): Duplicate entry 'MUNYAO' for key 'users_username_unique'
-userID [4755] failed to migrate error :: 1062 (23000): Duplicate entry 'Andrew Mandere' for key 'users_username_unique'
-userID [4760] failed to migrate error :: 1062 (23000): Duplicate entry 'adamsobonyo@yahoo.com' for key 'users_username_unique'
-userID [4761] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [4752] failed to migrate error :: Missing user_details
+userID [4755] failed to migrate error :: Missing user_details
+userID [4760] failed to migrate error :: Missing user_details
+userID [4761] failed to migrate error :: Missing user_details
 userID [4766] failed to migrate error :: 1062 (23000): Duplicate entry '24434162' for key 'individuals_nationalid_unique'
 userID [4786] failed to migrate error :: 1062 (23000): Duplicate entry '25649505' for key 'individuals_nationalid_unique'
 userID [4792] failed to migrate error :: 1062 (23000): Duplicate entry '9603148' for key 'individuals_nationalid_unique'
-userID [4796] failed to migrate error :: 1062 (23000): Duplicate entry 'sheila' for key 'users_username_unique'
-userID [4797] failed to migrate error :: 1062 (23000): Duplicate entry 'silaskatwa' for key 'users_username_unique'
-userID [4799] failed to migrate error :: 1062 (23000): Duplicate entry 'Langat94' for key 'users_username_unique'
-userID [4810] failed to migrate error :: 1062 (23000): Duplicate entry 'adamsobonyo@yahoo.com' for key 'users_username_unique'
-userID [4819] failed to migrate error :: 1062 (23000): Duplicate entry 'Muthoni' for key 'users_username_unique'
+userID [4796] failed to migrate error :: Missing user_details
+userID [4797] failed to migrate error :: Missing user_details
+userID [4799] failed to migrate error :: Missing user_details
+userID [4810] failed to migrate error :: Missing user_details
+userID [4819] failed to migrate error :: Missing user_details
 userID [4822] failed to migrate error :: 1062 (23000): Duplicate entry '34667248' for key 'individuals_nationalid_unique'
 userID [4833] failed to migrate error :: 1062 (23000): Duplicate entry 'P0519200681' for key 'firms_kra_unique'
-userID [4834] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [4834] failed to migrate error :: Missing user_details
 userID [4837] failed to migrate error :: 1062 (23000): Duplicate entry '26321489' for key 'individuals_nationalid_unique'
-userID [4838] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4841] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4843] failed to migrate error :: 1062 (23000): Duplicate entry 'CATHERINE' for key 'users_username_unique'
+userID [4838] failed to migrate error :: Missing user_details
+userID [4841] failed to migrate error :: Missing user_details
+userID [4843] failed to migrate error :: Missing user_details
 userID [4848] failed to migrate error :: 1062 (23000): Duplicate entry '14676394' for key 'individuals_nationalid_unique'
-userID [4864] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [4864] failed to migrate error :: Missing user_details
 userID [4866] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
 userID [4885] failed to migrate error :: 1062 (23000): Duplicate entry '30188805' for key 'individuals_nationalid_unique'
-userID [4887] failed to migrate error :: 1062 (23000): Duplicate entry 'Safeglobalconsultancyfirmltd@gmail.com' for key 'users_username_unique'
+userID [4887] failed to migrate error :: Missing user_details
 userID [4889] failed to migrate error :: 1062 (23000): Duplicate entry '34079800' for key 'individuals_nationalid_unique'
-userID [4893] failed to migrate error :: 1062 (23000): Duplicate entry 'Safeglobalconsultancyfirmltd@gmail.com' for key 'users_username_unique'
+userID [4893] failed to migrate error :: Missing user_details
 userID [4898] failed to migrate error :: 1062 (23000): Duplicate entry '30352681' for key 'individuals_nationalid_unique'
-userID [4901] failed to migrate error :: 1062 (23000): Duplicate entry 'Rita' for key 'users_username_unique'
+userID [4901] failed to migrate error :: Missing user_details
 userID [4903] failed to migrate error :: 1062 (23000): Duplicate entry '23888720' for key 'individuals_nationalid_unique'
-userID [4904] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [4913] failed to migrate error :: 1062 (23000): Duplicate entry 'Mutunga' for key 'users_username_unique'
-userID [4915] failed to migrate error :: 1062 (23000): Duplicate entry 'kinyua' for key 'users_username_unique'
-userID [4924] failed to migrate error :: 1062 (23000): Duplicate entry 'Martin' for key 'users_username_unique'
-userID [4925] failed to migrate error :: 1062 (23000): Duplicate entry 'Sam' for key 'users_username_unique'
-userID [4927] failed to migrate error :: 1062 (23000): Duplicate entry 'JACKLINE' for key 'users_username_unique'
-userID [4930] failed to migrate error :: 1062 (23000): Duplicate entry 'Mike' for key 'users_username_unique'
+userID [4904] failed to migrate error :: Missing user_details
+userID [4913] failed to migrate error :: Missing user_details
+userID [4915] failed to migrate error :: Missing user_details
+userID [4924] failed to migrate error :: Missing user_details
+userID [4925] failed to migrate error :: Missing user_details
+userID [4927] failed to migrate error :: Missing user_details
+userID [4930] failed to migrate error :: Missing user_details
 userID [4932] failed to migrate error :: 1062 (23000): Duplicate entry '23197417' for key 'individuals_nationalid_unique'
-userID [4944] failed to migrate error :: 1062 (23000): Duplicate entry 'Millicent' for key 'users_username_unique'
+userID [4944] failed to migrate error :: Missing user_details
 userID [4962] failed to migrate error :: 1062 (23000): Duplicate entry '32767639' for key 'individuals_nationalid_unique'
-userID [4969] failed to migrate error :: 1062 (23000): Duplicate entry 'Mutunga' for key 'users_username_unique'
+userID [4969] failed to migrate error :: Missing user_details
 userID [5010] failed to migrate error :: 1062 (23000): Duplicate entry '22313302' for key 'individuals_nationalid_unique'
-userID [5023] failed to migrate error :: 1062 (23000): Duplicate entry 'vin' for key 'users_username_unique'
+userID [5023] failed to migrate error :: Missing user_details
 userID [5052] failed to migrate error :: 1062 (23000): Duplicate entry '32175306' for key 'individuals_nationalid_unique'
-userID [5057] failed to migrate error :: 1062 (23000): Duplicate entry 'John' for key 'users_username_unique'
-userID [5061] failed to migrate error :: 1062 (23000): Duplicate entry 'Jesse' for key 'users_username_unique'
-userID [5069] failed to migrate error :: 1062 (23000): Duplicate entry 'Green World Compliance Ltd' for key 'users_username_unique'
+userID [5057] failed to migrate error :: Missing user_details
+userID [5061] failed to migrate error :: Missing user_details
+userID [5069] failed to migrate error :: Missing user_details
 userID [5088] failed to migrate error :: 1062 (23000): Duplicate entry '10012487' for key 'individuals_nationalid_unique'
 userID [5101] failed to migrate error :: 1062 (23000): Duplicate entry '33627048' for key 'individuals_nationalid_unique'
-userID [5104] failed to migrate error :: 1062 (23000): Duplicate entry 'sylviamurunga' for key 'users_username_unique'
-userID [5114] failed to migrate error :: 1062 (23000): Duplicate entry 'PIUS' for key 'users_username_unique'
+userID [5104] failed to migrate error :: Missing user_details
+userID [5114] failed to migrate error :: Missing user_details
 userID [5115] failed to migrate error :: 1062 (23000): Duplicate entry '25185049' for key 'individuals_nationalid_unique'
-userID [5121] failed to migrate error :: 1062 (23000): Duplicate entry 'MAINGI' for key 'users_username_unique'
-userID [5125] failed to migrate error :: 1062 (23000): Duplicate entry 'kibiga' for key 'users_username_unique'
+userID [5121] failed to migrate error :: Missing user_details
+userID [5125] failed to migrate error :: Missing user_details
 userID [5132] failed to migrate error :: 1062 (23000): Duplicate entry '14679668' for key 'individuals_nationalid_unique'
-userID [5134] failed to migrate error :: 1062 (23000): Duplicate entry 'Martin' for key 'users_username_unique'
-userID [5140] failed to migrate error :: 1062 (23000): Duplicate entry 'cnjeru' for key 'users_username_unique'
-userID [5141] failed to migrate error :: 1062 (23000): Duplicate entry 'cnjeru' for key 'users_username_unique'
-userID [5142] failed to migrate error :: 1062 (23000): Duplicate entry 'cnjeru' for key 'users_username_unique'
-userID [5153] failed to migrate error :: 1062 (23000): Duplicate entry 'Achutie' for key 'users_username_unique'
-userID [5157] failed to migrate error :: 1062 (23000): Duplicate entry 'ENVISAFE SERVICES' for key 'users_username_unique'
-userID [5158] failed to migrate error :: 1062 (23000): Duplicate entry 'ENVISAFE SERVICES' for key 'users_username_unique'
-userID [5165] failed to migrate error :: 1062 (23000): Duplicate entry 'runo' for key 'users_username_unique'
-userID [5170] failed to migrate error :: 1062 (23000): Duplicate entry 'Grace' for key 'users_username_unique'
+userID [5134] failed to migrate error :: Missing user_details
+userID [5140] failed to migrate error :: Missing user_details
+userID [5141] failed to migrate error :: Missing user_details
+userID [5142] failed to migrate error :: Missing user_details
+userID [5153] failed to migrate error :: Missing user_details
+userID [5157] failed to migrate error :: Missing user_details
+userID [5158] failed to migrate error :: Missing user_details
+userID [5165] failed to migrate error :: Missing user_details
+userID [5170] failed to migrate error :: Missing user_details
 userID [5174] failed to migrate error :: 1062 (23000): Duplicate entry '34248296' for key 'individuals_nationalid_unique'
-userID [5184] failed to migrate error :: 1062 (23000): Duplicate entry 'rodula' for key 'users_username_unique'
+userID [5184] failed to migrate error :: Missing user_details
 userID [5185] failed to migrate error :: 1062 (23000): Duplicate entry '22342938' for key 'individuals_nationalid_unique'
 userID [5186] failed to migrate error :: 1062 (23000): Duplicate entry '32955209' for key 'individuals_nationalid_unique'
-userID [5191] failed to migrate error :: 1062 (23000): Duplicate entry 'CALEB' for key 'users_username_unique'
-userID [5197] failed to migrate error :: 1062 (23000): Duplicate entry 'George' for key 'users_username_unique'
-userID [5201] failed to migrate error :: 1062 (23000): Duplicate entry 'iplanconsult' for key 'users_username_unique'
+userID [5191] failed to migrate error :: Missing user_details
+userID [5197] failed to migrate error :: Missing user_details
+userID [5201] failed to migrate error :: Missing user_details
 userID [5203] failed to migrate error :: 1062 (23000): Duplicate entry 'P051533131T' for key 'individuals_nationalid_unique'
 userID [5204] failed to migrate error :: 1062 (23000): Duplicate entry 'P051130664Q' for key 'firms_kra_unique'
-userID [5210] failed to migrate error :: 1062 (23000): Duplicate entry 'fowiti' for key 'users_username_unique'
-userID [5216] failed to migrate error :: 1062 (23000): Duplicate entry 'john' for key 'users_username_unique'
+userID [5210] failed to migrate error :: Missing user_details
+userID [5216] failed to migrate error :: Missing user_details
 userID [5219] failed to migrate error :: 1062 (23000): Duplicate entry '9314732' for key 'individuals_nationalid_unique'
-userID [5220] failed to migrate error :: 1062 (23000): Duplicate entry 'samuel' for key 'users_username_unique'
-userID [5223] failed to migrate error :: 1062 (23000): Duplicate entry 'BRIAN' for key 'users_username_unique'
-userID [5227] failed to migrate error :: 1062 (23000): Duplicate entry 'Wilson' for key 'users_username_unique'
-userID [5230] failed to migrate error :: 1062 (23000): Duplicate entry 'Evans' for key 'users_username_unique'
-userID [5231] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [5220] failed to migrate error :: Missing user_details
+userID [5223] failed to migrate error :: Missing user_details
+userID [5227] failed to migrate error :: Missing user_details
+userID [5230] failed to migrate error :: Missing user_details
+userID [5231] failed to migrate error :: Missing user_details
 userID [5233] failed to migrate error :: 1062 (23000): Duplicate entry '21093786' for key 'individuals_nationalid_unique'
 userID [5236] failed to migrate error :: 1062 (23000): Duplicate entry '9837530' for key 'individuals_nationalid_unique'
-userID [5240] failed to migrate error :: 1062 (23000): Duplicate entry 'dominic kemboi' for key 'users_username_unique'
-userID [5241] failed to migrate error :: 1062 (23000): Duplicate entry 'dominic kemboi' for key 'users_username_unique'
-userID [5253] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [5240] failed to migrate error :: Missing user_details
+userID [5241] failed to migrate error :: Missing user_details
+userID [5253] failed to migrate error :: Missing user_details
 userID [5255] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [5258] failed to migrate error :: 1062 (23000): Duplicate entry 'Philip' for key 'users_username_unique'
+userID [5258] failed to migrate error :: Missing user_details
 userID [5267] failed to migrate error :: 1062 (23000): Duplicate entry '32067505' for key 'individuals_nationalid_unique'
-userID [5275] failed to migrate error :: 1062 (23000): Duplicate entry 'FRIDAH' for key 'users_username_unique'
-userID [5286] failed to migrate error :: 1062 (23000): Duplicate entry 'Evans' for key 'users_username_unique'
-userID [5290] failed to migrate error :: 1062 (23000): Duplicate entry 'Catherine Juma' for key 'users_username_unique'
+userID [5275] failed to migrate error :: Missing user_details
+userID [5286] failed to migrate error :: Missing user_details
+userID [5290] failed to migrate error :: Missing user_details
 userID [5299] failed to migrate error :: 1062 (23000): Duplicate entry 'oscar.aghan@gmail.com' for key 'users_email_unique'
-userID [5300] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [5300] failed to migrate error :: Missing user_details
 userID [5306] failed to migrate error :: 1062 (23000): Duplicate entry '10728863' for key 'individuals_nationalid_unique'
 userID [5309] failed to migrate error :: 1062 (23000): Duplicate entry '5967315' for key 'individuals_nationalid_unique'
-userID [5311] failed to migrate error :: 1062 (23000): Duplicate entry 'samuel' for key 'users_username_unique'
+userID [5311] failed to migrate error :: Missing user_details
 userID [5317] failed to migrate error :: 1062 (23000): Duplicate entry '25108819' for key 'individuals_nationalid_unique'
-userID [5320] failed to migrate error :: 1062 (23000): Duplicate entry 'Justine Mbula' for key 'users_username_unique'
+userID [5320] failed to migrate error :: Missing user_details
 userID [5321] failed to migrate error :: 1062 (23000): Duplicate entry '0563227' for key 'individuals_nationalid_unique'
 userID [5323] failed to migrate error :: 1062 (23000): Duplicate entry '33304841' for key 'individuals_nationalid_unique'
-userID [5328] failed to migrate error :: 1062 (23000): Duplicate entry 'Rabera' for key 'users_username_unique'
-userID [5329] failed to migrate error :: 1062 (23000): Duplicate entry 'Rabera' for key 'users_username_unique'
-userID [5330] failed to migrate error :: 1062 (23000): Duplicate entry 'memusim' for key 'users_username_unique'
+userID [5328] failed to migrate error :: Missing user_details
+userID [5329] failed to migrate error :: Missing user_details
+userID [5330] failed to migrate error :: Missing user_details
 userID [5331] failed to migrate error :: 1062 (23000): Duplicate entry '7771309' for key 'individuals_nationalid_unique'
-userID [5338] failed to migrate error :: 1062 (23000): Duplicate entry 'gwaruikabuthia' for key 'users_username_unique'
-userID [5340] failed to migrate error :: 1062 (23000): Duplicate entry 'Moraa' for key 'users_username_unique'
+userID [5338] failed to migrate error :: Missing user_details
+userID [5340] failed to migrate error :: Missing user_details
 userID [5345] failed to migrate error :: 1062 (23000): Duplicate entry '28043472' for key 'individuals_nationalid_unique'
-userID [5346] failed to migrate error :: 1062 (23000): Duplicate entry 'Nancy' for key 'users_username_unique'
-userID [5348] failed to migrate error :: 1062 (23000): Duplicate entry 'Nancy' for key 'users_username_unique'
-userID [5349] failed to migrate error :: 1062 (23000): Duplicate entry 'EVANS' for key 'users_username_unique'
+userID [5346] failed to migrate error :: Missing user_details
+userID [5348] failed to migrate error :: Missing user_details
+userID [5349] failed to migrate error :: Missing user_details
 userID [5350] failed to migrate error :: 1062 (23000): Duplicate entry '34309211' for key 'individuals_nationalid_unique'
-userID [5368] failed to migrate error :: 1062 (23000): Duplicate entry 'mideva' for key 'users_username_unique'
-userID [5370] failed to migrate error :: 1062 (23000): Duplicate entry 'rose ' for key 'users_username_unique'
-userID [5371] failed to migrate error :: 1062 (23000): Duplicate entry 'rose ' for key 'users_username_unique'
-userID [5380] failed to migrate error :: 1062 (23000): Duplicate entry 'Geofrey' for key 'users_username_unique'
+userID [5368] failed to migrate error :: Missing user_details
+userID [5370] failed to migrate error :: Missing user_details
+userID [5371] failed to migrate error :: Missing user_details
+userID [5380] failed to migrate error :: Missing user_details
 userID [5382] failed to migrate error :: 1062 (23000): Duplicate entry '13337612' for key 'individuals_nationalid_unique'
-userID [5384] failed to migrate error :: 1062 (23000): Duplicate entry 'Lucheli' for key 'users_username_unique'
-userID [5390] failed to migrate error :: 1062 (23000): Duplicate entry 'Sammy' for key 'users_username_unique'
-userID [5393] failed to migrate error :: 1062 (23000): Duplicate entry 'rose ' for key 'users_username_unique'
+userID [5384] failed to migrate error :: Missing user_details
+userID [5390] failed to migrate error :: Missing user_details
+userID [5393] failed to migrate error :: Missing user_details
 userID [5395] failed to migrate error :: 1062 (23000): Duplicate entry '32198049' for key 'individuals_nationalid_unique'
-userID [5407] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [5410] failed to migrate error :: 1062 (23000): Duplicate entry 'Veronicah ' for key 'users_username_unique'
+userID [5407] failed to migrate error :: Missing user_details
+userID [5410] failed to migrate error :: Missing user_details
 userID [5417] failed to migrate error :: 1062 (23000): Duplicate entry '32198049' for key 'individuals_nationalid_unique'
 userID [5418] failed to migrate error :: 1062 (23000): Duplicate entry '32198049' for key 'individuals_nationalid_unique'
 userID [5425] failed to migrate error :: 1062 (23000): Duplicate entry '32432165' for key 'individuals_nationalid_unique'
-userID [5428] failed to migrate error :: 1062 (23000): Duplicate entry 'Hezborn' for key 'users_username_unique'
-userID [5430] failed to migrate error :: 1062 (23000): Duplicate entry 'Hans' for key 'users_username_unique'
-userID [5432] failed to migrate error :: 1062 (23000): Duplicate entry 'Michael ' for key 'users_username_unique'
-userID [5438] failed to migrate error :: 1062 (23000): Duplicate entry 'LIZ' for key 'users_username_unique'
+userID [5428] failed to migrate error :: Missing user_details
+userID [5430] failed to migrate error :: Missing user_details
+userID [5432] failed to migrate error :: Missing user_details
+userID [5438] failed to migrate error :: Missing user_details
 userID [5440] failed to migrate error :: 1062 (23000): Duplicate entry '35136913' for key 'individuals_nationalid_unique'
-userID [5448] failed to migrate error :: 1062 (23000): Duplicate entry 'goro' for key 'users_username_unique'
-userID [5449] failed to migrate error :: 1062 (23000): Duplicate entry 'justusolima' for key 'users_username_unique'
-userID [5451] failed to migrate error :: 1062 (23000): Duplicate entry 'paul' for key 'users_username_unique'
-userID [5453] failed to migrate error :: 1062 (23000): Duplicate entry 'ekirui' for key 'users_username_unique'
+userID [5448] failed to migrate error :: Missing user_details
+userID [5449] failed to migrate error :: Missing user_details
+userID [5451] failed to migrate error :: Missing user_details
+userID [5453] failed to migrate error :: Missing user_details
 userID [5458] failed to migrate error :: 1062 (23000): Duplicate entry 'P051431295B' for key 'firms_kra_unique'
 userID [5464] failed to migrate error :: 1062 (23000): Duplicate entry '10431403' for key 'individuals_nationalid_unique'
-userID [5469] failed to migrate error :: 1062 (23000): Duplicate entry 'DAN' for key 'users_username_unique'
-userID [5471] failed to migrate error :: 1062 (23000): Duplicate entry 'aloismusembi' for key 'users_username_unique'
-userID [5473] failed to migrate error :: 1062 (23000): Duplicate entry 'japheth ' for key 'users_username_unique'
-userID [5480] failed to migrate error :: 1062 (23000): Duplicate entry 'Hans' for key 'users_username_unique'
-userID [5485] failed to migrate error :: 1062 (23000): Duplicate entry 'mega' for key 'users_username_unique'
-userID [5486] failed to migrate error :: 1062 (23000): Duplicate entry 'evans' for key 'users_username_unique'
-userID [5493] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [5469] failed to migrate error :: Missing user_details
+userID [5471] failed to migrate error :: Missing user_details
+userID [5473] failed to migrate error :: Missing user_details
+userID [5480] failed to migrate error :: Missing user_details
+userID [5485] failed to migrate error :: Missing user_details
+userID [5486] failed to migrate error :: Missing user_details
+userID [5493] failed to migrate error :: Missing user_details
 userID [5496] failed to migrate error :: 1062 (23000): Duplicate entry '32771472' for key 'individuals_nationalid_unique'
 userID [5499] failed to migrate error :: 1062 (23000): Duplicate entry '27275298' for key 'individuals_nationalid_unique'
-userID [5503] failed to migrate error :: 1062 (23000): Duplicate entry 'Sharon' for key 'users_username_unique'
-userID [5511] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [5503] failed to migrate error :: Missing user_details
+userID [5511] failed to migrate error :: Missing user_details
 userID [5521] failed to migrate error :: 1062 (23000): Duplicate entry 'nur.omar.m@gmail.com' for key 'users_email_unique'
-userID [5522] failed to migrate error :: 1062 (23000): Duplicate entry 'Grace' for key 'users_username_unique'
+userID [5522] failed to migrate error :: Missing user_details
 userID [5528] failed to migrate error :: 1062 (23000): Duplicate entry '31882395' for key 'individuals_nationalid_unique'
-userID [5530] failed to migrate error :: 1062 (23000): Duplicate entry 'amos' for key 'users_username_unique'
+userID [5530] failed to migrate error :: Missing user_details
 userID [5546] failed to migrate error :: 1062 (23000): Duplicate entry '34296589' for key 'individuals_nationalid_unique'
-userID [5550] failed to migrate error :: 1062 (23000): Duplicate entry 'Sharon' for key 'users_username_unique'
-userID [5556] failed to migrate error :: 1062 (23000): Duplicate entry 'sellah ' for key 'users_username_unique'
-userID [5566] failed to migrate error :: 1062 (23000): Duplicate entry 'Augustus Keya' for key 'users_username_unique'
+userID [5550] failed to migrate error :: Missing user_details
+userID [5556] failed to migrate error :: Missing user_details
+userID [5566] failed to migrate error :: Missing user_details
 userID [5573] failed to migrate error :: 1062 (23000): Duplicate entry '32108110' for key 'individuals_nationalid_unique'
 userID [5575] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'firms_kra_unique'
-userID [5577] failed to migrate error :: 1062 (23000): Duplicate entry 'Christine' for key 'users_username_unique'
+userID [5577] failed to migrate error :: Missing user_details
 userID [5579] failed to migrate error :: 1062 (23000): Duplicate entry '32001649' for key 'individuals_nationalid_unique'
 userID [5580] failed to migrate error :: 1062 (23000): Duplicate entry 'otienoosike@gmail.com' for key 'users_email_unique'
 userID [5586] failed to migrate error :: 1062 (23000): Duplicate entry '30438138' for key 'individuals_nationalid_unique'
-userID [5594] failed to migrate error :: 1062 (23000): Duplicate entry 'bob' for key 'users_username_unique'
+userID [5594] failed to migrate error :: Missing user_details
 userID [5605] failed to migrate error :: 1062 (23000): Duplicate entry 'godwinkorir@gmail.com' for key 'users_email_unique'
-userID [5608] failed to migrate error :: 1062 (23000): Duplicate entry 'EDWINA' for key 'users_username_unique'
+userID [5608] failed to migrate error :: Missing user_details
 userID [5620] failed to migrate error :: 1062 (23000): Duplicate entry '24826957' for key 'individuals_nationalid_unique'
-userID [5623] failed to migrate error :: 1062 (23000): Duplicate entry 'Joe Isaac' for key 'users_username_unique'
-userID [5631] failed to migrate error :: 1062 (23000): Duplicate entry 'fredricklagat' for key 'users_username_unique'
-userID [5633] failed to migrate error :: 1062 (23000): Duplicate entry 'fredricklagat' for key 'users_username_unique'
+userID [5623] failed to migrate error :: Missing user_details
+userID [5631] failed to migrate error :: Missing user_details
+userID [5633] failed to migrate error :: Missing user_details
 userID [5651] failed to migrate error :: 1062 (23000): Duplicate entry '11815643' for key 'individuals_nationalid_unique'
 userID [5653] failed to migrate error :: 1062 (23000): Duplicate entry '35887670' for key 'individuals_nationalid_unique'
 userID [5658] failed to migrate error :: 1062 (23000): Duplicate entry '33023448' for key 'individuals_nationalid_unique'
 userID [5663] failed to migrate error :: 1062 (23000): Duplicate entry 'njuannen@yahoo.com' for key 'users_email_unique'
 userID [5664] failed to migrate error :: 1062 (23000): Duplicate entry '11796938' for key 'individuals_nationalid_unique'
-userID [5672] failed to migrate error :: 1062 (23000): Duplicate entry 'mwaniki' for key 'users_username_unique'
-userID [5679] failed to migrate error :: 1062 (23000): Duplicate entry 'DUNCAN' for key 'users_username_unique'
+userID [5672] failed to migrate error :: Missing user_details
+userID [5679] failed to migrate error :: Missing user_details
 userID [5684] failed to migrate error :: 1062 (23000): Duplicate entry '11470085' for key 'individuals_nationalid_unique'
-userID [5685] failed to migrate error :: 1062 (23000): Duplicate entry 'PIUS' for key 'users_username_unique'
+userID [5685] failed to migrate error :: Missing user_details
 userID [5688] failed to migrate error :: 1062 (23000): Duplicate entry '28406657' for key 'individuals_nationalid_unique'
 userID [5689] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [5698] failed to migrate error :: 1062 (23000): Duplicate entry 'Jjeruto' for key 'users_username_unique'
+userID [5698] failed to migrate error :: Missing user_details
 userID [5704] failed to migrate error :: 1062 (23000): Duplicate entry '30232428' for key 'individuals_nationalid_unique'
-userID [5707] failed to migrate error :: 1062 (23000): Duplicate entry 'Brian' for key 'users_username_unique'
-userID [5708] failed to migrate error :: 1062 (23000): Duplicate entry 'Brian' for key 'users_username_unique'
-userID [5711] failed to migrate error :: 1062 (23000): Duplicate entry 'TONY' for key 'users_username_unique'
+userID [5707] failed to migrate error :: Missing user_details
+userID [5708] failed to migrate error :: Missing user_details
+userID [5711] failed to migrate error :: Missing user_details
 userID [5713] failed to migrate error :: 1062 (23000): Duplicate entry 'N/a' for key 'firms_kra_unique'
-userID [5716] failed to migrate error :: 1062 (23000): Duplicate entry 'Brian' for key 'users_username_unique'
-userID [5730] failed to migrate error :: 1062 (23000): Duplicate entry 'fkinyua' for key 'users_username_unique'
-userID [5731] failed to migrate error :: 1062 (23000): Duplicate entry 'info@amcgroupafrica.com' for key 'users_username_unique'
+userID [5716] failed to migrate error :: Missing user_details
+userID [5730] failed to migrate error :: Missing user_details
+userID [5731] failed to migrate error :: Missing user_details
 userID [5735] failed to migrate error :: 1062 (23000): Duplicate entry '21476348' for key 'individuals_nationalid_unique'
-userID [5736] failed to migrate error :: 1062 (23000): Duplicate entry 'JULIUS' for key 'users_username_unique'
-userID [5742] failed to migrate error :: 1062 (23000): Duplicate entry 'Muga' for key 'users_username_unique'
-userID [5745] failed to migrate error :: 1062 (23000): Duplicate entry 'mwatumwa ' for key 'users_username_unique'
+userID [5736] failed to migrate error :: Missing user_details
+userID [5742] failed to migrate error :: Missing user_details
+userID [5745] failed to migrate error :: Missing user_details
 userID [5749] failed to migrate error :: 1062 (23000): Duplicate entry '29548955' for key 'individuals_nationalid_unique'
-userID [5754] failed to migrate error :: 1062 (23000): Duplicate entry 'Hans' for key 'users_username_unique'
+userID [5754] failed to migrate error :: Missing user_details
 userID [5776] failed to migrate error :: 1062 (23000): Duplicate entry '30196357' for key 'individuals_nationalid_unique'
-userID [5789] failed to migrate error :: 1062 (23000): Duplicate entry 'JOAN JERONO' for key 'users_username_unique'
-userID [5794] failed to migrate error :: 1062 (23000): Duplicate entry 'Tarus' for key 'users_username_unique'
+userID [5789] failed to migrate error :: Missing user_details
+userID [5794] failed to migrate error :: Missing user_details
 userID [5795] failed to migrate error :: 1062 (23000): Duplicate entry '32731141' for key 'individuals_nationalid_unique'
-userID [5796] failed to migrate error :: 1062 (23000): Duplicate entry 'PATRICK' for key 'users_username_unique'
+userID [5796] failed to migrate error :: Missing user_details
 userID [5804] failed to migrate error :: 1062 (23000): Duplicate entry '34156002' for key 'individuals_nationalid_unique'
 userID [5807] failed to migrate error :: 1062 (23000): Duplicate entry '10015844' for key 'individuals_nationalid_unique'
-userID [5812] failed to migrate error :: 1062 (23000): Duplicate entry 'Kerubo' for key 'users_username_unique'
+userID [5812] failed to migrate error :: Missing user_details
 userID [5829] failed to migrate error :: 1062 (23000): Duplicate entry '24532561' for key 'individuals_nationalid_unique'
-userID [5832] failed to migrate error :: 1062 (23000): Duplicate entry 'nancy' for key 'users_username_unique'
+userID [5832] failed to migrate error :: Missing user_details
 userID [5839] failed to migrate error :: 1062 (23000): Duplicate entry '32823906' for key 'individuals_nationalid_unique'
-userID [5850] failed to migrate error :: 1062 (23000): Duplicate entry 'michaelnyaata' for key 'users_username_unique'
-userID [5852] failed to migrate error :: 1062 (23000): Duplicate entry 'Ondieki' for key 'users_username_unique'
-userID [5863] failed to migrate error :: 1062 (23000): Duplicate entry 'Loice' for key 'users_username_unique'
+userID [5850] failed to migrate error :: Missing user_details
+userID [5852] failed to migrate error :: Missing user_details
+userID [5863] failed to migrate error :: Missing user_details
 userID [5872] failed to migrate error :: 1062 (23000): Duplicate entry '27809237' for key 'individuals_nationalid_unique'
-userID [5880] failed to migrate error :: 1062 (23000): Duplicate entry 'merikij@gail.com' for key 'users_username_unique'
-userID [5887] failed to migrate error :: 1062 (23000): Duplicate entry 'Diana Nthiwa' for key 'users_username_unique'
+userID [5880] failed to migrate error :: Missing user_details
+userID [5887] failed to migrate error :: Missing user_details
 userID [5891] failed to migrate error :: 1062 (23000): Duplicate entry '32247939' for key 'individuals_nationalid_unique'
-userID [5893] failed to migrate error :: 1062 (23000): Duplicate entry 'Sharon ' for key 'users_username_unique'
-userID [5894] failed to migrate error :: 1062 (23000): Duplicate entry 'JOY NJUGUNA' for key 'users_username_unique'
+userID [5893] failed to migrate error :: Missing user_details
+userID [5894] failed to migrate error :: Missing user_details
 userID [5901] failed to migrate error :: 1062 (23000): Duplicate entry '25358561' for key 'individuals_nationalid_unique'
-userID [5909] failed to migrate error :: 1062 (23000): Duplicate entry 'Lucas Abillah' for key 'users_username_unique'
+userID [5909] failed to migrate error :: Missing user_details
 userID [5911] failed to migrate error :: 1062 (23000): Duplicate entry '30063092' for key 'individuals_nationalid_unique'
-userID [5912] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [5912] failed to migrate error :: Missing user_details
 userID [5914] failed to migrate error :: 1062 (23000): Duplicate entry '0720892' for key 'individuals_nationalid_unique'
 userID [5916] failed to migrate error :: 1062 (23000): Duplicate entry '14470213' for key 'individuals_nationalid_unique'
-userID [5919] failed to migrate error :: 1062 (23000): Duplicate entry 'Lydia' for key 'users_username_unique'
-userID [5930] failed to migrate error :: 1062 (23000): Duplicate entry 'jkithinji' for key 'users_username_unique'
+userID [5919] failed to migrate error :: Missing user_details
+userID [5930] failed to migrate error :: Missing user_details
 userID [5935] failed to migrate error :: 1062 (23000): Duplicate entry '25467634' for key 'individuals_nationalid_unique'
-userID [5939] failed to migrate error :: 1062 (23000): Duplicate entry 'ENVISAFE SERVICES' for key 'users_username_unique'
-userID [5951] failed to migrate error :: 1062 (23000): Duplicate entry 'Lydia' for key 'users_username_unique'
-userID [5952] failed to migrate error :: 1062 (23000): Duplicate entry '0704555088' for key 'users_username_unique'
+userID [5939] failed to migrate error :: Missing user_details
+userID [5951] failed to migrate error :: Missing user_details
+userID [5952] failed to migrate error :: Missing user_details
 userID [5956] failed to migrate error :: 1062 (23000): Duplicate entry '0756910' for key 'individuals_nationalid_unique'
 userID [5960] failed to migrate error :: 1062 (23000): Duplicate entry '24488350' for key 'individuals_nationalid_unique'
 userID [5962] failed to migrate error :: 1062 (23000): Duplicate entry '240199' for key 'individuals_nationalid_unique'
-userID [5965] failed to migrate error :: 1062 (23000): Duplicate entry 'okoth flora' for key 'users_username_unique'
-userID [5966] failed to migrate error :: 1062 (23000): Duplicate entry 'Amos' for key 'users_username_unique'
+userID [5965] failed to migrate error :: Missing user_details
+userID [5966] failed to migrate error :: Missing user_details
 userID [5967] failed to migrate error :: 1062 (23000): Duplicate entry '24841749' for key 'individuals_nationalid_unique'
 userID [5971] failed to migrate error :: 1062 (23000): Duplicate entry '31648207' for key 'individuals_nationalid_unique'
 userID [5972] failed to migrate error :: 1062 (23000): Duplicate entry '24506025' for key 'individuals_nationalid_unique'
 userID [5973] failed to migrate error :: 1062 (23000): Duplicate entry '32078751' for key 'individuals_nationalid_unique'
 userID [5976] failed to migrate error :: 1062 (23000): Duplicate entry '11078100' for key 'individuals_nationalid_unique'
-userID [5982] failed to migrate error :: 1062 (23000): Duplicate entry 'JOSEPHWENDOTT' for key 'users_username_unique'
-userID [5991] failed to migrate error :: 1062 (23000): Duplicate entry 'anne.nairuko' for key 'users_username_unique'
-userID [5992] failed to migrate error :: 1062 (23000): Duplicate entry 'rakem' for key 'users_username_unique'
+userID [5982] failed to migrate error :: Missing user_details
+userID [5991] failed to migrate error :: Missing user_details
+userID [5992] failed to migrate error :: Missing user_details
 userID [5993] failed to migrate error :: 1062 (23000): Duplicate entry '22127845' for key 'individuals_nationalid_unique'
-userID [6006] failed to migrate error :: 1062 (23000): Duplicate entry 'josephine' for key 'users_username_unique'
-userID [6007] failed to migrate error :: 1062 (23000): Duplicate entry 'Onyangojuma' for key 'users_username_unique'
+userID [6006] failed to migrate error :: Missing user_details
+userID [6007] failed to migrate error :: Missing user_details
 userID [6009] failed to migrate error :: 1062 (23000): Duplicate entry 'P051629102D' for key 'firms_kra_unique'
-userID [6012] failed to migrate error :: 1062 (23000): Duplicate entry 'safetyhub' for key 'users_username_unique'
-userID [6013] failed to migrate error :: 1062 (23000): Duplicate entry 'safetyhub' for key 'users_username_unique'
+userID [6012] failed to migrate error :: Missing user_details
+userID [6013] failed to migrate error :: Missing user_details
 userID [6016] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [6019] failed to migrate error :: 1062 (23000): Duplicate entry 'Cecilia' for key 'users_username_unique'
-userID [6021] failed to migrate error :: 1062 (23000): Duplicate entry 'Biukevin' for key 'users_username_unique'
+userID [6019] failed to migrate error :: Missing user_details
+userID [6021] failed to migrate error :: Missing user_details
 userID [6023] failed to migrate error :: 1062 (23000): Duplicate entry '24416401' for key 'individuals_nationalid_unique'
 userID [6030] failed to migrate error :: 1062 (23000): Duplicate entry '21849148' for key 'individuals_nationalid_unique'
 userID [6032] failed to migrate error :: 1062 (23000): Duplicate entry '33614145' for key 'individuals_nationalid_unique'
-userID [6034] failed to migrate error :: 1062 (23000): Duplicate entry 'Ndolo' for key 'users_username_unique'
+userID [6034] failed to migrate error :: Missing user_details
 userID [6037] failed to migrate error :: 1062 (23000): Duplicate entry '22002711' for key 'individuals_nationalid_unique'
 userID [6049] failed to migrate error :: 1062 (23000): Duplicate entry '29275690' for key 'individuals_nationalid_unique'
-userID [6050] failed to migrate error :: 1062 (23000): Duplicate entry 'Cecilia' for key 'users_username_unique'
-userID [6051] failed to migrate error :: 1062 (23000): Duplicate entry 'Sammy' for key 'users_username_unique'
-userID [6056] failed to migrate error :: 1062 (23000): Duplicate entry 'nwenyaa' for key 'users_username_unique'
-userID [6059] failed to migrate error :: 1062 (23000): Duplicate entry 'Loice' for key 'users_username_unique'
-userID [6070] failed to migrate error :: 1062 (23000): Duplicate entry 'Wanjjiku' for key 'users_username_unique'
+userID [6050] failed to migrate error :: Missing user_details
+userID [6051] failed to migrate error :: Missing user_details
+userID [6056] failed to migrate error :: Missing user_details
+userID [6059] failed to migrate error :: Missing user_details
+userID [6070] failed to migrate error :: Missing user_details
 userID [6077] failed to migrate error :: 1062 (23000): Duplicate entry '24531357' for key 'individuals_nationalid_unique'
-userID [6083] failed to migrate error :: 1062 (23000): Duplicate entry 'Evans Kibet' for key 'users_username_unique'
+userID [6083] failed to migrate error :: Missing user_details
 userID [6084] failed to migrate error :: 1062 (23000): Duplicate entry '35281602' for key 'individuals_nationalid_unique'
-userID [6087] failed to migrate error :: 1062 (23000): Duplicate entry 'fowiti' for key 'users_username_unique'
+userID [6087] failed to migrate error :: Missing user_details
 userID [6093] failed to migrate error :: 1062 (23000): Duplicate entry 'n/a' for key 'firms_kra_unique'
-userID [6102] failed to migrate error :: 1062 (23000): Duplicate entry 'pmwangi' for key 'users_username_unique'
-userID [6108] failed to migrate error :: 1062 (23000): Duplicate entry 'Fidel Otira' for key 'users_username_unique'
-userID [6113] failed to migrate error :: 1062 (23000): Duplicate entry 'Mwangi' for key 'users_username_unique'
-userID [6131] failed to migrate error :: 1062 (23000): Duplicate entry 'JM_Crick' for key 'users_username_unique'
-userID [6133] failed to migrate error :: 1062 (23000): Duplicate entry 'goro' for key 'users_username_unique'
-userID [6137] failed to migrate error :: 1062 (23000): Duplicate entry 'JM_Crick' for key 'users_username_unique'
+userID [6102] failed to migrate error :: Missing user_details
+userID [6108] failed to migrate error :: Missing user_details
+userID [6113] failed to migrate error :: Missing user_details
+userID [6131] failed to migrate error :: Missing user_details
+userID [6133] failed to migrate error :: Missing user_details
+userID [6137] failed to migrate error :: Missing user_details
 userID [6138] failed to migrate error :: 1062 (23000): Duplicate entry 'mauricemuia2015@gmail.com' for key 'users_email_unique'
-userID [6139] failed to migrate error :: 1062 (23000): Duplicate entry 'Violet' for key 'users_username_unique'
-userID [6142] failed to migrate error :: 1062 (23000): Duplicate entry 'Catherine' for key 'users_username_unique'
+userID [6139] failed to migrate error :: Missing user_details
+userID [6142] failed to migrate error :: Missing user_details
 userID [6145] failed to migrate error :: 1062 (23000): Duplicate entry '33910999' for key 'individuals_nationalid_unique'
 userID [6162] failed to migrate error :: 1062 (23000): Duplicate entry 'NONE' for key 'firms_kra_unique'
-userID [6163] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6175] failed to migrate error :: 1062 (23000): Duplicate entry 'maurice' for key 'users_username_unique'
+userID [6163] failed to migrate error :: Missing user_details
+userID [6175] failed to migrate error :: Missing user_details
 userID [6177] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [6178] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6181] failed to migrate error :: 1062 (23000): Duplicate entry 'Fredrick ' for key 'users_username_unique'
-userID [6183] failed to migrate error :: 1062 (23000): Duplicate entry 'Amos' for key 'users_username_unique'
-userID [6193] failed to migrate error :: 1062 (23000): Duplicate entry 'John' for key 'users_username_unique'
-userID [6195] failed to migrate error :: 1062 (23000): Duplicate entry 'Jackline' for key 'users_username_unique'
-userID [6197] failed to migrate error :: 1062 (23000): Duplicate entry 'Amina Rahma Hussein' for key 'users_username_unique'
-userID [6199] failed to migrate error :: 1062 (23000): Duplicate entry 'Enyagoha' for key 'users_username_unique'
-userID [6223] failed to migrate error :: 1062 (23000): Duplicate entry 'keziah' for key 'users_username_unique'
-userID [6229] failed to migrate error :: 1062 (23000): Duplicate entry 'ENyagoha' for key 'users_username_unique'
-userID [6230] failed to migrate error :: 1062 (23000): Duplicate entry 'Enyagoha' for key 'users_username_unique'
-userID [6232] failed to migrate error :: 1062 (23000): Duplicate entry 'Enyagoha' for key 'users_username_unique'
+userID [6178] failed to migrate error :: Missing user_details
+userID [6181] failed to migrate error :: Missing user_details
+userID [6183] failed to migrate error :: Missing user_details
+userID [6193] failed to migrate error :: Missing user_details
+userID [6195] failed to migrate error :: Missing user_details
+userID [6197] failed to migrate error :: Missing user_details
+userID [6199] failed to migrate error :: Missing user_details
+userID [6223] failed to migrate error :: Missing user_details
+userID [6229] failed to migrate error :: Missing user_details
+userID [6230] failed to migrate error :: Missing user_details
+userID [6232] failed to migrate error :: Missing user_details
 userID [6235] failed to migrate error :: 1062 (23000): Duplicate entry '33589088' for key 'individuals_nationalid_unique'
 userID [6238] failed to migrate error :: 1062 (23000): Duplicate entry '21920425' for key 'individuals_nationalid_unique'
 userID [6239] failed to migrate error :: 1062 (23000): Duplicate entry '21920425' for key 'individuals_nationalid_unique'
 userID [6247] failed to migrate error :: 1062 (23000): Duplicate entry '27990325' for key 'individuals_nationalid_unique'
-userID [6248] failed to migrate error :: 1062 (23000): Duplicate entry 'john' for key 'users_username_unique'
+userID [6248] failed to migrate error :: Missing user_details
 userID [6255] failed to migrate error :: 1062 (23000): Duplicate entry '34812975' for key 'individuals_nationalid_unique'
-userID [6258] failed to migrate error :: 1062 (23000): Duplicate entry 'Wamugunda' for key 'users_username_unique'
+userID [6258] failed to migrate error :: Missing user_details
 userID [6262] failed to migrate error :: 1062 (23000): Duplicate entry '32604738' for key 'individuals_nationalid_unique'
-userID [6264] failed to migrate error :: 1062 (23000): Duplicate entry 'ZAINAB AHMED' for key 'users_username_unique'
+userID [6264] failed to migrate error :: Missing user_details
 userID [6266] failed to migrate error :: 1062 (23000): Duplicate entry '24476652' for key 'individuals_nationalid_unique'
 userID [6273] failed to migrate error :: 1062 (23000): Duplicate entry '32006159' for key 'individuals_nationalid_unique'
-userID [6276] failed to migrate error :: 1062 (23000): Duplicate entry 'Olivia' for key 'users_username_unique'
-userID [6278] failed to migrate error :: 1062 (23000): Duplicate entry 'Hellen' for key 'users_username_unique'
+userID [6276] failed to migrate error :: Missing user_details
+userID [6278] failed to migrate error :: Missing user_details
 userID [6280] failed to migrate error :: 1062 (23000): Duplicate entry '22701387' for key 'individuals_nationalid_unique'
-userID [6282] failed to migrate error :: 1062 (23000): Duplicate entry 'majau' for key 'users_username_unique'
+userID [6282] failed to migrate error :: Missing user_details
 userID [6286] failed to migrate error :: 1062 (23000): Duplicate entry 'P051629502H' for key 'firms_kra_unique'
 userID [6300] failed to migrate error :: 1062 (23000): Duplicate entry '30132190' for key 'individuals_nationalid_unique'
-userID [6302] failed to migrate error :: 1062 (23000): Duplicate entry 'Nancy' for key 'users_username_unique'
+userID [6302] failed to migrate error :: Missing user_details
 userID [6307] failed to migrate error :: 1062 (23000): Duplicate entry '30209794' for key 'individuals_nationalid_unique'
-userID [6310] failed to migrate error :: 1062 (23000): Duplicate entry 'Millicent ' for key 'users_username_unique'
-userID [6311] failed to migrate error :: 1062 (23000): Duplicate entry 'jopiyo' for key 'users_username_unique'
-userID [6316] failed to migrate error :: 1062 (23000): Duplicate entry 'grace' for key 'users_username_unique'
+userID [6310] failed to migrate error :: Missing user_details
+userID [6311] failed to migrate error :: Missing user_details
+userID [6316] failed to migrate error :: Missing user_details
 userID [6320] failed to migrate error :: 1062 (23000): Duplicate entry '3727988' for key 'individuals_nationalid_unique'
 userID [6328] failed to migrate error :: 1062 (23000): Duplicate entry '22403123' for key 'individuals_nationalid_unique'
-userID [6332] failed to migrate error :: 1062 (23000): Duplicate entry 'DAVID' for key 'users_username_unique'
+userID [6332] failed to migrate error :: Missing user_details
 userID [6336] failed to migrate error :: 1062 (23000): Duplicate entry '22192409' for key 'individuals_nationalid_unique'
-userID [6342] failed to migrate error :: 1062 (23000): Duplicate entry 'linet' for key 'users_username_unique'
+userID [6342] failed to migrate error :: Missing user_details
 userID [6354] failed to migrate error :: 1062 (23000): Duplicate entry '37437332' for key 'individuals_nationalid_unique'
 userID [6357] failed to migrate error :: 1062 (23000): Duplicate entry '26218389' for key 'individuals_nationalid_unique'
-userID [6360] failed to migrate error :: 1062 (23000): Duplicate entry 'Florah' for key 'users_username_unique'
-userID [6361] failed to migrate error :: 1062 (23000): Duplicate entry 'Florah' for key 'users_username_unique'
-userID [6362] failed to migrate error :: 1062 (23000): Duplicate entry 'Florah' for key 'users_username_unique'
-userID [6363] failed to migrate error :: 1062 (23000): Duplicate entry 'Florah' for key 'users_username_unique'
-userID [6364] failed to migrate error :: 1062 (23000): Duplicate entry 'Florah' for key 'users_username_unique'
-userID [6367] failed to migrate error :: 1062 (23000): Duplicate entry 'ERIC' for key 'users_username_unique'
-userID [6369] failed to migrate error :: 1062 (23000): Duplicate entry 'Brian' for key 'users_username_unique'
-userID [6375] failed to migrate error :: 1062 (23000): Duplicate entry 'Elizabeth' for key 'users_username_unique'
-userID [6376] failed to migrate error :: 1062 (23000): Duplicate entry 'Elizabeth' for key 'users_username_unique'
-userID [6377] failed to migrate error :: 1062 (23000): Duplicate entry 'Elizabeth' for key 'users_username_unique'
-userID [6378] failed to migrate error :: 1062 (23000): Duplicate entry 'Elizabeth' for key 'users_username_unique'
-userID [6383] failed to migrate error :: 1062 (23000): Duplicate entry 'MUGO' for key 'users_username_unique'
-userID [6385] failed to migrate error :: 1062 (23000): Duplicate entry 'Samuel' for key 'users_username_unique'
-userID [6386] failed to migrate error :: 1062 (23000): Duplicate entry 'Samuel' for key 'users_username_unique'
+userID [6360] failed to migrate error :: Missing user_details
+userID [6361] failed to migrate error :: Missing user_details
+userID [6362] failed to migrate error :: Missing user_details
+userID [6363] failed to migrate error :: Missing user_details
+userID [6364] failed to migrate error :: Missing user_details
+userID [6367] failed to migrate error :: Missing user_details
+userID [6369] failed to migrate error :: Missing user_details
+userID [6375] failed to migrate error :: Missing user_details
+userID [6376] failed to migrate error :: Missing user_details
+userID [6377] failed to migrate error :: Missing user_details
+userID [6378] failed to migrate error :: Missing user_details
+userID [6383] failed to migrate error :: Missing user_details
+userID [6385] failed to migrate error :: Missing user_details
+userID [6386] failed to migrate error :: Missing user_details
 userID [6387] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [6389] failed to migrate error :: 1062 (23000): Duplicate entry 'Amos' for key 'users_username_unique'
-userID [6390] failed to migrate error :: 1062 (23000): Duplicate entry 'Amos' for key 'users_username_unique'
+userID [6389] failed to migrate error :: Missing user_details
+userID [6390] failed to migrate error :: Missing user_details
 userID [6398] failed to migrate error :: 1062 (23000): Duplicate entry '29445104' for key 'individuals_nationalid_unique'
-userID [6400] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
+userID [6400] failed to migrate error :: Missing user_details
 userID [6404] failed to migrate error :: 1062 (23000): Duplicate entry '28135231' for key 'individuals_nationalid_unique'
-userID [6407] failed to migrate error :: 1062 (23000): Duplicate entry 'Brian ' for key 'users_username_unique'
-userID [6408] failed to migrate error :: 1062 (23000): Duplicate entry 'Brian ' for key 'users_username_unique'
-userID [6412] failed to migrate error :: 1062 (23000): Duplicate entry 'Sogada' for key 'users_username_unique'
-userID [6415] failed to migrate error :: 1062 (23000): Duplicate entry 'solomon' for key 'users_username_unique'
-userID [6417] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
-userID [6418] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
-userID [6419] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
-userID [6420] failed to migrate error :: 1062 (23000): Duplicate entry 'BRENDA' for key 'users_username_unique'
+userID [6407] failed to migrate error :: Missing user_details
+userID [6408] failed to migrate error :: Missing user_details
+userID [6412] failed to migrate error :: Missing user_details
+userID [6415] failed to migrate error :: Missing user_details
+userID [6417] failed to migrate error :: Missing user_details
+userID [6418] failed to migrate error :: Missing user_details
+userID [6419] failed to migrate error :: Missing user_details
+userID [6420] failed to migrate error :: Missing user_details
 userID [6421] failed to migrate error :: 1062 (23000): Duplicate entry '34878698' for key 'individuals_nationalid_unique'
-userID [6426] failed to migrate error :: 1062 (23000): Duplicate entry 'Whitney ' for key 'users_username_unique'
-userID [6429] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
-userID [6431] failed to migrate error :: 1062 (23000): Duplicate entry '27311079' for key 'users_username_unique'
-userID [6437] failed to migrate error :: 1062 (23000): Duplicate entry 'Beverlyne' for key 'users_username_unique'
-userID [6438] failed to migrate error :: 1062 (23000): Duplicate entry 'Beverlyne' for key 'users_username_unique'
-userID [6448] failed to migrate error :: 1062 (23000): Duplicate entry 'Beverlyne' for key 'users_username_unique'
-userID [6449] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
-userID [6450] failed to migrate error :: 1062 (23000): Duplicate entry 'Brenda' for key 'users_username_unique'
-userID [6455] failed to migrate error :: 1062 (23000): Duplicate entry 'Bongo' for key 'users_username_unique'
-userID [6456] failed to migrate error :: 1062 (23000): Duplicate entry 'Alex' for key 'users_username_unique'
+userID [6426] failed to migrate error :: Missing user_details
+userID [6429] failed to migrate error :: Missing user_details
+userID [6431] failed to migrate error :: Missing user_details
+userID [6437] failed to migrate error :: Missing user_details
+userID [6438] failed to migrate error :: Missing user_details
+userID [6448] failed to migrate error :: Missing user_details
+userID [6449] failed to migrate error :: Missing user_details
+userID [6450] failed to migrate error :: Missing user_details
+userID [6455] failed to migrate error :: Missing user_details
+userID [6456] failed to migrate error :: Missing user_details
 userID [6485] failed to migrate error :: 1062 (23000): Duplicate entry '24279495' for key 'individuals_nationalid_unique'
-userID [6486] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6487] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6492] failed to migrate error :: 1062 (23000): Duplicate entry 'Stellah' for key 'users_username_unique'
-userID [6495] failed to migrate error :: 1062 (23000): Duplicate entry 'Stellah' for key 'users_username_unique'
-userID [6502] failed to migrate error :: 1062 (23000): Duplicate entry 'Nelson' for key 'users_username_unique'
+userID [6486] failed to migrate error :: Missing user_details
+userID [6487] failed to migrate error :: Missing user_details
+userID [6492] failed to migrate error :: Missing user_details
+userID [6495] failed to migrate error :: Missing user_details
+userID [6502] failed to migrate error :: Missing user_details
 userID [6506] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'firms_kra_unique'
-userID [6510] failed to migrate error :: 1062 (23000): Duplicate entry 'Emma' for key 'users_username_unique'
-userID [6519] failed to migrate error :: 1062 (23000): Duplicate entry 'LAGOYE' for key 'users_username_unique'
-userID [6525] failed to migrate error :: 1062 (23000): Duplicate entry 'Charles' for key 'users_username_unique'
+userID [6510] failed to migrate error :: Missing user_details
+userID [6519] failed to migrate error :: Missing user_details
+userID [6525] failed to migrate error :: Missing user_details
 userID [6531] failed to migrate error :: 1062 (23000): Duplicate entry '32613755' for key 'individuals_nationalid_unique'
-userID [6532] failed to migrate error :: 1062 (23000): Duplicate entry 'Faith' for key 'users_username_unique'
-userID [6533] failed to migrate error :: 1062 (23000): Duplicate entry 'Faith' for key 'users_username_unique'
-userID [6534] failed to migrate error :: 1062 (23000): Duplicate entry 'Faith' for key 'users_username_unique'
-userID [6535] failed to migrate error :: 1062 (23000): Duplicate entry 'Faith' for key 'users_username_unique'
+userID [6532] failed to migrate error :: Missing user_details
+userID [6533] failed to migrate error :: Missing user_details
+userID [6534] failed to migrate error :: Missing user_details
+userID [6535] failed to migrate error :: Missing user_details
 userID [6539] failed to migrate error :: 1062 (23000): Duplicate entry 'P051144445S' for key 'firms_kra_unique'
-userID [6543] failed to migrate error :: 1062 (23000): Duplicate entry 'yassin' for key 'users_username_unique'
-userID [6550] failed to migrate error :: 1062 (23000): Duplicate entry 'MUGO' for key 'users_username_unique'
-userID [6551] failed to migrate error :: 1062 (23000): Duplicate entry 'MUGO' for key 'users_username_unique'
+userID [6543] failed to migrate error :: Missing user_details
+userID [6550] failed to migrate error :: Missing user_details
+userID [6551] failed to migrate error :: Missing user_details
 userID [6556] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [6567] failed to migrate error :: 1062 (23000): Duplicate entry 'gabriel' for key 'users_username_unique'
+userID [6567] failed to migrate error :: Missing user_details
 userID [6572] failed to migrate error :: 1062 (23000): Duplicate entry '25941818' for key 'individuals_nationalid_unique'
-userID [6579] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [6579] failed to migrate error :: Missing user_details
 userID [6588] failed to migrate error :: 1062 (23000): Duplicate entry 'N/A' for key 'individuals_nationalid_unique'
-userID [6589] failed to migrate error :: 1062 (23000): Duplicate entry 'Emmanuel' for key 'users_username_unique'
+userID [6589] failed to migrate error :: Missing user_details
 userID [6603] failed to migrate error :: 1062 (23000): Duplicate entry '33129408' for key 'individuals_nationalid_unique'
-userID [6612] failed to migrate error :: 1062 (23000): Duplicate entry 'Douglas' for key 'users_username_unique'
-userID [6613] failed to migrate error :: 1062 (23000): Duplicate entry 'Douglas' for key 'users_username_unique'
-userID [6614] failed to migrate error :: 1062 (23000): Duplicate entry 'Douglas' for key 'users_username_unique'
-userID [6623] failed to migrate error :: 1062 (23000): Duplicate entry 'samantha' for key 'users_username_unique'
-userID [6624] failed to migrate error :: 1062 (23000): Duplicate entry 'samantha' for key 'users_username_unique'
-userID [6625] failed to migrate error :: 1062 (23000): Duplicate entry 'samantha' for key 'users_username_unique'
-userID [6626] failed to migrate error :: 1062 (23000): Duplicate entry 'Samantha' for key 'users_username_unique'
-userID [6628] failed to migrate error :: 1062 (23000): Duplicate entry 'samantha' for key 'users_username_unique'
-userID [6629] failed to migrate error :: 1062 (23000): Duplicate entry 'samantha' for key 'users_username_unique'
-userID [6631] failed to migrate error :: 1062 (23000): Duplicate entry 'freddy82' for key 'users_username_unique'
-userID [6632] failed to migrate error :: 1062 (23000): Duplicate entry 'freddy82' for key 'users_username_unique'
+userID [6612] failed to migrate error :: Missing user_details
+userID [6613] failed to migrate error :: Missing user_details
+userID [6614] failed to migrate error :: Missing user_details
+userID [6623] failed to migrate error :: Missing user_details
+userID [6624] failed to migrate error :: Missing user_details
+userID [6625] failed to migrate error :: Missing user_details
+userID [6626] failed to migrate error :: Missing user_details
+userID [6628] failed to migrate error :: Missing user_details
+userID [6629] failed to migrate error :: Missing user_details
+userID [6631] failed to migrate error :: Missing user_details
+userID [6632] failed to migrate error :: Missing user_details
 userID [6634] failed to migrate error :: 1062 (23000): Duplicate entry '23746992' for key 'individuals_nationalid_unique'
-userID [6638] failed to migrate error :: 1062 (23000): Duplicate entry 'Kaleli' for key 'users_username_unique'
-userID [6644] failed to migrate error :: 1062 (23000): Duplicate entry 'Euslah' for key 'users_username_unique'
-userID [6647] failed to migrate error :: 1062 (23000): Duplicate entry 'kaleli' for key 'users_username_unique'
+userID [6638] failed to migrate error :: Missing user_details
+userID [6644] failed to migrate error :: Missing user_details
+userID [6647] failed to migrate error :: Missing user_details
 userID [6652] failed to migrate error :: 1062 (23000): Duplicate entry '14455720' for key 'individuals_nationalid_unique'
-userID [6657] failed to migrate error :: 1062 (23000): Duplicate entry 'Aaron' for key 'users_username_unique'
-userID [6658] failed to migrate error :: 1062 (23000): Duplicate entry 'Aaron' for key 'users_username_unique'
-userID [6659] failed to migrate error :: 1062 (23000): Duplicate entry 'Aaron' for key 'users_username_unique'
-userID [6660] failed to migrate error :: 1062 (23000): Duplicate entry 'Aaron' for key 'users_username_unique'
+userID [6657] failed to migrate error :: Missing user_details
+userID [6658] failed to migrate error :: Missing user_details
+userID [6659] failed to migrate error :: Missing user_details
+userID [6660] failed to migrate error :: Missing user_details
 userID [6667] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'firms_kra_unique'
 userID [6672] failed to migrate error :: 1062 (23000): Duplicate entry '33660411' for key 'individuals_nationalid_unique'
-userID [6676] failed to migrate error :: 1062 (23000): Duplicate entry 'Ben' for key 'users_username_unique'
+userID [6676] failed to migrate error :: Missing user_details
 userID [6680] failed to migrate error :: 1062 (23000): Duplicate entry '32377822' for key 'individuals_nationalid_unique'
 userID [6686] failed to migrate error :: 1062 (23000): Duplicate entry '25431873' for key 'individuals_nationalid_unique'
-userID [6693] failed to migrate error :: 1062 (23000): Duplicate entry 'perpetua.agoya@gmail.com' for key 'users_username_unique'
-userID [6696] failed to migrate error :: 1062 (23000): Duplicate entry 'ROSELYNE' for key 'users_username_unique'
+userID [6693] failed to migrate error :: Missing user_details
+userID [6696] failed to migrate error :: Missing user_details
 userID [6698] failed to migrate error :: 1062 (23000): Duplicate entry '21866397' for key 'individuals_nationalid_unique'
-userID [6707] failed to migrate error :: 1062 (23000): Duplicate entry 'Joshua' for key 'users_username_unique'
-userID [6709] failed to migrate error :: 1062 (23000): Duplicate entry 'Munyi' for key 'users_username_unique'
-userID [6724] failed to migrate error :: 1062 (23000): Duplicate entry 'Esinyen ' for key 'users_username_unique'
-userID [6725] failed to migrate error :: 1062 (23000): Duplicate entry 'Esinyen ' for key 'users_username_unique'
-userID [6729] failed to migrate error :: 1062 (23000): Duplicate entry 'steve' for key 'users_username_unique'
-userID [6737] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6742] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6743] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6744] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6745] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6747] failed to migrate error :: 1062 (23000): Duplicate entry 'nasimiyusaraphina9@gmail.com' for key 'users_username_unique'
-userID [6748] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6750] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6751] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6752] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6753] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6754] failed to migrate error :: 1062 (23000): Duplicate entry 'Victor' for key 'users_username_unique'
-userID [6755] failed to migrate error :: 1062 (23000): Duplicate entry 'Victor' for key 'users_username_unique'
-userID [6756] failed to migrate error :: 1062 (23000): Duplicate entry 'Victor' for key 'users_username_unique'
-userID [6757] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6758] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6759] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6760] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6761] failed to migrate error :: 1062 (23000): Duplicate entry 'kirombo' for key 'users_username_unique'
-userID [6762] failed to migrate error :: 1062 (23000): Duplicate entry 'kirombo' for key 'users_username_unique'
-userID [6764] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6765] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6766] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6767] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6768] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6769] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6770] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6772] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6773] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6775] failed to migrate error :: 1062 (23000): Duplicate entry 'brian_oti' for key 'users_username_unique'
-userID [6776] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6778] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6779] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6780] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6781] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6782] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6783] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6785] failed to migrate error :: 1062 (23000): Duplicate entry 'Bethwel Kitum' for key 'users_username_unique'
-userID [6786] failed to migrate error :: 1062 (23000): Duplicate entry 'Bethwel Kitum' for key 'users_username_unique'
-userID [6787] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6788] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6789] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6790] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6791] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6792] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6793] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6794] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6795] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6796] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6797] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6798] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6799] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6800] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6801] failed to migrate error :: 1062 (23000): Duplicate entry 'Henry' for key 'users_username_unique'
-userID [6802] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6803] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6804] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6805] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6806] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6807] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6808] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6809] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6810] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6811] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6812] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6813] failed to migrate error :: 1062 (23000): Duplicate entry 'Bethwel Kitum' for key 'users_username_unique'
-userID [6814] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6815] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6816] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6817] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6818] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6819] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6820] failed to migrate error :: 1062 (23000): Duplicate entry 'kirombo' for key 'users_username_unique'
-userID [6821] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6822] failed to migrate error :: 1062 (23000): Duplicate entry 'kirombo' for key 'users_username_unique'
-userID [6823] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6825] failed to migrate error :: 1062 (23000): Duplicate entry 'Feiruz Adan' for key 'users_username_unique'
-userID [6826] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6827] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6828] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6829] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6830] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6831] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6832] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6833] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6834] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6835] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6836] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6837] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6838] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6839] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6840] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6841] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6842] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6843] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6844] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6845] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6848] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [6707] failed to migrate error :: Missing user_details
+userID [6709] failed to migrate error :: Missing user_details
+userID [6724] failed to migrate error :: Missing user_details
+userID [6725] failed to migrate error :: Missing user_details
+userID [6729] failed to migrate error :: Missing user_details
+userID [6737] failed to migrate error :: Missing user_details
+userID [6742] failed to migrate error :: Missing user_details
+userID [6743] failed to migrate error :: Missing user_details
+userID [6744] failed to migrate error :: Missing user_details
+userID [6745] failed to migrate error :: Missing user_details
+userID [6747] failed to migrate error :: Missing user_details
+userID [6748] failed to migrate error :: Missing user_details
+userID [6750] failed to migrate error :: Missing user_details
+userID [6751] failed to migrate error :: Missing user_details
+userID [6752] failed to migrate error :: Missing user_details
+userID [6753] failed to migrate error :: Missing user_details
+userID [6754] failed to migrate error :: Missing user_details
+userID [6755] failed to migrate error :: Missing user_details
+userID [6756] failed to migrate error :: Missing user_details
+userID [6757] failed to migrate error :: Missing user_details
+userID [6758] failed to migrate error :: Missing user_details
+userID [6759] failed to migrate error :: Missing user_details
+userID [6760] failed to migrate error :: Missing user_details
+userID [6761] failed to migrate error :: Missing user_details
+userID [6762] failed to migrate error :: Missing user_details
+userID [6764] failed to migrate error :: Missing user_details
+userID [6765] failed to migrate error :: Missing user_details
+userID [6766] failed to migrate error :: Missing user_details
+userID [6767] failed to migrate error :: Missing user_details
+userID [6768] failed to migrate error :: Missing user_details
+userID [6769] failed to migrate error :: Missing user_details
+userID [6770] failed to migrate error :: Missing user_details
+userID [6772] failed to migrate error :: Missing user_details
+userID [6773] failed to migrate error :: Missing user_details
+userID [6775] failed to migrate error :: Missing user_details
+userID [6776] failed to migrate error :: Missing user_details
+userID [6778] failed to migrate error :: Missing user_details
+userID [6779] failed to migrate error :: Missing user_details
+userID [6780] failed to migrate error :: Missing user_details
+userID [6781] failed to migrate error :: Missing user_details
+userID [6782] failed to migrate error :: Missing user_details
+userID [6783] failed to migrate error :: Missing user_details
+userID [6785] failed to migrate error :: Missing user_details
+userID [6786] failed to migrate error :: Missing user_details
+userID [6787] failed to migrate error :: Missing user_details
+userID [6788] failed to migrate error :: Missing user_details
+userID [6789] failed to migrate error :: Missing user_details
+userID [6790] failed to migrate error :: Missing user_details
+userID [6791] failed to migrate error :: Missing user_details
+userID [6792] failed to migrate error :: Missing user_details
+userID [6793] failed to migrate error :: Missing user_details
+userID [6794] failed to migrate error :: Missing user_details
+userID [6795] failed to migrate error :: Missing user_details
+userID [6796] failed to migrate error :: Missing user_details
+userID [6797] failed to migrate error :: Missing user_details
+userID [6798] failed to migrate error :: Missing user_details
+userID [6799] failed to migrate error :: Missing user_details
+userID [6800] failed to migrate error :: Missing user_details
+userID [6801] failed to migrate error :: Missing user_details
+userID [6802] failed to migrate error :: Missing user_details
+userID [6803] failed to migrate error :: Missing user_details
+userID [6804] failed to migrate error :: Missing user_details
+userID [6805] failed to migrate error :: Missing user_details
+userID [6806] failed to migrate error :: Missing user_details
+userID [6807] failed to migrate error :: Missing user_details
+userID [6808] failed to migrate error :: Missing user_details
+userID [6809] failed to migrate error :: Missing user_details
+userID [6810] failed to migrate error :: Missing user_details
+userID [6811] failed to migrate error :: Missing user_details
+userID [6812] failed to migrate error :: Missing user_details
+userID [6813] failed to migrate error :: Missing user_details
+userID [6814] failed to migrate error :: Missing user_details
+userID [6815] failed to migrate error :: Missing user_details
+userID [6816] failed to migrate error :: Missing user_details
+userID [6817] failed to migrate error :: Missing user_details
+userID [6818] failed to migrate error :: Missing user_details
+userID [6819] failed to migrate error :: Missing user_details
+userID [6820] failed to migrate error :: Missing user_details
+userID [6821] failed to migrate error :: Missing user_details
+userID [6822] failed to migrate error :: Missing user_details
+userID [6823] failed to migrate error :: Missing user_details
+userID [6825] failed to migrate error :: Missing user_details
+userID [6826] failed to migrate error :: Missing user_details
+userID [6827] failed to migrate error :: Missing user_details
+userID [6828] failed to migrate error :: Missing user_details
+userID [6829] failed to migrate error :: Missing user_details
+userID [6830] failed to migrate error :: Missing user_details
+userID [6831] failed to migrate error :: Missing user_details
+userID [6832] failed to migrate error :: Missing user_details
+userID [6833] failed to migrate error :: Missing user_details
+userID [6834] failed to migrate error :: Missing user_details
+userID [6835] failed to migrate error :: Missing user_details
+userID [6836] failed to migrate error :: Missing user_details
+userID [6837] failed to migrate error :: Missing user_details
+userID [6838] failed to migrate error :: Missing user_details
+userID [6839] failed to migrate error :: Missing user_details
+userID [6840] failed to migrate error :: Missing user_details
+userID [6841] failed to migrate error :: Missing user_details
+userID [6842] failed to migrate error :: Missing user_details
+userID [6843] failed to migrate error :: Missing user_details
+userID [6844] failed to migrate error :: Missing user_details
+userID [6845] failed to migrate error :: Missing user_details
+userID [6848] failed to migrate error :: Missing user_details
 userID [6849] failed to migrate error :: 1062 (23000): Duplicate entry '1234' for key 'firms_kra_unique'
-userID [6851] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6852] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6853] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6854] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6855] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6856] failed to migrate error :: 1062 (23000): Duplicate entry 'Bethwel Kitum' for key 'users_username_unique'
-userID [6857] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6858] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6859] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6860] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6861] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6862] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6863] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6864] failed to migrate error :: 1062 (23000): Duplicate entry 'Dennisoloo50' for key 'users_username_unique'
-userID [6865] failed to migrate error :: 1062 (23000): Duplicate entry 'Dennisoloo50' for key 'users_username_unique'
-userID [6866] failed to migrate error :: 1062 (23000): Duplicate entry 'Dennisoloo50' for key 'users_username_unique'
-userID [6867] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6868] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6869] failed to migrate error :: 1062 (23000): Duplicate entry 'sam' for key 'users_username_unique'
+userID [6851] failed to migrate error :: Missing user_details
+userID [6852] failed to migrate error :: Missing user_details
+userID [6853] failed to migrate error :: Missing user_details
+userID [6854] failed to migrate error :: Missing user_details
+userID [6855] failed to migrate error :: Missing user_details
+userID [6856] failed to migrate error :: Missing user_details
+userID [6857] failed to migrate error :: Missing user_details
+userID [6858] failed to migrate error :: Missing user_details
+userID [6859] failed to migrate error :: Missing user_details
+userID [6860] failed to migrate error :: Missing user_details
+userID [6861] failed to migrate error :: Missing user_details
+userID [6862] failed to migrate error :: Missing user_details
+userID [6863] failed to migrate error :: Missing user_details
+userID [6864] failed to migrate error :: Missing user_details
+userID [6865] failed to migrate error :: Missing user_details
+userID [6866] failed to migrate error :: Missing user_details
+userID [6867] failed to migrate error :: Missing user_details
+userID [6868] failed to migrate error :: Missing user_details
+userID [6869] failed to migrate error :: Missing user_details
 userID [6874] failed to migrate error :: 1048 (23000): Column 'name' cannot be null
-userID [6875] failed to migrate error :: 1062 (23000): Duplicate entry 'nasimiyusaraphina9@gmail.com' for key 'users_username_unique'
-userID [6877] failed to migrate error :: 1062 (23000): Duplicate entry 'Feiruz Adan' for key 'users_username_unique'
-userID [6878] failed to migrate error :: 1062 (23000): Duplicate entry 'Feiruz Adan' for key 'users_username_unique'
-userID [6879] failed to migrate error :: 1062 (23000): Duplicate entry 'Feiruz Adan' for key 'users_username_unique'
-userID [6880] failed to migrate error :: 1062 (23000): Duplicate entry 'Feiruz Adan' for key 'users_username_unique'
-userID [6881] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6884] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6886] failed to migrate error :: 1062 (23000): Duplicate entry 'Diana' for key 'users_username_unique'
-userID [6887] failed to migrate error :: 1062 (23000): Duplicate entry 'Diana' for key 'users_username_unique'
-userID [6888] failed to migrate error :: 1062 (23000): Duplicate entry 'Feiruz Adan' for key 'users_username_unique'
+userID [6875] failed to migrate error :: Missing user_details
+userID [6877] failed to migrate error :: Missing user_details
+userID [6878] failed to migrate error :: Missing user_details
+userID [6879] failed to migrate error :: Missing user_details
+userID [6880] failed to migrate error :: Missing user_details
+userID [6881] failed to migrate error :: Missing user_details
+userID [6884] failed to migrate error :: Missing user_details
+userID [6886] failed to migrate error :: Missing user_details
+userID [6887] failed to migrate error :: Missing user_details
+userID [6888] failed to migrate error :: Missing user_details
 userID [6890] failed to migrate error :: 1062 (23000): Duplicate entry '21718161' for key 'individuals_nationalid_unique'
 userID [6891] failed to migrate error :: 1062 (23000): Duplicate entry 'None' for key 'firms_kra_unique'
-userID [6892] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6893] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6897] failed to migrate error :: 1062 (23000): Duplicate entry 'MIRRIAM ' for key 'users_username_unique'
-userID [6898] failed to migrate error :: 1062 (23000): Duplicate entry 'MIRRIAM ' for key 'users_username_unique'
+userID [6892] failed to migrate error :: Missing user_details
+userID [6893] failed to migrate error :: Missing user_details
+userID [6897] failed to migrate error :: Missing user_details
+userID [6898] failed to migrate error :: Missing user_details
 userID [6899] failed to migrate error :: 1062 (23000): Duplicate entry '29650222' for key 'individuals_nationalid_unique'
-userID [6900] failed to migrate error :: 1062 (23000): Duplicate entry 'Albert' for key 'users_username_unique'
-userID [6905] failed to migrate error :: 1062 (23000): Duplicate entry 'MIRRIAM ' for key 'users_username_unique'
-userID [6906] failed to migrate error :: 1062 (23000): Duplicate entry 'MIRRIAM ' for key 'users_username_unique'
-userID [6907] failed to migrate error :: 1062 (23000): Duplicate entry 'MIRRIAM ' for key 'users_username_unique'
-userID [6910] failed to migrate error :: 1062 (23000): Duplicate entry 'patricktheuri' for key 'users_username_unique'
-userID [6911] failed to migrate error :: 1062 (23000): Duplicate entry 'patricktheuri' for key 'users_username_unique'
-userID [6912] failed to migrate error :: 1062 (23000): Duplicate entry 'patricktheuri' for key 'users_username_unique'
+userID [6900] failed to migrate error :: Missing user_details
+userID [6905] failed to migrate error :: Missing user_details
+userID [6906] failed to migrate error :: Missing user_details
+userID [6907] failed to migrate error :: Missing user_details
+userID [6910] failed to migrate error :: Missing user_details
+userID [6911] failed to migrate error :: Missing user_details
+userID [6912] failed to migrate error :: Missing user_details
 userID [6913] failed to migrate error :: 1062 (23000): Duplicate entry '9857444' for key 'individuals_nationalid_unique'
-userID [6914] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6915] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6916] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6918] failed to migrate error :: 1062 (23000): Duplicate entry 'charity' for key 'users_username_unique'
-userID [6920] failed to migrate error :: 1062 (23000): Duplicate entry 'ISAIAH ' for key 'users_username_unique'
-userID [6921] failed to migrate error :: 1062 (23000): Duplicate entry 'ISAIAH  ' for key 'users_username_unique'
-userID [6922] failed to migrate error :: 1062 (23000): Duplicate entry 'ISAIAH  ' for key 'users_username_unique'
-userID [6925] failed to migrate error :: 1062 (23000): Duplicate entry 'Daniel.olimo' for key 'users_username_unique'
-userID [6926] failed to migrate error :: 1062 (23000): Duplicate entry 'ISAIAH  ' for key 'users_username_unique'
-userID [6928] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6930] failed to migrate error :: 1062 (23000): Duplicate entry 'kennedy.ongeko' for key 'users_username_unique'
+userID [6914] failed to migrate error :: Missing user_details
+userID [6915] failed to migrate error :: Missing user_details
+userID [6916] failed to migrate error :: Missing user_details
+userID [6918] failed to migrate error :: Missing user_details
+userID [6920] failed to migrate error :: Missing user_details
+userID [6921] failed to migrate error :: Missing user_details
+userID [6922] failed to migrate error :: Missing user_details
+userID [6925] failed to migrate error :: Missing user_details
+userID [6926] failed to migrate error :: Missing user_details
+userID [6928] failed to migrate error :: Missing user_details
+userID [6930] failed to migrate error :: Missing user_details
 userID [6931] failed to migrate error :: 1062 (23000): Duplicate entry '11411922' for key 'individuals_nationalid_unique'
-userID [6932] failed to migrate error :: 1062 (23000): Duplicate entry 'K_ONYANGO' for key 'users_username_unique'
-userID [6933] failed to migrate error :: 1062 (23000): Duplicate entry 'K_ONYANGO' for key 'users_username_unique'
-userID [6934] failed to migrate error :: 1062 (23000): Duplicate entry 'K_ONYANGO' for key 'users_username_unique'
+userID [6932] failed to migrate error :: Missing user_details
+userID [6933] failed to migrate error :: Missing user_details
+userID [6934] failed to migrate error :: Missing user_details
 userID [6936] failed to migrate error :: 1062 (23000): Duplicate entry 'dmugendi82@gmail.com' for key 'users_email_unique'
 userID [6939] failed to migrate error :: 1062 (23000): Duplicate entry 'milieuconsultantsltd@gmail.com' for key 'users_email_unique'
 userID [6947] failed to migrate error :: 1062 (23000): Duplicate entry 'P051378089W' for key 'firms_kra_unique'
-userID [6948] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6949] failed to migrate error :: 1062 (23000): Duplicate entry 'gmwangi' for key 'users_username_unique'
+userID [6948] failed to migrate error :: Missing user_details
+userID [6949] failed to migrate error :: Missing user_details
 userID [6950] failed to migrate error :: 1062 (23000): Duplicate entry '26550354' for key 'individuals_nationalid_unique'
-userID [6951] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6952] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6954] failed to migrate error :: 1062 (23000): Duplicate entry 'IRENE' for key 'users_username_unique'
-userID [6955] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6956] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6957] failed to migrate error :: 1062 (23000): Duplicate entry 'brian_oti' for key 'users_username_unique'
-userID [6958] failed to migrate error :: 1062 (23000): Duplicate entry 'dennisoloo50' for key 'users_username_unique'
+userID [6951] failed to migrate error :: Missing user_details
+userID [6952] failed to migrate error :: Missing user_details
+userID [6954] failed to migrate error :: Missing user_details
+userID [6955] failed to migrate error :: Missing user_details
+userID [6956] failed to migrate error :: Missing user_details
+userID [6957] failed to migrate error :: Missing user_details
+userID [6958] failed to migrate error :: Missing user_details
 userID [6959] failed to migrate error :: 1062 (23000): Duplicate entry '28232346' for key 'individuals_nationalid_unique'
 userID [6962] failed to migrate error :: 1062 (23000): Duplicate entry '27922743' for key 'individuals_nationalid_unique'
-userID [6964] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [6964] failed to migrate error :: Missing user_details
 userID [6966] failed to migrate error :: 1062 (23000): Duplicate entry '22020836' for key 'individuals_nationalid_unique'
-userID [6968] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6969] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6970] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6971] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [6974] failed to migrate error :: 1062 (23000): Duplicate entry 'ericochieng' for key 'users_username_unique'
-userID [6975] failed to migrate error :: 1062 (23000): Duplicate entry 'jmusau22@gmail.com' for key 'users_username_unique'
+userID [6968] failed to migrate error :: Missing user_details
+userID [6969] failed to migrate error :: Missing user_details
+userID [6970] failed to migrate error :: Missing user_details
+userID [6971] failed to migrate error :: Missing user_details
+userID [6974] failed to migrate error :: Missing user_details
+userID [6975] failed to migrate error :: Missing user_details
 userID [6976] failed to migrate error :: 1062 (23000): Duplicate entry 'P000618272E' for key 'firms_kra_unique'
-userID [6978] failed to migrate error :: 1062 (23000): Duplicate entry 'Diana' for key 'users_username_unique'
-userID [6982] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [6978] failed to migrate error :: Missing user_details
+userID [6982] failed to migrate error :: Missing user_details
 userID [6984] failed to migrate error :: 1062 (23000): Duplicate entry '9709877' for key 'individuals_nationalid_unique'
 userID [6986] failed to migrate error :: 1062 (23000): Duplicate entry '26701709' for key 'individuals_nationalid_unique'
 userID [6987] failed to migrate error :: 1062 (23000): Duplicate entry 'termskenyalimited@gmail.com' for key 'users_email_unique'
-userID [6988] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [6988] failed to migrate error :: Missing user_details
 userID [6989] failed to migrate error :: 1062 (23000): Duplicate entry '32627066' for key 'individuals_nationalid_unique'
-userID [6996] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [6996] failed to migrate error :: Missing user_details
 userID [6999] failed to migrate error :: 1062 (23000): Duplicate entry 'info@charlesandbarker.co.ke' for key 'users_email_unique'
-userID [7000] failed to migrate error :: 1062 (23000): Duplicate entry 'bob' for key 'users_username_unique'
+userID [7000] failed to migrate error :: Missing user_details
 userID [7003] failed to migrate error :: 1062 (23000): Duplicate entry 'contedesign89@gmail.com' for key 'users_email_unique'
 userID [7005] failed to migrate error :: 1062 (23000): Duplicate entry '8948662' for key 'individuals_nationalid_unique'
 userID [7006] failed to migrate error :: 1062 (23000): Duplicate entry '21321783' for key 'individuals_nationalid_unique'
-userID [7010] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7011] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7012] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7013] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7014] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7015] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7018] failed to migrate error :: 1062 (23000): Duplicate entry 'Home74' for key 'users_username_unique'
+userID [7010] failed to migrate error :: Missing user_details
+userID [7011] failed to migrate error :: Missing user_details
+userID [7012] failed to migrate error :: Missing user_details
+userID [7013] failed to migrate error :: Missing user_details
+userID [7014] failed to migrate error :: Missing user_details
+userID [7015] failed to migrate error :: Missing user_details
+userID [7018] failed to migrate error :: Missing user_details
 userID [7019] failed to migrate error :: 1062 (23000): Duplicate entry '21829842' for key 'individuals_nationalid_unique'
-userID [7020] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7021] failed to migrate error :: 1062 (23000): Duplicate entry 'FAITH MOSES' for key 'users_username_unique'
-userID [7022] failed to migrate error :: 1062 (23000): Duplicate entry 'ericochieng' for key 'users_username_unique'
+userID [7020] failed to migrate error :: Missing user_details
+userID [7021] failed to migrate error :: Missing user_details
+userID [7022] failed to migrate error :: Missing user_details
 userID [7028] failed to migrate error :: 1062 (23000): Duplicate entry '33400450' for key 'individuals_nationalid_unique'
-userID [7033] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7033] failed to migrate error :: Missing user_details
 userID [7035] failed to migrate error :: 1062 (23000): Duplicate entry 'alph.mwas@gmail.com' for key 'users_email_unique'
-userID [7036] failed to migrate error :: 1062 (23000): Duplicate entry 'Bethwel Kitum' for key 'users_username_unique'
-userID [7038] failed to migrate error :: 1062 (23000): Duplicate entry 'kariukipatrick011@gmail.com' for key 'users_username_unique'
-userID [7039] failed to migrate error :: 1062 (23000): Duplicate entry 'kariukipatrick011@gmail.com' for key 'users_username_unique'
-userID [7041] failed to migrate error :: 1062 (23000): Duplicate entry 'kariukipatrick011@gmail.com' for key 'users_username_unique'
-userID [7042] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7043] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7044] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7045] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7046] failed to migrate error :: 1062 (23000): Duplicate entry 'kariukipatrick011@gmail.com' for key 'users_username_unique'
+userID [7036] failed to migrate error :: Missing user_details
+userID [7038] failed to migrate error :: Missing user_details
+userID [7039] failed to migrate error :: Missing user_details
+userID [7041] failed to migrate error :: Missing user_details
+userID [7042] failed to migrate error :: Missing user_details
+userID [7043] failed to migrate error :: Missing user_details
+userID [7044] failed to migrate error :: Missing user_details
+userID [7045] failed to migrate error :: Missing user_details
+userID [7046] failed to migrate error :: Missing user_details
 userID [7052] failed to migrate error :: 1062 (23000): Duplicate entry '22067680' for key 'individuals_nationalid_unique'
 userID [7053] failed to migrate error :: 1062 (23000): Duplicate entry '11565771' for key 'individuals_nationalid_unique'
-userID [7056] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7057] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7058] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7060] failed to migrate error :: 1062 (23000): Duplicate entry 'Amos' for key 'users_username_unique'
-userID [7061] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7062] failed to migrate error :: 1062 (23000): Duplicate entry 'Kiptanui' for key 'users_username_unique'
-userID [7063] failed to migrate error :: 1062 (23000): Duplicate entry 'Kiptanui' for key 'users_username_unique'
-userID [7067] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7069] failed to migrate error :: 1062 (23000): Duplicate entry 'Abbott' for key 'users_username_unique'
-userID [7071] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7056] failed to migrate error :: Missing user_details
+userID [7057] failed to migrate error :: Missing user_details
+userID [7058] failed to migrate error :: Missing user_details
+userID [7060] failed to migrate error :: Missing user_details
+userID [7061] failed to migrate error :: Missing user_details
+userID [7062] failed to migrate error :: Missing user_details
+userID [7063] failed to migrate error :: Missing user_details
+userID [7067] failed to migrate error :: Missing user_details
+userID [7069] failed to migrate error :: Missing user_details
+userID [7071] failed to migrate error :: Missing user_details
 userID [7076] failed to migrate error :: 1062 (23000): Duplicate entry '27438057' for key 'individuals_nationalid_unique'
-userID [7081] failed to migrate error :: 1062 (23000): Duplicate entry 'Diana' for key 'users_username_unique'
-userID [7083] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7081] failed to migrate error :: Missing user_details
+userID [7083] failed to migrate error :: Missing user_details
 userID [7088] failed to migrate error :: 1062 (23000): Duplicate entry 'mkmwangi75@gmail.com' for key 'users_email_unique'
-userID [7089] failed to migrate error :: 1062 (23000): Duplicate entry 'jkithinji' for key 'users_username_unique'
+userID [7089] failed to migrate error :: Missing user_details
 userID [7090] failed to migrate error :: 1062 (23000): Duplicate entry '39372720' for key 'individuals_nationalid_unique'
-userID [7092] failed to migrate error :: 1062 (23000): Duplicate entry 'Enyagoha' for key 'users_username_unique'
+userID [7092] failed to migrate error :: Missing user_details
 userID [7096] failed to migrate error :: 1062 (23000): Duplicate entry 'info@acal.co.ke' for key 'users_email_unique'
 userID [7098] failed to migrate error :: 1062 (23000): Duplicate entry '22215749' for key 'individuals_nationalid_unique'
 userID [7099] failed to migrate error :: 1062 (23000): Duplicate entry '13299457' for key 'individuals_nationalid_unique'
-userID [7103] failed to migrate error :: 1062 (23000): Duplicate entry 'FRANCIS KARIMI' for key 'users_username_unique'
+userID [7103] failed to migrate error :: Missing user_details
 userID [7104] failed to migrate error :: 1062 (23000): Duplicate entry '5757620' for key 'individuals_nationalid_unique'
-userID [7105] failed to migrate error :: 1062 (23000): Duplicate entry 'Timothy Mutiso' for key 'users_username_unique'
-userID [7106] failed to migrate error :: 1062 (23000): Duplicate entry 'Timothy Mutiso' for key 'users_username_unique'
-userID [7107] failed to migrate error :: 1062 (23000): Duplicate entry 'Timothy Mutiso' for key 'users_username_unique'
-userID [7112] failed to migrate error :: 1062 (23000): Duplicate entry 'Fredrick' for key 'users_username_unique'
-userID [7114] failed to migrate error :: 1062 (23000): Duplicate entry 'Michael' for key 'users_username_unique'
+userID [7105] failed to migrate error :: Missing user_details
+userID [7106] failed to migrate error :: Missing user_details
+userID [7107] failed to migrate error :: Missing user_details
+userID [7112] failed to migrate error :: Missing user_details
+userID [7114] failed to migrate error :: Missing user_details
 userID [7116] failed to migrate error :: 1062 (23000): Duplicate entry 'adimo8@gmail.com' for key 'users_email_unique'
-userID [7117] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7117] failed to migrate error :: Missing user_details
 userID [7121] failed to migrate error :: 1062 (23000): Duplicate entry '24488350' for key 'individuals_nationalid_unique'
-userID [7122] failed to migrate error :: 1062 (23000): Duplicate entry 'Stanley ' for key 'users_username_unique'
-userID [7123] failed to migrate error :: 1062 (23000): Duplicate entry 'Stanley ' for key 'users_username_unique'
-userID [7124] failed to migrate error :: 1062 (23000): Duplicate entry 'Stanley ' for key 'users_username_unique'
+userID [7122] failed to migrate error :: Missing user_details
+userID [7123] failed to migrate error :: Missing user_details
+userID [7124] failed to migrate error :: Missing user_details
 userID [7128] failed to migrate error :: 1062 (23000): Duplicate entry '7009749' for key 'individuals_nationalid_unique'
-userID [7133] failed to migrate error :: 1062 (23000): Duplicate entry 'Stanley' for key 'users_username_unique'
-userID [7134] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7137] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7138] failed to migrate error :: 1062 (23000): Duplicate entry 'Faith' for key 'users_username_unique'
-userID [7143] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7133] failed to migrate error :: Missing user_details
+userID [7134] failed to migrate error :: Missing user_details
+userID [7137] failed to migrate error :: Missing user_details
+userID [7138] failed to migrate error :: Missing user_details
+userID [7143] failed to migrate error :: Missing user_details
 userID [7144] failed to migrate error :: 1062 (23000): Duplicate entry '"' for key 'firms_kra_unique'
 userID [7146] failed to migrate error :: 1062 (23000): Duplicate entry '32700869' for key 'individuals_nationalid_unique'
-userID [7147] failed to migrate error :: 1062 (23000): Duplicate entry 'martin' for key 'users_username_unique'
-userID [7156] failed to migrate error :: 1062 (23000): Duplicate entry 'benjamin' for key 'users_username_unique'
-userID [7157] failed to migrate error :: 1062 (23000): Duplicate entry 'suzannah.goss' for key 'users_username_unique'
+userID [7147] failed to migrate error :: Missing user_details
+userID [7156] failed to migrate error :: Missing user_details
+userID [7157] failed to migrate error :: Missing user_details
 userID [7167] failed to migrate error :: 1062 (23000): Duplicate entry '10115416' for key 'individuals_nationalid_unique'
-userID [7172] failed to migrate error :: 1062 (23000): Duplicate entry 'Alex' for key 'users_username_unique'
-userID [7173] failed to migrate error :: 1062 (23000): Duplicate entry 'Alex' for key 'users_username_unique'
+userID [7172] failed to migrate error :: Missing user_details
+userID [7173] failed to migrate error :: Missing user_details
 userID [7177] failed to migrate error :: 1062 (23000): Duplicate entry '32127826' for key 'individuals_nationalid_unique'
 userID [7185] failed to migrate error :: 1062 (23000): Duplicate entry '26297254' for key 'individuals_nationalid_unique'
 userID [7187] failed to migrate error :: 1062 (23000): Duplicate entry 'ematechsolutions@gmail.com' for key 'users_email_unique'
-userID [7190] failed to migrate error :: 1062 (23000): Duplicate entry 'metropolisplanning' for key 'users_username_unique'
-userID [7191] failed to migrate error :: 1062 (23000): Duplicate entry 'metropolisplanning' for key 'users_username_unique'
-userID [7192] failed to migrate error :: 1062 (23000): Duplicate entry 'metropolisplanning' for key 'users_username_unique'
-userID [7193] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7194] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7195] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7196] failed to migrate error :: 1062 (23000): Duplicate entry 'martin' for key 'users_username_unique'
-userID [7197] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7190] failed to migrate error :: Missing user_details
+userID [7191] failed to migrate error :: Missing user_details
+userID [7192] failed to migrate error :: Missing user_details
+userID [7193] failed to migrate error :: Missing user_details
+userID [7194] failed to migrate error :: Missing user_details
+userID [7195] failed to migrate error :: Missing user_details
+userID [7196] failed to migrate error :: Missing user_details
+userID [7197] failed to migrate error :: Missing user_details
 userID [7199] failed to migrate error :: 1062 (23000): Duplicate entry '"' for key 'firms_kra_unique'
-userID [7200] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7201] failed to migrate error :: 1062 (23000): Duplicate entry 'WILLIAM' for key 'users_username_unique'
+userID [7200] failed to migrate error :: Missing user_details
+userID [7201] failed to migrate error :: Missing user_details
 userID [7207] failed to migrate error :: 1062 (23000): Duplicate entry 'info@hesco.co.ke' for key 'users_email_unique'
 userID [7213] failed to migrate error :: 1062 (23000): Duplicate entry 'kmwamichwe@gmail.com' for key 'users_email_unique'
-userID [7214] failed to migrate error :: 1062 (23000): Duplicate entry 'Benson ' for key 'users_username_unique'
-userID [7215] failed to migrate error :: 1062 (23000): Duplicate entry 'Benson ' for key 'users_username_unique'
-userID [7216] failed to migrate error :: 1062 (23000): Duplicate entry 'DENNISOBARA' for key 'users_username_unique'
-userID [7222] failed to migrate error :: 1062 (23000): Duplicate entry 'Laurent Monda' for key 'users_username_unique'
-userID [7230] failed to migrate error :: 1062 (23000): Duplicate entry 'Hans' for key 'users_username_unique'
-userID [7231] failed to migrate error :: 1062 (23000): Duplicate entry 'Hans' for key 'users_username_unique'
-userID [7241] failed to migrate error :: 1062 (23000): Duplicate entry 'JANET' for key 'users_username_unique'
-userID [7244] failed to migrate error :: 1062 (23000): Duplicate entry 'Irene Ngatia' for key 'users_username_unique'
-userID [7245] failed to migrate error :: 1062 (23000): Duplicate entry 'Irene Ngatia' for key 'users_username_unique'
+userID [7214] failed to migrate error :: Missing user_details
+userID [7215] failed to migrate error :: Missing user_details
+userID [7216] failed to migrate error :: Missing user_details
+userID [7222] failed to migrate error :: Missing user_details
+userID [7230] failed to migrate error :: Missing user_details
+userID [7231] failed to migrate error :: Missing user_details
+userID [7241] failed to migrate error :: Missing user_details
+userID [7244] failed to migrate error :: Missing user_details
+userID [7245] failed to migrate error :: Missing user_details
 userID [7247] failed to migrate error :: 1062 (23000): Duplicate entry '27811286' for key 'individuals_nationalid_unique'
 userID [7253] failed to migrate error :: 1062 (23000): Duplicate entry '21326352' for key 'individuals_nationalid_unique'
 userID [7255] failed to migrate error :: 1062 (23000): Duplicate entry '29753784' for key 'individuals_nationalid_unique'
-userID [7256] failed to migrate error :: 1062 (23000): Duplicate entry 'Hans' for key 'users_username_unique'
-userID [7257] failed to migrate error :: 1062 (23000): Duplicate entry 'pmanyara' for key 'users_username_unique'
-userID [7258] failed to migrate error :: 1062 (23000): Duplicate entry 'pmanyara' for key 'users_username_unique'
+userID [7256] failed to migrate error :: Missing user_details
+userID [7257] failed to migrate error :: Missing user_details
+userID [7258] failed to migrate error :: Missing user_details
 userID [7265] failed to migrate error :: 1062 (23000): Duplicate entry '23781042' for key 'individuals_nationalid_unique'
-userID [7266] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7269] failed to migrate error :: 1062 (23000): Duplicate entry 'Faith' for key 'users_username_unique'
-userID [7271] failed to migrate error :: 1062 (23000): Duplicate entry 'benjamin' for key 'users_username_unique'
-userID [7277] failed to migrate error :: 1062 (23000): Duplicate entry 'Nzisa' for key 'users_username_unique'
-userID [7285] failed to migrate error :: 1062 (23000): Duplicate entry 'enyagoha' for key 'users_username_unique'
+userID [7266] failed to migrate error :: Missing user_details
+userID [7269] failed to migrate error :: Missing user_details
+userID [7271] failed to migrate error :: Missing user_details
+userID [7277] failed to migrate error :: Missing user_details
+userID [7285] failed to migrate error :: Missing user_details
 userID [7293] failed to migrate error :: 1062 (23000): Duplicate entry '28864729' for key 'individuals_nationalid_unique'
 userID [7294] failed to migrate error :: 1062 (23000): Duplicate entry '34109289' for key 'individuals_nationalid_unique'
 userID [7296] failed to migrate error :: 1062 (23000): Duplicate entry 'kemuntostar@yahoo.com' for key 'users_email_unique'
-userID [7297] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7301] failed to migrate error :: 1062 (23000): Duplicate entry 'n/a' for key 'users_username_unique'
-userID [7303] failed to migrate error :: 1062 (23000): Duplicate entry 'murithimutuma@gmail.com' for key 'users_username_unique'
-userID [7304] failed to migrate error :: 1062 (23000): Duplicate entry 'murithimutuma@gmail.com' for key 'users_username_unique'
-userID [7305] failed to migrate error :: 1062 (23000): Duplicate entry 'murithimutuma@gmail.com' for key 'users_username_unique'
+userID [7297] failed to migrate error :: Missing user_details
+userID [7301] failed to migrate error :: Missing user_details
+userID [7303] failed to migrate error :: Missing user_details
+userID [7304] failed to migrate error :: Missing user_details
+userID [7305] failed to migrate error :: Missing user_details
 userID [7306] failed to migrate error :: 1062 (23000): Duplicate entry '24957381' for key 'individuals_nationalid_unique'
-userID [7309] failed to migrate error :: 1062 (23000): Duplicate entry 'modvine' for key 'users_username_unique'
-userID [7310] failed to migrate error :: 1062 (23000): Duplicate entry 'modvine' for key 'users_username_unique'
-userID [7311] failed to migrate error :: 1062 (23000): Duplicate entry 'Modvine' for key 'users_username_unique'
-userID [7312] failed to migrate error :: 1062 (23000): Duplicate entry 'LARTECH' for key 'users_username_unique'
-userID [7313] failed to migrate error :: 1062 (23000): Duplicate entry 'Modvine' for key 'users_username_unique'
-userID [7315] failed to migrate error :: 1062 (23000): Duplicate entry 'Modvine' for key 'users_username_unique'
+userID [7309] failed to migrate error :: Missing user_details
+userID [7310] failed to migrate error :: Missing user_details
+userID [7311] failed to migrate error :: Missing user_details
+userID [7312] failed to migrate error :: Missing user_details
+userID [7313] failed to migrate error :: Missing user_details
+userID [7315] failed to migrate error :: Missing user_details
 userID [7316] failed to migrate error :: 1062 (23000): Duplicate entry '31335428' for key 'individuals_nationalid_unique'
 userID [7317] failed to migrate error :: 1062 (23000): Duplicate entry 'info@lartechafrica.com' for key 'users_email_unique'
-userID [7322] failed to migrate error :: 1062 (23000): Duplicate entry 'Lydia Soy' for key 'users_username_unique'
-userID [7324] failed to migrate error :: 1062 (23000): Duplicate entry 'Nyamumbo ' for key 'users_username_unique'
-userID [7327] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7328] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7329] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7330] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7331] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7332] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7333] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis ' for key 'users_username_unique'
-userID [7334] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis ' for key 'users_username_unique'
-userID [7335] failed to migrate error :: 1062 (23000): Duplicate entry 'Lydia Soy' for key 'users_username_unique'
-userID [7342] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7343] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7344] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7345] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7346] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7347] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7348] failed to migrate error :: 1062 (23000): Duplicate entry 'Lydia Soy' for key 'users_username_unique'
-userID [7349] failed to migrate error :: 1062 (23000): Duplicate entry 'Lydia Soy' for key 'users_username_unique'
+userID [7322] failed to migrate error :: Missing user_details
+userID [7324] failed to migrate error :: Missing user_details
+userID [7327] failed to migrate error :: Missing user_details
+userID [7328] failed to migrate error :: Missing user_details
+userID [7329] failed to migrate error :: Missing user_details
+userID [7330] failed to migrate error :: Missing user_details
+userID [7331] failed to migrate error :: Missing user_details
+userID [7332] failed to migrate error :: Missing user_details
+userID [7333] failed to migrate error :: Missing user_details
+userID [7334] failed to migrate error :: Missing user_details
+userID [7335] failed to migrate error :: Missing user_details
+userID [7342] failed to migrate error :: Missing user_details
+userID [7343] failed to migrate error :: Missing user_details
+userID [7344] failed to migrate error :: Missing user_details
+userID [7345] failed to migrate error :: Missing user_details
+userID [7346] failed to migrate error :: Missing user_details
+userID [7347] failed to migrate error :: Missing user_details
+userID [7348] failed to migrate error :: Missing user_details
+userID [7349] failed to migrate error :: Missing user_details
 userID [7355] failed to migrate error :: 1062 (23000): Duplicate entry 'illaeva1234@gmail.com' for key 'users_email_unique'
-userID [7359] failed to migrate error :: 1062 (23000): Duplicate entry 'KOOME' for key 'users_username_unique'
+userID [7359] failed to migrate error :: Missing user_details
 userID [7360] failed to migrate error :: 1062 (23000): Duplicate entry 'selinamkamburi1@gmail.com' for key 'users_email_unique'
-userID [7363] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7364] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7365] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7366] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7367] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7368] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7369] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7374] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7375] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7376] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7363] failed to migrate error :: Missing user_details
+userID [7364] failed to migrate error :: Missing user_details
+userID [7365] failed to migrate error :: Missing user_details
+userID [7366] failed to migrate error :: Missing user_details
+userID [7367] failed to migrate error :: Missing user_details
+userID [7368] failed to migrate error :: Missing user_details
+userID [7369] failed to migrate error :: Missing user_details
+userID [7374] failed to migrate error :: Missing user_details
+userID [7375] failed to migrate error :: Missing user_details
+userID [7376] failed to migrate error :: Missing user_details
 userID [7377] failed to migrate error :: 1062 (23000): Duplicate entry '29377102' for key 'individuals_nationalid_unique'
-userID [7378] failed to migrate error :: 1062 (23000): Duplicate entry 'Philkim' for key 'users_username_unique'
-userID [7387] failed to migrate error :: 1062 (23000): Duplicate entry 'Lewis' for key 'users_username_unique'
-userID [7391] failed to migrate error :: 1062 (23000): Duplicate entry 'LEWIS' for key 'users_username_unique'
+userID [7378] failed to migrate error :: Missing user_details
+userID [7387] failed to migrate error :: Missing user_details
+userID [7391] failed to migrate error :: Missing user_details
 userID [7393] failed to migrate error :: 1062 (23000): Duplicate entry '27566879' for key 'individuals_nationalid_unique'
-userID [7395] failed to migrate error :: 1062 (23000): Duplicate entry 'murithimutuma@gmail.com' for key 'users_username_unique'
+userID [7395] failed to migrate error :: Missing user_details
 userID [7406] failed to migrate error :: 1062 (23000): Duplicate entry '2766548' for key 'individuals_nationalid_unique'
-userID [7408] failed to migrate error :: 1062 (23000): Duplicate entry 'Kevin' for key 'users_username_unique'
+userID [7408] failed to migrate error :: Missing user_details
 userID [7410] failed to migrate error :: 1062 (23000): Duplicate entry '11577931' for key 'individuals_nationalid_unique'
-userID [7417] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
-userID [7418] failed to migrate error :: 1062 (23000): Duplicate entry 'Orrelary' for key 'users_username_unique'
-userID [7420] failed to migrate error :: 1062 (23000): Duplicate entry 'MESHACK' for key 'users_username_unique'
+userID [7417] failed to migrate error :: Missing user_details
+userID [7418] failed to migrate error :: Missing user_details
+userID [7420] failed to migrate error :: Missing user_details
 userID [7425] failed to migrate error :: 1062 (23000): Duplicate entry '"' for key 'firms_kra_unique'
-userID [7427] failed to migrate error :: 1062 (23000): Duplicate entry 'Roseokoth' for key 'users_username_unique'
-userID [7432] failed to migrate error :: 1062 (23000): Duplicate entry 'Moses' for key 'users_username_unique'
-userID [7442] failed to migrate error :: 1062 (23000): Duplicate entry '' for key 'users_email_unique'
+userID [7427] failed to migrate error :: Missing user_details
+userID [7432] failed to migrate error :: Missing user_details
+userID [7442] failed to migrate error :: Missing user_details
+userID [7445] failed to migrate error :: Missing user_details
+userID [7446] failed to migrate error :: Missing user_details
+userID [7451] failed to migrate error :: Missing user_details

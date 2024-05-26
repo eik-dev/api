@@ -5,12 +5,12 @@ namespace App\Mail;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
-use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Content;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class DeleteUser extends Mailable
+class VerifyUser extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -29,7 +29,7 @@ class DeleteUser extends Mailable
     {
         return new Envelope(
             from: new Address('info@eik.co.ke', 'EIK Admin'),
-            subject: 'Delete User',
+            subject: 'Account verified',
         );
     }
 
@@ -39,7 +39,7 @@ class DeleteUser extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'emails.NewAdmin',
+            view: 'emails.VerifyUser',
         );
     }
 

@@ -150,8 +150,10 @@ class AdminController extends Controller
                     :
                     User::where('role', 'Individual')
                     ->with('certificates:user_id,number')
-                    ->get()
-                    ;
+                    ->orderByDesc('id')
+                    ->take($request->limit)
+                    ->whereAny(['name','email','nema','certificates.number'],'LIKE' , '%'.$request->search.'%')
+                    ->get();
                     return response()->json($members);
                 } else if ($user->role=='Firm'){
                     $members = User::where('role', 'Individual')
@@ -160,6 +162,9 @@ class AdminController extends Controller
                         $kra = Firm::where('user_id', $user->id)->first()->kra;
                         $query->where('firm', $kra);
                     }, 'individual:user_id,category,firm,alternate'])
+                    ->orderByDesc('id')
+                    ->take($request->limit)
+                    ->whereAny(['name'],'LIKE' , '%'.$request->search.'%')
                     ->get();
                     return response()->json($members);
                 } else {
@@ -226,14 +231,15 @@ class AdminController extends Controller
             if ($user) {
                 if ($user->role=='Admin') {
                     $individual = Individual::where('user_id', $request->id)->first();
-                    $individual->delete();
+                    if ($individual) $individual->delete();
                     $certificates = Certificates::where('user_id', $request->id)->first();
-                    $certificates->delete();
+                    if ($certificates) $certificates->delete();
                     $files = Files::where('user_id', $request->id)->get();
                     foreach ($files as $file) {
                         $file->delete();
                     }
                     $member = User::find($request->id);
+                    $email = $member->email;
                     $member->delete();
                     //delete folder with name user id from public/uploads
                     $path = public_path('uploads/'.$request->id);
@@ -246,7 +252,7 @@ class AdminController extends Controller
                     // //     }
                     // //     rmdir($path);
                     // // }
-                    EmailController::sendDeleteUserEmail($member->email);
+                    EmailController::sendDeleteUserEmail($email);
                     return response()->json([
                         'message' => 'Member deleted successfully',
                     ]);
@@ -278,6 +284,7 @@ class AdminController extends Controller
                     $member = User::find($request->user);
                     if ($request->verify == 'true'){
                         $member->email_verified_at = now();
+                        EmailController::sendVerifyUserEmail($member->email);
                     }else{
                         $member->email_verified_at = null;
                     }

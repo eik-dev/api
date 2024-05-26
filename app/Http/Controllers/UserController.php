@@ -28,6 +28,10 @@ class UserController extends Controller
                 'password' => 'required',
             ]);
 
+            //check if email exists
+            if (!User::where('email',$credentials['email'])->exists()) {
+                return response()->json(['error' => 'Account not found'], 401);
+            }
 
             if (Auth::attempt($credentials)) {
                 $user = Auth::user();

@@ -27,6 +27,7 @@ class FileController extends Controller
                 $url = url("uploads/$id/$folder/" . str_replace(' ', '_', $name));
                 $record = Files::create([
                     'user_id' => $id,
+                    'title' => $request->title,
                     'folder' => $folder,
                     'name' => $name,
                     'url' => $url,
@@ -48,7 +49,7 @@ class FileController extends Controller
             $user = $request->user();
             $id = ($request->id && $user->role=='Admin')?$request->id:$user->id;
             if($user){
-                $files = Files::where('user_id', $id)->where('folder', $folder)->select('name', 'url')->get();
+                $files = Files::where('user_id', $id)->where('folder', $folder)->select('name', 'url', 'title')->get();
                 return response()->json($files);
             } else {
                 return response()->json(['error' => 'Unauthorized'], 401);
