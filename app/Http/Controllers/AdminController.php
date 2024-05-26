@@ -152,7 +152,7 @@ class AdminController extends Controller
                     ->with('certificates:user_id,number')
                     ->orderByDesc('id')
                     ->take($request->limit)
-                    ->whereAny(['name','email','nema','certificates.number'],'LIKE' , '%'.$request->search.'%')
+                    ->whereAny(['name','email','nema'],'LIKE' , '%'.$request->search.'%')
                     ->get();
                     return response()->json($members);
                 } else if ($user->role=='Firm'){
