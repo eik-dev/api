@@ -20,7 +20,11 @@ class CertificatesController extends Controller
             if ($user->role == 'Admin') {
                 $certs = Certificates::with([
                     'user:id,name,email,nema',
-                ])->get();
+                ])
+                ->orderByDesc('id')
+                ->take($request->limit)
+                ->whereAny([],'LIKE' , '%'.$request->search.'%')
+                ->get();
                 return response()->json($certs);
             } else {
                 return response()->json(['error' => 'Unauthorized'], 401);

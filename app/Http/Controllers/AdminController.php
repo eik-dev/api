@@ -319,6 +319,9 @@ class AdminController extends Controller
                 $firms = User::where('role', 'Firm')
                 ->with('certificates:user_id,number')
                 ->with('firm:user_id,kra')
+                ->orderByDesc('id')
+                ->take($request->limit)
+                ->whereAny(['name'],'LIKE' , '%'.$request->search.'%')
                 ->get();
                 return response()->json($firms);
             } else {
