@@ -42,6 +42,9 @@ class CertificatesController extends Controller
             $user = $request->user();
             if ($user) {
                 //EIK/<category>/<id>
+                if($request->id) {
+                    $user = User::find($request->id);
+                }
                 if ($user->role == 'Individual') {
                     $category = Individual::where('user_id', $user->id)->first()->category;
                 } else {
@@ -147,5 +150,23 @@ class CertificatesController extends Controller
     public function destroy($id)
     {
         return response()->noContent();
+    }
+
+    public function delete(Request $request)
+    {
+        try{
+            $user = $request->user();
+            if ($user->role == 'Admin') {
+                $cert = Certificates::find($request->id);
+                $cert->delete();
+                return response()->json([
+                    'message' => 'Certificate deleted',
+                ]);
+            } else {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
     }
 }

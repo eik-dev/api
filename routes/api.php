@@ -63,5 +63,6 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/certificates', [CertificatesController::class, 'index']);
     Route::get('/request', [CertificatesController::class, 'store']);
     Route::get('/certificate/validate', [CertificatesController::class, 'validate']);
+    Route::get('/certificate/delete', [CertificatesController::class, 'delete']);
     //payment related routes
 });

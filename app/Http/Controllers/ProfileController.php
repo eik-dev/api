@@ -47,12 +47,20 @@ class ProfileController extends Controller
                     ]);
                 } else if ($user->role=='Firm' || $request->role=='Firm') {
                     $profile = Firm::where('user_id',$id)->first();
-                    $profile->name = $user->name;
-                    $profile->email = $user->email;
-                    $profile->nema = $user->nema;
+                    if ($request->id && $user->role=='Admin'){
+                        $userDetails = User::where('id',$id)->first();
+                        $profile->name = $userDetails->name;
+                        $profile->email = $userDetails->email;
+                        $profile->nema = $userDetails->nema;
+                    } else {
+                        $profile->name = $user->name;
+                        $profile->email = $user->email;
+                        $profile->nema = $user->nema;
+                    }
                     return response()->json([
                         'profile' => $profile,
                         'certificate' => $cert,
+                        'id'=> $id
                     ]);
                 }
             } else {
