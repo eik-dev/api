@@ -42,7 +42,7 @@ class CertificatesController extends Controller
             $user = $request->user();
             if ($user) {
                 //EIK/<category>/<id>
-                if($request->id) {
+                if($request->id && $user->role == 'Admin') {
                     $user = User::find($request->id);
                 }
                 if ($user->role == 'Individual') {
