@@ -49,28 +49,28 @@ class CertificatesController extends Controller
                 }
                 switch ($category) {
                     case 'Student':
-                        $number = 'EIK/1/' . $user->id;
+                        $number = 'EIK/5/' . $user->id;
                         break;
                     case 'Associate':
                         $number = 'EIK/2/' . $user->id;
                         break;
                     case 'Fellow':
-                        $number = 'EIK/3/' . $user->id;
-                        break;
-                    case 'Honorary':
-                        $number = 'EIK/4/' . $user->id;
-                        break;
-                    case 'Affiliate':
-                        $number = 'EIK/5/' . $user->id;
-                        break;
-                    case 'Lead':
-                        $number = 'EIK/6/' . $user->id;
-                        break;
-                    case 'Corporate':
                         $number = 'EIK/7/' . $user->id;
                         break;
+                    case 'Honorary':
+                        $number = 'EIK/6/' . $user->id;
+                        break;
+                    case 'Affiliate':
+                        $number = 'EIK/4/' . $user->id;
+                        break;
+                    case 'Lead':
+                        $number = 'EIK/1/' . $user->id;
+                        break;
+                    case 'Corporate':
+                        $number = 'EIK/3/' . $user->id;
+                        break;
                     case 'Firms':
-                        $number = 'EIK/8/' . $user->id;
+                        $number = 'EIK/3/' . $user->id;
                         break;
                     default:
                         $number = 'EIK/0/' . $user->id;

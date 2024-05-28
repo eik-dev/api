@@ -204,7 +204,7 @@ for user in users:
                 newC.execute("INSERT INTO certificates (user_id, number, expiry, verified) VALUES (%s,%s,%s,%s)", (id, f"EIK/{getNumber(USER['profile']['category'])}/{id}", '2025-1-1', '2024-5-22'))
             for file in USER['files']:
                 newC.execute("INSERT INTO files (user_id, folder, title, name, url) VALUES (%s,%s,%s,%s,%s)", (id, 'requirements', file['title'], file['filename'], f"https://api.eik.co.ke/uploads/{id}/requirements/{file['filename']}"))
-                move(originPath + file['filename'], f"../public/uploads/{id}/requirements/{file['filename']}",id)
+                # move(originPath + file['filename'], f"../public/uploads/{id}/requirements/{file['filename']}",id)
             if USER['type'] == 'Firm':
                 newC.execute("INSERT INTO firms (user_id, kra, category, alternate, nationality, postal, town, county, phone, bio) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (id, USER['profile']['kra'], USER['profile']['category'], USER['profile']['alternate'], USER['profile']['nationality'], USER['profile']['postal'], USER['profile']['town'], USER['profile']['county'], USER['profile']['phone'], USER['profile']['note']))
             else:
