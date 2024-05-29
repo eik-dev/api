@@ -28,21 +28,21 @@ def getType(category):
 def getNumber(category):
     category = category.lower()
     if category == 'student':
-        return 1
+        return 5
     if category == 'associate':
         return 2
     if category == 'fellow':
-        return 3
-    if category == 'honorary':
-        return 4
-    if category == 'affiliate':
-        return 5
-    if category == 'lead':
-        return 6
-    if category == 'corporate':
         return 7
+    if category == 'honorary':
+        return 6
+    if category == 'affiliate':
+        return 4
+    if category == 'lead':
+        return 1
+    if category == 'corporate':
+        return 3
     if category == 'firms':
-        return 8
+        return 3
     else:
         raise Exception("Invalid category")
 
@@ -201,10 +201,10 @@ for user in users:
             newC.execute("INSERT INTO users (name, username, role, email, nema, email_verified_at, password) VALUES (%s,%s,%s,%s,%s,%s,%s)", (USER['name'], USER['username'], USER['type'], USER['email'], USER['nema'] if USER['nema']!='"' else None, '2021-01-01', USER['password']))# Move the user to DB2
             id = newC.lastrowid
             if USER['certificate']['requested'] == 1:
-                newC.execute("INSERT INTO certificates (user_id, number, expiry, verified) VALUES (%s,%s,%s,%s)", (id, f"EIK/{getNumber(USER['profile']['category'])}/{id}", '2025-1-1', '2024-5-22'))
-            for file in USER['files']:
-                newC.execute("INSERT INTO files (user_id, folder, title, name, url) VALUES (%s,%s,%s,%s,%s)", (id, 'requirements', file['title'], file['filename'], f"https://api.eik.co.ke/uploads/{id}/requirements/{file['filename']}"))
-                # move(originPath + file['filename'], f"../public/uploads/{id}/requirements/{file['filename']}",id)
+                newC.execute("INSERT INTO certificates (user_id, number, expiry, verified) VALUES (%s,%s,%s,%s)", (id, f"EIK/{getNumber(USER['profile']['category'])}/{USER['id']}", '2025-1-1', '2024-5-22'))
+            # for file in USER['files']:
+            #     newC.execute("INSERT INTO files (user_id, folder, title, name, url) VALUES (%s,%s,%s,%s,%s)", (id, 'requirements', file['title'], file['filename'], f"https://api.eik.co.ke/uploads/{id}/requirements/{file['filename']}"))
+            #     move(originPath + file['filename'], f"../public/uploads/{id}/requirements/{file['filename']}",id)
             if USER['type'] == 'Firm':
                 newC.execute("INSERT INTO firms (user_id, kra, category, alternate, nationality, postal, town, county, phone, bio) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)", (id, USER['profile']['kra'], USER['profile']['category'], USER['profile']['alternate'], USER['profile']['nationality'], USER['profile']['postal'], USER['profile']['town'], USER['profile']['county'], USER['profile']['phone'], USER['profile']['note']))
             else:
@@ -213,6 +213,7 @@ for user in users:
                     newC.execute("INSERT INTO education (user_id, Title, Institution, Certification, start, end) VALUES (%s,%s,%s,%s,%s,%s)", (id, education['title'], education['institution'], education['certification'], education['start'], education['end']))
                 for experience in USER['experience']:
                     newC.execute("INSERT INTO professions (user_id, Organization, Location, Position, Duties, Email, Phone, start, end) VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s)", (id, experience['organization'], 'Nairobi', experience['position'], experience['duties'], experience['email'], experience['phone'], experience['start'], experience['end']))
+            newC.execute("INSERT INTO maps (new_id, old_id) VALUES (%s,%s)", (id, USER['id']))
             new.commit()
             SUCCESS += 1
         except Exception as e:

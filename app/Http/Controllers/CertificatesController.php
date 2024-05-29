@@ -21,10 +21,18 @@ class CertificatesController extends Controller
                 $certs = Certificates::with([
                     'user:id,name,email,nema',
                 ])
+                ->skip($request->Genesis)
                 ->orderByDesc('id')
                 ->take($request->limit)
-                ->whereAny([],'LIKE' , '%'.$request->search.'%')
+                ->whereAny(['number'],'LIKE' , '%'.$request->search.'%')
                 ->get();
+                if($request->count){
+                    $count = Certificates::count();
+                    return response()->json([
+                        'count' => $count,
+                        'certs'=> $certs
+                    ]);
+                }
                 return response()->json($certs);
             } else {
                 return response()->json(['error' => 'Unauthorized'], 401);
@@ -50,36 +58,7 @@ class CertificatesController extends Controller
                 } else {
                     $category = Firm::where('user_id', $user->id)->first()->category;
                 }
-                switch ($category) {
-                    case 'Student':
-                        $number = 'EIK/5/' . $user->id;
-                        break;
-                    case 'Associate':
-                        $number = 'EIK/2/' . $user->id;
-                        break;
-                    case 'Fellow':
-                        $number = 'EIK/7/' . $user->id;
-                        break;
-                    case 'Honorary':
-                        $number = 'EIK/6/' . $user->id;
-                        break;
-                    case 'Affiliate':
-                        $number = 'EIK/4/' . $user->id;
-                        break;
-                    case 'Lead':
-                        $number = 'EIK/1/' . $user->id;
-                        break;
-                    case 'Corporate':
-                        $number = 'EIK/3/' . $user->id;
-                        break;
-                    case 'Firms':
-                        $number = 'EIK/3/' . $user->id;
-                        break;
-                    default:
-                        $number = 'EIK/0/' . $user->id;
-                        break;
-                }
-                $cert = Certificates::create($number, $user->id);
+                $cert = Certificates::create($category, $user->id);
                 return response()->json([
                     'message'=>'Certificate requested',
                     'cert'=> $cert
@@ -129,6 +108,12 @@ class CertificatesController extends Controller
             $cert = Certificates::with([
                 'user:id,name',
             ])->find($request->id);
+            $user = User::find($cert->user_id);
+            if ($user->role=='Individual') {
+                $cert->category = Individual::where('user_id', $user->id)->first()->category;
+            } else {
+                $cert->category = Firm::where('user_id', $user->id)->first()->category;
+            }
             return response()->json($cert);
         } catch (\Exception $e) {
             return response()->json([ 'error' => $e->getMessage() ],401);
