@@ -57,7 +57,7 @@ class PaymentController extends Controller
                     "PartyB" => $this->shortcode,
                     "PhoneNumber" => $contact,
                     "CallBackURL" => "https://2420-197-248-74-74.ngrok-free.app/callback",
-                    "AccountReference" => "Registration Fee",
+                    "AccountReference" => $request->AccountReference,
                     "TransactionDesc" => "Payment"
                 ]
             ]);

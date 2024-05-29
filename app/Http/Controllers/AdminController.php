@@ -142,13 +142,7 @@ class AdminController extends Controller
             $user = $request->user();
             if ($user) {
                 if ($user->role=='Admin') {
-                    $members = $request->id?
-                    User::where('id', $request->id)
-                    ->with('certificates:user_id,number')
-                    ->with('individual:user_id,category,firm,alternate,nationality,nationalID,postal,town,county,kra,phone')
-                    ->get()
-                    :
-                    User::where('role', 'Individual')
+                    $members =  User::where('role', 'Individual')
                     ->whereAny(['name','email','nema'],'LIKE' , '%'.$request->search.'%')
                     ->with('certificates:user_id,number')
                     ->orderByDesc('id')
@@ -185,6 +179,34 @@ class AdminController extends Controller
     }
 
     /**
+     * Get a member
+     */
+    public function member(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                $member = User::find($request->id);
+                $individual = Individual::where('user_id', $request->id)->first();
+                $certificates = Certificates::where('user_id', $request->id)->first();
+                $files = Files::where('user_id', $request->id)->get();
+                return response()->json([
+                    'member' => $member,
+                    'individual' => $individual,
+                    'certificates' => $certificates,
+                    'files' => $files,
+                ]);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        }
+        catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
+    }
+
+    /**
      * Update member details
      */
     public function updateMember(Request $request){
@@ -196,7 +218,7 @@ class AdminController extends Controller
                 $member->email = $request->email;
                 $member->nema = $request->nema;
                 $member->save();
-                $individual = $user->role=='Admin'?Individual::where('user_id', $request->id)->first():Individual::where('user_id', $user->id)->first();
+                $individual = Individual::where('user_id', $user->role=='Admin'?$request->id:$user->id)->first();
                 $individual->category = $request->individual['category'];
                 $individual->firm = $request->individual['firm'];
                 $individual->alternate = $request->individual['alternate'];
@@ -205,7 +227,6 @@ class AdminController extends Controller
                 $individual->postal = $request->individual['postal'];
                 $individual->town = $request->individual['town'];
                 $individual->county = $request->individual['county'];
-                $individual->kra = $request->individual['kra'];
                 $individual->phone = $request->individual['phone'];
                 $individual->save();
                 return response()->json([
