@@ -20,7 +20,16 @@ class Certificates extends Model
 
     public static function generateNumber($category, $id){
         $number = '';
-        //check if id is in old_id from map model
+        //check if id has old_id in model Map
+        $map = Map::where('new_id', $id)->first();
+        if($map) $id = $map->old_id; //set id from old
+        else{ //if id doesn't have a link to an old_id
+            $map = new Map();
+            $map->new_id = $id;
+            $id = Map::max('old_id') + 1;
+            $map->old_id = $id;
+            $map->save();
+        }
         switch ($category) {
             case 'Student':
                 $number = 'EIK/5/' . $id;
