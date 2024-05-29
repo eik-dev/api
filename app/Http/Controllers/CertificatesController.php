@@ -22,7 +22,7 @@ class CertificatesController extends Controller
                     'user:id,name,email,nema',
                 ])
                 ->skip($request->Genesis)
-                ->orderByDesc('id')
+                ->orderByDesc('created_at')
                 ->take($request->limit)
                 ->whereAny(['number'],'LIKE' , '%'.$request->search.'%')
                 ->get();

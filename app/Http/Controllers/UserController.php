@@ -51,7 +51,29 @@ class UserController extends Controller
             }
 
             return response()->json(['error' => 'Invalid credentials'], 401);
-        } catch (\Exception $e) {
+        } 
+        catch (\RuntimeException $e) {
+            if ($e->getMessage() === 'This password does not use the Bcrypt algorithm.') {
+                //check if password==md5($request->password)
+                $user = User::where('email',$credentials['email'])->first();
+                if ($user && $user->password==md5($credentials['password'])) {
+                    //update password to bcrypt
+                    $user->password = bcrypt($credentials['password']);
+                    $user->save();
+                    //login user
+                    Auth::login($user);
+                    $token = $user->createToken('auth_token')->plainTextToken;
+                    return response()->json([
+                        'user' => [
+                            'role' => $user->role,
+                            'token'=> $token,
+                        ],
+                    ]);
+                } else return response()->json(['error' => 'Password not recognized, recover password'], 401);
+                // return response()->json(['error' => 'Recover password'], 401);
+            }
+        } 
+        catch (\Exception $e) {
             return response()->json([ 'error' => $e->getMessage() ],401);
         }
     }

@@ -171,17 +171,22 @@ class AdminController extends Controller
                 } else if ($user->role=='Firm'){
                     $members = User::where('role', 'Individual')
                     ->with('certificates:user_id,number')
-                    ->with(['individual' => function ($query) use ($user) {
+                    ->whereHas('individual', function ($query) use ($user) {
                         $kra = Firm::where('user_id', $user->id)->first()->kra;
                         $query->where('firm', $kra);
-                    }, 'individual:user_id,category,firm,alternate'])
+                    })
                     ->orderByDesc('id')
                     ->take($request->limit)
                     ->whereAny(['name'],'LIKE' , '%'.$request->search.'%')
                     ->skip($request->Genesis)
                     ->get();
                     if($request->count){
-                        $count = $members->count();
+                        $count = User::where('role', 'Individual')
+                        ->whereHas('individual', function ($query) use ($user) {
+                            $kra = Firm::where('user_id', $user->id)->first()->kra;
+                            $query->where('firm', $kra);
+                        })
+                        ->count();
                         return response()->json([
                             'members' => $members,
                             'count' => $count,
