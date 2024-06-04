@@ -7,6 +7,8 @@ use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Files;
+use App\Models\Education;
+use App\Models\Profession;
 use App\Models\Certificates;
 use App\Http\Controllers\EmailController;
 
@@ -287,6 +289,14 @@ class AdminController extends Controller
                     if ($individual) $individual->delete();
                     $certificates = Certificates::where('user_id', $request->id)->first();
                     if ($certificates) $certificates->delete();
+                    $education = Education::where('user_id', $request->id)->get();
+                    foreach ($education as $edu) {
+                        $edu->delete();
+                    }
+                    $profession = Profession::where('user_id', $request->id)->get();
+                    foreach ($profession as $prof) {
+                        $prof->delete();
+                    }
                     $files = Files::where('user_id', $request->id)->get();
                     foreach ($files as $file) {
                         $file->delete();
