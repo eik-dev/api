@@ -26,6 +26,10 @@ class ProfileController extends Controller
             if ($user) {
                 if ($user->role=='Individual' || $request->role=='Individual') {
                     $profile = Individual::where('user_id',$id)->first();
+                    return response()->json([
+                        'id' => $id,
+                        'profile' => $profile,
+                    ], 401);
                     $education = Education::where('user_id',$id)->get();
                     $profession = Profession::where('user_id',$id)->get();
                     if ($request->id && $user->role=='Admin'){
