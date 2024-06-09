@@ -12,6 +12,8 @@ use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Files;
 
+use App\Events\SaveLog;
+
 /**
  * Handle user registration, login, and session management.
  */
@@ -27,21 +29,31 @@ class UserController extends Controller
                 'email' => 'required|email',
                 'password' => 'required',
             ]);
-
+    
             //check if email exists
             if (!User::where('email',$credentials['email'])->exists()) {
                 return response()->json(['error' => 'Account not found'], 401);
             }
-
+    
             if (Auth::attempt($credentials)) {
                 $user = Auth::user();
                 //check if email is verified
                 if ($user->role!='Admin' && !$user->email_verified_at) {
+                    SaveLog::dispatch([
+                        'name' => $user->name,
+                        'email' => $user->email,
+                        'action' => 'Failed login attempt'
+                    ]);
                     return response()->json(['error' => 'Pending admin approval'], 401);
                 }
                 $token = $user->createToken('auth_token')->plainTextToken;
-
-
+                
+                SaveLog::dispatch([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'action' => 'Successful login'
+                ]);
+    
                 return response()->json([
                     'user' => [
                         'role' => $user->role,
@@ -49,7 +61,7 @@ class UserController extends Controller
                     ],
                 ]);
             }
-
+    
             return response()->json(['error' => 'Invalid credentials'], 401);
         } 
         catch (\RuntimeException $e) {
@@ -130,6 +142,11 @@ class UserController extends Controller
             ]);
 
             User::create($credentials);
+            SaveLog::dispatch([
+                'name' => $request->name,
+                'email' => $request->email,
+                'action' => 'New user created'
+            ]);
             //create email and password credentials to authenticate user
             if (Auth::attempt($credentials)) {
                 $user = Auth::user();
@@ -140,7 +157,7 @@ class UserController extends Controller
                 }
     
                 $token = $user->createToken('auth_token')->plainTextToken;
-    
+
                 return response()->json([
                     'token' => $token
                 ]);

@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Certificates;
+use App\Events\SaveLog;
 
 class CertificatesController extends Controller
 {
@@ -59,6 +60,11 @@ class CertificatesController extends Controller
                     $category = Firm::where('user_id', $user->id)->first()->category;
                 }
                 $cert = Certificates::create($category, $user->id);
+                SaveLog::dispatch([
+                    'name' => $user->name,
+                    'email' => $user->email,
+                    'action' => 'New certificate request'
+                ]);
                 return response()->json([
                     'message'=>'Certificate requested',
                     'cert'=> $cert

@@ -10,6 +10,7 @@ use App\Models\Files;
 use App\Models\Education;
 use App\Models\Profession;
 use App\Models\Certificates;
+use App\Models\Logs;
 use App\Http\Controllers\EmailController;
 
 //populates dashboard with stats
@@ -404,6 +405,42 @@ class AdminController extends Controller
             return response()->json([
                 'error' => 'Unauthorized',
             ], 401);
+        }
+    }
+    /**
+     * Get all logs
+     */
+    public function logs(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                if ($user->role=='Admin') {
+                    $logs = Logs::orderByDesc('id')
+                    ->take($request->limit)
+                    ->whereAny(['user','email','action'],'LIKE' , '%'.$request->search.'%')
+                    ->get(['created_at', 'user', 'email', 'action']);
+                    if($request->count){
+                        $count = Logs::count();
+                        return response()->json([
+                            'logs' => $logs,
+                            'count' => $count,
+                        ]);
+                    }
+                    return response()->json($logs);
+                } else {
+                    return response()->json([
+                        'error' => 'Unauthorized',
+                    ], 401);
+                }
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], 500);
         }
     }
 }
