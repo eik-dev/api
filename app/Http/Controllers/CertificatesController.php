@@ -112,7 +112,7 @@ class CertificatesController extends Controller
     {
         try{
             $cert = Certificates::with([
-                'user:id,name',
+                'user:id,name,email',
             ])->find($request->id);
             $user = User::find($cert->user_id);
             if ($user->role=='Individual') {
@@ -120,6 +120,11 @@ class CertificatesController extends Controller
             } else {
                 $cert->category = Firm::where('user_id', $user->id)->first()->category;
             }
+            SaveLog::dispatch([
+                'name' => $cert->user->name,
+                'email' => $cert->user->email,
+                'action' => 'Downloaded certificate'
+            ]);
             return response()->json($cert);
         } catch (\Exception $e) {
             return response()->json([ 'error' => $e->getMessage() ],401);

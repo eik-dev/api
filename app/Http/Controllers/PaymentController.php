@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 
 use App\Models\Mpesa;
 
+use App\Events\SaveLog;
 class PaymentController extends Controller
 {
     public $shortcode = 284864;
@@ -69,6 +70,11 @@ class PaymentController extends Controller
                     'AccountReference' => 'Registration Fee',
                     'CheckoutRequestID' => $response->CheckoutRequestID
                 ]);
+                SaveLog::dispatch([
+                    'name' => 'System',
+                    'email' => 'developers@eik.co.ke',
+                    'action' => 'Payment prompt sent to ' . $contact
+                ]);
             }
             return $response;
         } catch (\Exception $e) {
@@ -120,5 +126,11 @@ class PaymentController extends Controller
                 'requestId' => $response->requestId
             ]);
         }
+    }
+    public function mpesaCallback(Request $request){
+        Log::info($request->all());
+        return response()->json([
+            'message' => 'success'
+        ]);
     }
 }

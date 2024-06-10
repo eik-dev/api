@@ -16,6 +16,7 @@ use App\Http\Controllers\PaymentController;
 Route::get('/user', [UserController::class, 'show']);
 Route::post('/pay/mpesa', [PaymentController::class, 'mpesaSTK']);
 Route::get('/mpesa/callback', [PaymentController::class, 'logCallback']);
+Route::post('/mpesa/mpesaCallback', [PaymentController::class, 'mpesaCallback']);
 
 Route::get('/version', function () {
     return ['Laravel' => app()->version()];

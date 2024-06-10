@@ -29,6 +29,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/admin/modify',
             'api/admin/members',
             'api/mpesa/callback',
+            'api/mpesa/mpesaCallback',
             'api/pay/mpesa',
             'api/profile/edit/*'
         ]);
