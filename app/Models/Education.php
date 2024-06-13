@@ -20,6 +20,10 @@ class Education extends Model
     public static function create($educations,$id)
     {
         for ($i=0; $i < count($educations); $i++) { 
+            if ( !isset($educations[$i]['Title']) ||
+                !isset($educations[$i]['Institution']) ||
+                !isset($educations[$i]['Certification'])
+            ) continue;
             $education = new Education();
             $education->user_id = $id;
             $education->Title = $educations[$i]['Title'];

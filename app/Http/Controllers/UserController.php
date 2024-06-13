@@ -11,6 +11,7 @@ use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Files;
+use App\Models\Certificates;
 
 use App\Events\SaveLog;
 
@@ -155,6 +156,8 @@ class UserController extends Controller
                 } else if ($request->role=='Firm') {
                     Firm::create($request->profile, $user->id);
                 }
+                //add number to user
+                User::where('id',$user->id)->update(['number'=>Certificates::generateNumber($request->profile['category'],$user->id)]);
     
                 $token = $user->createToken('auth_token')->plainTextToken;
 

@@ -157,9 +157,8 @@ class AdminController extends Controller
             if ($user) {
                 if ($user->role=='Admin') {
                     $members =  User::where('role', 'Individual')
-                    ->whereAny(['name','email','nema'],'LIKE' , '%'.$request->search.'%')
+                    ->whereAny(['name','email','nema','number'],'LIKE' , '%'.$request->search.'%')
                     ->skip($request->Genesis)
-                    ->with('certificates:user_id,number')
                     ->orderByDesc('id')
                     ->take($request->limit)
                     ->get();
@@ -384,12 +383,11 @@ class AdminController extends Controller
         if ($user) {
             if ($user->role=='Admin') {
                 $firms = User::where('role', 'Firm')
-                ->with('certificates:user_id,number')
+                ->whereAny(['name','email','nema','number'],'LIKE' , '%'.$request->search.'%')
+                ->skip($request->Genesis)
                 ->with('firm:user_id,kra')
                 ->orderByDesc('id')
                 ->take($request->limit)
-                ->whereAny(['name','email','nema'],'LIKE' , '%'.$request->search.'%')
-                ->skip($request->Genesis)
                 ->get();
                 if($request->count){
                     $count = User::where('role', 'Firm')->count();

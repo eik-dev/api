@@ -24,6 +24,10 @@ class Profession extends Model
     public static function create($professions,$id)
     {
         for ($i=0; $i < count($professions); $i++) { 
+            if ( !isset($professions[$i]['Organization']) ||
+                !isset($professions[$i]['Location']) ||
+                !isset($professions[$i]['Position'])
+            ) continue;
             $profession = new Profession();
             $profession->user_id = $id;
             $profession->Organization = $professions[$i]['Organization'];
