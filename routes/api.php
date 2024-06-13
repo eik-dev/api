@@ -60,6 +60,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/admin/firms', [AdminController::class, 'firms']);
     Route::get('/user/verify', [AdminController::class, 'verify']);
     Route::get('/logs', [AdminController::class, 'logs']);
+    Route::get('/payments', [AdminController::class, 'payments']);
     //firm related routes
     Route::post('/firm/members', [FirmController::class, 'members']);
     //certificate related routes

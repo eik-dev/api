@@ -11,6 +11,7 @@ use App\Models\Education;
 use App\Models\Profession;
 use App\Models\Certificates;
 use App\Models\Logs;
+use App\Models\Mpesa;
 use App\Http\Controllers\EmailController;
 
 //populates dashboard with stats
@@ -429,6 +430,43 @@ class AdminController extends Controller
                         ]);
                     }
                     return response()->json($logs);
+                } else {
+                    return response()->json([
+                        'error' => 'Unauthorized',
+                    ], 401);
+                }
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+    /**
+     * Get all payments
+     */
+    public function payments(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                if ($user->role=='Admin') {
+                    $payments = Mpesa::orderByDesc('id')
+                    ->take($request->limit)
+                    ->whereAny(['CheckoutRequestID','email','phone','amount'],'LIKE' , '%'.$request->search.'%')
+                    ->skip($request->Genesis)
+                    ->get(['ResultCode','amount', 'email', 'phone', 'CheckoutRequestID','created_at']);
+                    if($request->count){
+                        $count = Mpesa::count();
+                        return response()->json([
+                            'payments' => $payments,
+                            'count' => $count,
+                        ]);
+                    }
+                    return response()->json($payments);
                 } else {
                     return response()->json([
                         'error' => 'Unauthorized',
