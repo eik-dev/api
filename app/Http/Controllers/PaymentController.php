@@ -67,6 +67,7 @@ class PaymentController extends Controller
                 Mpesa::create([
                     'phone' => $contact,
                     'amount' => $request->amount,
+                    'email' => $request->email,
                     'AccountReference' => 'Registration Fee',
                     'CheckoutRequestID' => $response->CheckoutRequestID
                 ]);
@@ -85,21 +86,15 @@ class PaymentController extends Controller
     }
     public function logCallback(Request $request)
     {
-        // first check if there is an existing transaction with a similiar CheckoutRequestID
+        // first check if there is an existing transaction with a similiar CheckoutRequestID and has a valid response code
         $transaction = Mpesa::where('CheckoutRequestID', $request->CheckoutRequestID)->first();
         if ($transaction){
-            if (!($transaction->email)){
-                $transaction->update([
-                    'email' => $request->email
-                ]);
-                //send email
-            }
             if ($transaction->ResultCode == "0") {
                 return response()->json([
                     'message' => 'Successfuly recorded payment',
                     'ResponseCode' => '0',
                 ]);
-            }else if ($transaction->ResultCode != "0") {
+            }else if ($transaction->ResultCode && $transaction->ResultCode != "0") {
                 return response()->json([
                     'error' => $transaction->ResultDesc,
                     'ResponseCode' => '0',
@@ -131,11 +126,6 @@ class PaymentController extends Controller
                 'ResultDesc' => $response->ResultDesc
             ]);
             if ($response->ResultCode == "0") {
-                SaveLog::dispatch([
-                    'name' => 'System',
-                    'email' => 'developers@eik.co.ke',
-                    'action' => 'Successful payment from ' . $request->phone
-                ]);
                 return response()->json([
                     'message' => 'Successfuly recorded payment',
                     'ResponseCode' => '0',
@@ -154,30 +144,25 @@ class PaymentController extends Controller
         }
     }
     public function mpesaCallback(Request $request){
-        Log::info($request->all());
         // from mpesa model get row using checkoutrequestid and check if ResultCode is 0
-        $transaction = Mpesa::where('CheckoutRequestID', $request->Body->stkCallback->CheckoutRequestID)->first();
+        $transaction = Mpesa::where('CheckoutRequestID', $request['Body']['stkCallback']['CheckoutRequestID'])->first();
         if($transaction){
             //update transaction
             $transaction->update([
-                'ResultCode' => $request->Body->stkCallback->ResultCode,
-                'ResultDesc' => $request->Body->stkCallback->ResultDesc
+                'ResultCode' => $request['Body']['stkCallback']['ResultCode'],
+                'ResultDesc' => $request['Body']['stkCallback']['ResultDesc'],
             ]);
-            if ($transaction->ResultCode == 0){
+            if ($request['Body']['stkCallback']['ResultCode'] == 0){
+                Log::info($request->all());
+                SaveLog::dispatch([
+                    'name' => 'System',
+                    'email' => 'developers@eik.co.ke',
+                    'action' => 'Successful payment from ' . $request->phone
+                ]);
                 // send email
             }
         }else{
-            Mpesa::create([
-                'phone' => $request->Body->stkCallback->CallbackMetadata->Item[4]->Value,
-                'amount' => $request->Body->stkCallback->CallbackMetadata->Item[0]->Value,
-                'AccountReference' => $request->Body->stkCallback->CallbackMetadata->Item[1]->Value,
-                'CheckoutRequestID' => $request->Body->stkCallback->CheckoutRequestID,
-                'ResultCode' => $request->Body->stkCallback->ResultCode,
-                'ResultDesc' => $request->Body->stkCallback->ResultDesc
-            ]);
+            Log::info('No transaction found');
         }
-        return response()->json([
-            'message' => 'success'
-        ]);
     }
 }
