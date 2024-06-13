@@ -220,15 +220,18 @@ class AdminController extends Controller
         try{
             $user = $request->user();
             if ($user) {
-                $member = User::find($request->id);
-                $individual = Individual::where('user_id', $request->id)->first();
-                $certificates = Certificates::where('user_id', $request->id)->first();
-                $files = Files::where('user_id', $request->id)->get();
+                $id = $user->role=='Admin'?$request->id:$user->id;
+                $member = User::find($id);
+                $individual = Individual::where('user_id', $id)->first();
+                $certificates = Certificates::where('user_id', $id)->first();
+                $files = Files::where('user_id', $id)->get();
+                $photo = Files::where('user_id',$id)->where('folder','profile')->first();
                 return response()->json([
                     'member' => $member,
                     'individual' => $individual,
                     'certificates' => $certificates,
                     'files' => $files,
+                    'photo' => $photo ? $photo->url : null,
                 ]);
             } else {
                 return response()->json([
@@ -418,6 +421,7 @@ class AdminController extends Controller
                     $logs = Logs::orderByDesc('id')
                     ->take($request->limit)
                     ->whereAny(['user','email','action'],'LIKE' , '%'.$request->search.'%')
+                    ->skip($request->Genesis)
                     ->get(['created_at', 'user', 'email', 'action']);
                     if($request->count){
                         $count = Logs::count();

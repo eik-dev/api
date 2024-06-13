@@ -16,6 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->integer('amount');
             $table->string('phone');
+            $table->string('email')->nullable();
             $table->string('AccountReference');
             $table->string('ResultCode')->nullable();
             $table->string('ResultDesc')->nullable();

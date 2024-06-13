@@ -1,0 +1,3 @@
+failed to modify error :: User not found
+failed to modify error :: 1062 (23000): Duplicate entry 'EIK/1/7460' for key 'certificates_number_unique'
+failed to modify error :: Invalid category

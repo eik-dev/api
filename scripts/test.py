@@ -7,5 +7,5 @@ import subprocess
 sql_files = glob.glob("*.sql")
 for sql_file in sql_files:
     print(sql_file)
-    subprocess.run(['mysql', '-u', 'sammy', '-p', '-e', f"SET foreign_key_checks = 0; USE temp_eik; SOURCE {sql_file}; SET foreign_key_checks = 1;"])
+    subprocess.run(['mysql', '-u', 'sammy', '-p', '-e', f"SET foreign_key_checks = 0; USE laravel; SOURCE {sql_file}; SET foreign_key_checks = 1;"])
     print("done")

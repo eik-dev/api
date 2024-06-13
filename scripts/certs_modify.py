@@ -1,14 +1,7 @@
 import mysql.connector
 import pprint
 
-original = mysql.connector.connect(
-    host="localhost",
-    user="sammy",
-    password="sammy",
-    database="original_eik"
-)
-
-new = mysql.connector.connect(
+DB = mysql.connector.connect(
     host="localhost",
     user="sammy",
     password="sammy",
@@ -16,8 +9,7 @@ new = mysql.connector.connect(
 )
 
 # Create cursors
-originalC = original.cursor(dictionary=True)
-newC = new.cursor(dictionary=True)
+cursor = DB.cursor(dictionary=True)
 def getNumber(category):
     category = category.lower()
     if category == 'student':
@@ -41,29 +33,46 @@ def getNumber(category):
 
 def modifyNumber(number, category):
     number = number.split('/')
-    number[2] = str(getNumber(category))
+    number[1] = str(getNumber(category))
     return '/'.join(number)
 
 # Select all users from DB1
-originalC.execute("SELECT * FROM certificates WHERE created_at IS NOT NULL")
-certificates = originalC.fetchall()
-
-for certificate in certificates:
-    #get user category from users table using user_id
-    originalC.execute("SELECT * FROM users WHERE id=%s", (certificate['user_id'],))
-    user = originalC.fetchone()
-    if not user:
-        continue
-    category = user['category']
-    #modify certificate numbber
-    newNumber = modifyNumber(certificate['number'], certificate['user_id'])
-    newC.execute("INSERT INTO certificates (user_id, number, created_at, updated_at, expiry, verified) VALUES (%s, %s, %s, %s, %s, %s)", (certificate['user_id'], newNumber, certificate['created_at'], certificate['updated_at'], certificate['expiry'], certificate['verified']))
-    new.commit()
-    print(f"{certificate['number']} - {newNumber}")
+cursor.execute("SELECT * FROM certificates")
+certificates = cursor.fetchall()
 
 TOTAL = len(certificates)
 COUNT = 0
 SUCCESS = 0
 ERRORED = 0
 
-print(TOTAL)
+for certificate in certificates:
+    original = certificate['number']
+    COUNT += 1
+    try:
+        #get user category from users table using user_id
+        cursor.execute("SELECT * FROM users WHERE id=%s", (certificate['user_id'],))
+        user = cursor.fetchone()
+        if not user:
+            raise Exception("User not found")
+        role = user['role']
+        category = ''
+        if role == 'Individual':
+            #get user category from individual table using user_id
+            cursor.execute("SELECT * FROM individuals WHERE user_id=%s", (certificate['user_id'],))
+            individual = cursor.fetchone()
+            category = individual['category']
+        else:
+            category = 'firms'
+        #modify certificate number
+        newNumber = modifyNumber(original, category)
+        cursor.execute("UPDATE certificates SET number = %s WHERE id = %s", (newNumber, certificate['id']))
+        DB.commit()
+        print(f"{original}::{category} -> {newNumber}")
+        # print(f"{COUNT}/{TOTAL} :: {round(COUNT/TOTAL*100, 2)}% :: {ERRORED} errored", end='\r')
+        SUCCESS += 1
+    except Exception as e:
+        with open('certs_update_logs.txt', 'a') as logs:
+                logs.write(f"failed to modify error :: {e}\n")
+        ERRORED += 1
+
+print(f"{COUNT}/{TOTAL} :: {SUCCESS}({round(SUCCESS/TOTAL*100, 2)}%) success :: {round(ERRORED/TOTAL*100, 2)}% errored")

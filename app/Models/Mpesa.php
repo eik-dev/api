@@ -11,6 +11,7 @@ class Mpesa extends Model
     protected $fillable = [
         'phone',
         'amount',
+        'email',
         'AccountReference',
         'ResultCode',
         'ResultDesc',
@@ -21,6 +22,7 @@ class Mpesa extends Model
         $mpesa = new Mpesa();
         $mpesa->phone = $input['phone'];
         $mpesa->amount = $input['amount'];
+        $mpesa->email = $input['email'];
         $mpesa->AccountReference = $input['AccountReference'];
         $mpesa->CheckoutRequestID = $input['CheckoutRequestID'];
         $mpesa->save();

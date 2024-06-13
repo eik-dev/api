@@ -57,7 +57,7 @@ class PaymentController extends Controller
                     "PartyA" => $contact,
                     "PartyB" => $this->shortcode,
                     "PhoneNumber" => $contact,
-                    "CallBackURL" => "https://2420-197-248-74-74.ngrok-free.app/callback",
+                    "CallBackURL" => "https://api.eik.co.ke/api/mpesa/mpesaCallback",
                     "AccountReference" => $request->AccountReference,
                     "TransactionDesc" => "Payment"
                 ]
@@ -85,6 +85,27 @@ class PaymentController extends Controller
     }
     public function logCallback(Request $request)
     {
+        // first check if there is an existing transaction with a similiar CheckoutRequestID
+        $transaction = Mpesa::where('CheckoutRequestID', $request->CheckoutRequestID)->first();
+        if ($transaction){
+            if (!($transaction->email)){
+                $transaction->update([
+                    'email' => $request->email
+                ]);
+                //send email
+            }
+            if ($transaction->ResultCode == "0") {
+                return response()->json([
+                    'message' => 'Successfuly recorded payment',
+                    'ResponseCode' => '0',
+                ]);
+            }else if ($transaction->ResultCode != "0") {
+                return response()->json([
+                    'error' => $transaction->ResultDesc,
+                    'ResponseCode' => '0',
+                ]);
+            }
+        }
         $timestamp = date('YmdHis');
         $password = base64_encode($this->shortcode . $this->passkey . $timestamp);
         $token = $this->getToken();
@@ -105,11 +126,16 @@ class PaymentController extends Controller
         $response = json_decode(curl_exec($ch));
         curl_close($ch);
         if (property_exists($response, 'ResponseCode') && $response->ResponseCode == "0"){
-            Mpesa::where('CheckoutRequestID', $request->CheckoutRequestID)->update([
+            $transaction->update([
                 'ResultCode' => $response->ResultCode,
                 'ResultDesc' => $response->ResultDesc
             ]);
             if ($response->ResultCode == "0") {
+                SaveLog::dispatch([
+                    'name' => 'System',
+                    'email' => 'developers@eik.co.ke',
+                    'action' => 'Successful payment from ' . $request->phone
+                ]);
                 return response()->json([
                     'message' => 'Successfuly recorded payment',
                     'ResponseCode' => '0',
@@ -129,6 +155,27 @@ class PaymentController extends Controller
     }
     public function mpesaCallback(Request $request){
         Log::info($request->all());
+        // from mpesa model get row using checkoutrequestid and check if ResultCode is 0
+        $transaction = Mpesa::where('CheckoutRequestID', $request->Body->stkCallback->CheckoutRequestID)->first();
+        if($transaction){
+            //update transaction
+            $transaction->update([
+                'ResultCode' => $request->Body->stkCallback->ResultCode,
+                'ResultDesc' => $request->Body->stkCallback->ResultDesc
+            ]);
+            if ($transaction->ResultCode == 0){
+                // send email
+            }
+        }else{
+            Mpesa::create([
+                'phone' => $request->Body->stkCallback->CallbackMetadata->Item[4]->Value,
+                'amount' => $request->Body->stkCallback->CallbackMetadata->Item[0]->Value,
+                'AccountReference' => $request->Body->stkCallback->CallbackMetadata->Item[1]->Value,
+                'CheckoutRequestID' => $request->Body->stkCallback->CheckoutRequestID,
+                'ResultCode' => $request->Body->stkCallback->ResultCode,
+                'ResultDesc' => $request->Body->stkCallback->ResultDesc
+            ]);
+        }
         return response()->json([
             'message' => 'success'
         ]);
