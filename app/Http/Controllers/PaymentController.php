@@ -151,6 +151,7 @@ class PaymentController extends Controller
             $transaction->update([
                 'ResultCode' => $request['Body']['stkCallback']['ResultCode'],
                 'ResultDesc' => $request['Body']['stkCallback']['ResultDesc'],
+                'MpesaReceiptNumber' => $request['Body']['stkCallback']['ResultDesc']['CallbackMetadata']['Item'][1]['Value'],
             ]);
             if ($request['Body']['stkCallback']['ResultCode'] == 0){
                 Log::info($request->all());

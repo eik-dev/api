@@ -15,7 +15,8 @@ class Mpesa extends Model
         'AccountReference',
         'ResultCode',
         'ResultDesc',
-        'CheckoutRequestID'
+        'CheckoutRequestID',
+        'MpesaReceiptNumber'
     ];
     public static function create($input)
     {

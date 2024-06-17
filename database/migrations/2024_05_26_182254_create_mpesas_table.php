@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('AccountReference');
             $table->string('ResultCode')->nullable();
             $table->string('ResultDesc')->nullable();
+            $table->string('MpesaReceiptNumber')->nullable();
             $table->string('CheckoutRequestID');
         });
     }

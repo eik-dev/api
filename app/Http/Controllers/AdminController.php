@@ -458,7 +458,7 @@ class AdminController extends Controller
                     ->take($request->limit)
                     ->whereAny(['CheckoutRequestID','email','phone','amount'],'LIKE' , '%'.$request->search.'%')
                     ->skip($request->Genesis)
-                    ->get(['ResultCode','amount', 'email', 'phone', 'CheckoutRequestID','created_at']);
+                    ->get(['ResultCode','amount', 'email', 'phone', 'MpesaReceiptNumber','created_at']);
                     if($request->count){
                         $count = Mpesa::count();
                         return response()->json([
