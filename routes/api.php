@@ -12,6 +12,8 @@ use App\Http\Controllers\FirmController;
 use App\Http\Controllers\CertificatesController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PDFcontroller;
+use App\Http\Controllers\TestController;
 
 Route::get('/user', [UserController::class, 'show']);
 Route::post('/pay/mpesa', [PaymentController::class, 'mpesaSTK']);
@@ -21,6 +23,10 @@ Route::post('/mpesa/mpesaCallback', [PaymentController::class, 'mpesaCallback'])
 Route::get('/version', function () {
     return ['Laravel' => app()->version()];
 });
+
+// test
+Route::get('/generate', [PDFcontroller::class, 'generate']);
+Route::get('/test', [TestController::class, 'index']);
 
 Route::get('/books', [BookController::class, 'index']);
 Route::post('/books', [BookController::class, 'store']);
@@ -43,6 +49,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/profile', [ProfileController::class, 'show']);
     Route::post('/profile/edit/{section}', [ProfileController::class, 'update']);
     //files related routes
+    Route::post('/csv', [FileController::class, 'csv']);
     Route::post('/files/{folder}', [FileController::class, 'store']);
     Route::get('/files/{folder}', [FileController::class, 'show']);
     Route::get('/file/delete/{folder}', [FileController::class, 'destroy']);

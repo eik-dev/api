@@ -10,11 +10,10 @@ class Training extends Model
     use HasFactory;
     public $timestamps = false;
     protected $fillable = [
-        'user_id',
+        'Training',
+        'Email',
         'Name',
         'Certification',
-        'start',
-        'end'
     ];
 
     public static function create($training,$id)

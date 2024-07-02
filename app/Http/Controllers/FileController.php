@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpOffice\PhpSpreadsheet\IOFactory;
 use App\Models\User;
 use App\Models\Files;
 
@@ -43,6 +44,44 @@ class FileController extends Controller
         }
     }
 
+    public function csv(Request $request)
+    {
+        try{
+            $user = $request->user();
+            if($user->role=='Admin'){
+                $file = $request->file('file');
+                $spreadsheet = IOFactory::load($file);
+                $worksheet = $spreadsheet->getActiveSheet();
+                $data = $worksheet->toArray();
+                //get index of name and email columns
+                $nameIndex = array_search('Name', $data[0]);
+                $emailIndex = array_search('Email', $data[0]);
+                //return an array of only name and email
+                $response = [];
+                foreach ($data as $key => $value) {
+                    if($value[$nameIndex]==null) break;
+                    if ($key > 0) {
+                        $member = User::where('email',$value[$emailIndex])->first();
+                        $response[] = [
+                            'name' => $value[$nameIndex],
+                            'email' => $value[$emailIndex],
+                            'number' => $member?$member->number:''
+                        ];
+                    }
+                }
+                return response()->json([
+                    'data' => $response,
+                    'message' => 'CSV file uploaded successfully',
+                    'nameIndex' => $nameIndex,
+                    'emailIndex' => $emailIndex,
+                ]);
+            } else {
+                return response()->json(['error' => 'Unauthorized'], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
+    }
     public function show(Request $request, $folder)
     {
         try{

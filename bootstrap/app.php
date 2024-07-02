@@ -32,6 +32,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/mpesa/callback',
             'api/mpesa/mpesaCallback',
             'api/pay/mpesa',
+            'api/csv',
             'api/profile/edit/*'
         ]);
 
