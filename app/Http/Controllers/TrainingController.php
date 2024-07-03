@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Training;
 use App\Models\AllTrainings;
+use App\Http\Controllers\EmailController;
 
 class TrainingController extends Controller
 {
@@ -71,6 +72,31 @@ class TrainingController extends Controller
             $pdf = Pdf::loadView('certificates.training', compact(['background','name','number','qrData']));
             $pdf->render();
             return $pdf->stream($name.'.pdf');
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+                'request'=>$request->all()
+            ], 500);
+        }
+    }
+    /**
+     * Send certificate
+     */
+    public function send(Request $request)
+    {
+        try{
+            $certificate = Training::where('number',$request->number)->first();
+            $training = AllTrainings::where('id',$certificate->Training)->first();
+            if (!$certificate || !$training) throw new \Exception('Certificate not found');
+            $name = $certificate->Name;
+            $number = $certificate->Number;
+            $qrData = 'https://portal.eik.co.ke/verify?training='.$certificate->Training.'&id='.$number;
+            $background = public_path('/system/training.jpg');
+            $pdf = Pdf::loadView('certificates.training', compact(['background','name','number','qrData']));
+            $pdf->render();
+            $pdfContent = $pdf->output();
+            EmailController::sendCertificate($certificate->Email, $pdfContent, compact(['name','number']));
+            return response()->json(['message'=>'success']);
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),

@@ -4,21 +4,26 @@ namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Mail\Attachment;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
+use Illuminate\Mail\Mailables\Address;
 use Illuminate\Queue\SerializesModels;
 
 class SendCertificate extends Mailable
 {
     use Queueable, SerializesModels;
+    protected $pdfContent;
+    protected $payload;
 
     /**
      * Create a new message instance.
      */
-    public function __construct()
+    public function __construct($pdfContent, $payload)
     {
-        //
+        $this->pdfContent = $pdfContent;
+        $this->payload = $payload;
     }
 
     /**
@@ -27,7 +32,8 @@ class SendCertificate extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Send Certificate',
+            subject: 'Training Certificate',
+            from: new Address('developers@eik.co.ke', 'EIK Admin'),
         );
     }
 
@@ -37,7 +43,7 @@ class SendCertificate extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'view.name',
+            view: 'emails.DownloadCertificate',
         );
     }
 
@@ -48,6 +54,8 @@ class SendCertificate extends Mailable
      */
     public function attachments(): array
     {
-        return [];
+        return [
+            Attachment::fromData(fn () => $this->pdfContent, $this->payload['name'].'.pdf')->withMime('application/pdf'),
+        ];
     }
 }

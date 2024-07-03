@@ -8,6 +8,7 @@ use App\Mail\NewAdmin;
 use App\Mail\DeleteUser;
 use App\Mail\VerifyUser;
 use App\Mail\Receipt;
+use App\Mail\SendCertificate;
 
 class EmailController extends Controller
 {
@@ -32,5 +33,9 @@ class EmailController extends Controller
     public static function sendReceiptEmail($email, $payload)
     {
         Mail::to($email)->send(new Receipt($payload));
+    }
+    public static function sendCertificate($email, $pdf, $payload)
+    {
+        Mail::to($email)->send(new SendCertificate($pdf, $payload));
     }
 }
