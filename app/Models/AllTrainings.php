@@ -8,10 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class AllTrainings extends Model
 {
     use HasFactory;
+    public $timestamps = false;
     protected $fillable = [
         'Name',
-        'Certificate',
         'Date',
         'View',
+        'Background',
+        'Style',
     ];
 }

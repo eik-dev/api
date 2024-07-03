@@ -13,7 +13,11 @@ return new class extends Migration
     {
         Schema::create('all_trainings', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('Name');
+            $table->date('Date');
+            $table->string('View');
+            $table->string('Background');
+            $table->string('Style');
         });
     }
 

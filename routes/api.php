@@ -13,6 +13,7 @@ use App\Http\Controllers\CertificatesController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PDFcontroller;
+use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\TestController;
 
 Route::get('/user', [UserController::class, 'show']);
@@ -75,5 +76,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/request', [CertificatesController::class, 'store']);
     Route::get('/certificate/validate', [CertificatesController::class, 'validate']);
     Route::get('/certificate/delete', [CertificatesController::class, 'delete']);
-    //payment related routes
+    //training related routes
+    Route::post('/training/members', [TrainingController::class, 'register']);
+    Route::get('/training/download', [TrainingController::class, 'download']);
 });

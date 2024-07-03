@@ -8,15 +8,20 @@ use Illuminate\Database\Eloquent\Model;
 class Training extends Model
 {
     use HasFactory;
-    public $timestamps = false;
     protected $fillable = [
         'Training',
         'Email',
         'Name',
-        'Certification',
+        'Number',
     ];
 
-    public static function create($training,$id)
+    public static function create($payload)
     {
+        $certificate = new Training();
+        $certificate->Training = $payload['Training'];
+        $certificate->Email = $payload['Email'];
+        $certificate->Name = $payload['Name'];
+        $certificate->Number = $payload['Number'];
+        $certificate->save();
     }
 }

@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('trainings', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
+            $table->integer('Training')->nullable();
+            $table->string('Email')->nullable();
+            $table->string('Name')->nullable();
+            $table->string('Number')->nullable();
         });
     }
 
