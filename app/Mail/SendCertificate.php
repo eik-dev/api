@@ -32,8 +32,8 @@ class SendCertificate extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Training Certificate',
-            from: new Address('developers@eik.co.ke', 'EIK Admin'),
+            subject: 'Environment Institute of Kenya Training Certificate',
+            from: new Address('eiktraining@eik.co.ke', 'EIK Admin'),
         );
     }
 
@@ -44,6 +44,9 @@ class SendCertificate extends Mailable
     {
         return new Content(
             view: 'emails.DownloadCertificate',
+            with: [
+                'name' => $this->payload['name'],
+            ]
         );
     }
 

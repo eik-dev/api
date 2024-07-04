@@ -37,7 +37,7 @@ class TrainingController extends Controller
                 'Training' => $training,
                 'Email' => $value['email'],
                 'Name' => $value['name'],
-                'Number' => 'EIK/' . $year . '/' . $month . '/' . $id,
+                'Number' => 'EIK/' . $month . '/' . $year . '/' . $id,
             ]);
         }
         $response = Training::where('Training',$training)->get(['Name','Email','Number']);

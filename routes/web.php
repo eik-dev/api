@@ -10,7 +10,7 @@ Route::get('/certificates/member', function () {
     return view('certificates.members', compact(['background']));
 });
 Route::get('/certificates/training', function () {
-    $name = 'ERICK ODHIAMBO ORWA';
+    $name = 'Jane Doe';
     $number = 'EIK/01/24/1234';
     $qrData = 'https://portal.eik.co.ke/verify?training='.'1'.'&id='.'EIK/1/7';
     $background = asset('system/training.jpg');
