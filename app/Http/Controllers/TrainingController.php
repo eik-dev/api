@@ -107,7 +107,7 @@ class TrainingController extends Controller
         try{
             $certificate = Training::where('number',$request->number)->first();
 
-            // if($certificate->Sent) return response()->json(['message'=>'Email already sent']);
+            if($certificate->Sent) return response()->json(['message'=>'Email already sent']);
             
             $training = AllTrainings::where('id',$certificate->Training)->first();
             if (!$certificate || !$training) throw new \Exception('Certificate not found');
