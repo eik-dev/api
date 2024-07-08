@@ -11,9 +11,20 @@ class AllTrainings extends Model
     public $timestamps = false;
     protected $fillable = [
         'Name',
-        'Date',
+        'StartDate',
+        'EndDate',
         'View',
         'Background',
         'Style',
+        'Info',
     ];
+
+    public static function create($name, $start, $end, $info){
+        $training = new AllTrainings();
+        $training->Name = $name;
+        $training->StartDate = $start;
+        $training->EndDate = $end;
+        $training->Info = $info;
+        $training->save();
+    }
 }

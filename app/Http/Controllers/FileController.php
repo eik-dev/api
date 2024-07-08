@@ -63,9 +63,9 @@ class FileController extends Controller
                     if ($key > 0) {
                         $member = User::where('email',$value[$emailIndex])->first();
                         $response[] = [
-                            'name' => $value[$nameIndex],
-                            'email' => $value[$emailIndex],
-                            'number' => $member?$member->number:''
+                            'Name' => $value[$nameIndex],
+                            'Email' => $value[$emailIndex],
+                            'Number' => $member?$member->number:''
                         ];
                     }
                 }

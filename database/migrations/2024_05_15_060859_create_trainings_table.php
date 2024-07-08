@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('Email')->nullable();
             $table->string('Name')->nullable();
             $table->string('Number')->nullable();
+            $table->boolean('Sent')->nullable();// true if sent false if failed null if not attempted
         });
     }
 

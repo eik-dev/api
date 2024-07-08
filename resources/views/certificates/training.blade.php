@@ -68,11 +68,11 @@
         <p class="name">{{$name}}</p>
         <p class="number">{{$number}}</p>
         <p class="info">
-        {{'For attending the EIK Webinar on Developing Quality Environment Audit Report On 31st January 2024. Your Continuous Professional Developments Points are Two (2) Units.'}}
+        {{$info}}
         </p>
     </div>
     <img class="QRcode" src="data:image/png;base64,<?php echo base64_encode(QrCode::format('png')->size(100)->generate($qrData)); ?>" alt="QRcode">
-    <p class="date">Date {{'31st January 2024'}}</p>
+    <p class="date"> {{$date}}</p>
 </body>
 </html>
  

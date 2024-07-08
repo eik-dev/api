@@ -13,6 +13,7 @@ class Training extends Model
         'Email',
         'Name',
         'Number',
+        'Sent',
     ];
 
     public static function create($payload)

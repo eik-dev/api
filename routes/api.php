@@ -77,6 +77,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/certificate/validate', [CertificatesController::class, 'validate']);
     Route::get('/certificate/delete', [CertificatesController::class, 'delete']);
     //training related routes
+    Route::get('/training/all', [TrainingController::class, 'index']);
+    Route::post('/training/create', [TrainingController::class, 'store']);
     Route::post('/training/members', [TrainingController::class, 'register']);
     Route::get('/training/download', [TrainingController::class, 'download']);
     Route::get('/training/email', [TrainingController::class, 'send']);

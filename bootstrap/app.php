@@ -34,6 +34,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/pay/mpesa',
             'api/csv',
             'api/training/members',
+            'api/training/create',
             'api/profile/edit/*'
         ]);
 

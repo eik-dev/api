@@ -14,10 +14,12 @@ return new class extends Migration
         Schema::create('all_trainings', function (Blueprint $table) {
             $table->id();
             $table->string('Name');
-            $table->date('Date');
-            $table->string('View');
-            $table->string('Background');
-            $table->string('Style');
+            $table->date('StartDate');
+            $table->date('EndDate')->nullable();
+            $table->string('View')->default('certificates.training');
+            $table->string('Background')->default('system/training.jpg');
+            $table->string('Style')->nullable();
+            $table->string('Info');
         });
     }
 
