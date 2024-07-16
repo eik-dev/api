@@ -136,6 +136,7 @@ class UserController extends Controller
             $credentials = $request->validate([
                 'name' => 'required',
                 'role' => 'required',
+                'practicing' => 'required',
                 'email' => 'required|email',
                 'password' => 'required',
                 'username' => '',

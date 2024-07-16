@@ -255,6 +255,7 @@ class AdminController extends Controller
                 $member->name = $request->fullName;
                 $member->email = $request->email;
                 $member->nema = $request->nema;
+                $member->practicing = $request->practicing;
                 $member->save();
                 $individual = Individual::where('user_id', $user->role=='Admin'?$request->id:$user->id)->first();
                 $individual->category = $request->individual['category'];

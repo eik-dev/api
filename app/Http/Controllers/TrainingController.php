@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Training;
 use App\Models\AllTrainings;
+use App\Models\User;
 use App\Http\Controllers\EmailController;
 
 class TrainingController extends Controller
@@ -21,6 +22,41 @@ class TrainingController extends Controller
             'message' => 'Success',
             'data' => $trainings
         ]);
+    }
+    /**
+     * Get attended trainings for a user
+     */
+    public function attended(Request $request)
+    {
+        try{
+            $user = $request->user();
+            $id = ($request->id && $user->role=='Admin')?$request->id:$user->id;
+            $user = User::where('id',$id)->first();
+            if ($user) {
+                $attendace = Training::where('Email',$user->email)->get();
+                $trainings = [];
+                foreach ($attendace as $value) {
+                    $training = AllTrainings::where('id',$value->Training)->first();
+                    $trainings[] = [
+                        'Name' => $training->Name,
+                        'Start' => $training->StartDate,
+                        'End' => $training->EndDate,
+                        'Info' => $training->Info,
+                        'Number' => $value->Number,
+                        'id' => $value->Training
+                    ];
+                }
+                return response()->json($trainings);
+            } else {
+                return response()->json([
+                    'error' => 'User not found',
+                ], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([ 
+                'error' => $e->getMessage(),
+            ], 401);
+        }
     }
     /**
      * Create a new training

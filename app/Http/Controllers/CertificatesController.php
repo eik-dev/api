@@ -8,6 +8,7 @@ use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Certificates;
 use App\Events\SaveLog;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class CertificatesController extends Controller
 {
@@ -111,21 +112,29 @@ class CertificatesController extends Controller
     public function download(Request $request)
     {
         try{
+            $background = public_path('system/members.jpeg');
             $cert = Certificates::with([
-                'user:id,name,email',
-            ])->find($request->id);
-            $user = User::find($cert->user_id);
-            if ($user->role=='Individual') {
-                $cert->category = Individual::where('user_id', $user->id)->first()->category;
+                'user:id,name,practicing,role,email',
+            ])->where('number', $request->id)->first();
+            $qrData = 'https://portal.eik.co.ke/verify?id=' . $cert->number;
+            if ($cert->user->role == 'Individual') {
+                $category = Individual::where('user_id', $cert->user->id)->first()->category;
             } else {
-                $cert->category = Firm::where('user_id', $user->id)->first()->category;
+                $category = Firm::where('user_id', $cert->user->id)->first()->category;
             }
+            $name = strtoupper($cert->user->name);
+            $date = $cert->verified;
+            $practicing = $cert->user->practicing ? 'practicing' : 'non-practicing';
+            $info = "Is a {$practicing} {$category} member of Environment Institute of Kenya An Institute Founded in the year 2014 to extend and disseminate Environment knowledge and promote the practical application for public good.";
+            $number = $cert->number;
+            $pdf = Pdf::loadView('certificates.members', compact(['background', 'name', 'number', 'qrData', 'info', 'date']));
+            $pdf->render();
             SaveLog::dispatch([
                 'name' => $cert->user->name,
                 'email' => $cert->user->email,
                 'action' => 'Downloaded certificate'
             ]);
-            return response()->json($cert);
+            return $pdf->stream($cert->user->name.'.pdf');
         } catch (\Exception $e) {
             return response()->json([ 'error' => $e->getMessage() ],401);
         }

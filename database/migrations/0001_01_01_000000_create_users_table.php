@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('username')->unique()->nullable();
             $table->string('role');
+            $table->boolean('practicing');
             $table->string('email')->unique();
             $table->string('nema')->nullable();
             $table->string('number')->nullable();

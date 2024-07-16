@@ -35,6 +35,11 @@ def getCategoryNumber(category):
         return 3
     else:
         raise Exception("Invalid category")
+def getPracticing(category):
+    if (category == 'Fellow' or category == 'Lead' or category == 'Associate' or category == 'Firms'):
+        return True
+    else:
+        return False
 
 # Select all users from DB1
 cursor.execute("SELECT * FROM users")
@@ -57,12 +62,12 @@ for user in users:
             category = individual['category']
         if user['role'] == 'Firm':
             category = 'corporate'
-        cursor.execute("UPDATE users SET number = %s WHERE id = %s", (getNumber(category, user['id']), user['id']))
+        cursor.execute("UPDATE users SET practicing = %s WHERE id = %s", (getPracticing(category), user['id']))
         DB.commit()
         print(f"{COUNT}/{TOTAL} :: {round(COUNT/TOTAL*100, 2)}% :: {ERRORED} errored", end='\r')
         SUCCESS += 1
     except Exception as e:
-        with open('users_update_logs.txt', 'a') as logs:
+        with open('users_update_2_logs.txt', 'a') as logs:
                 logs.write(f"[{user['id']}]failed to modify error :: {e}\n")
         ERRORED += 1
 

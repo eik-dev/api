@@ -52,14 +52,14 @@
 <body class="bg-certificate">
     <div class="content">
         <p class="text-center">This is to certify that</p>
-        <p class="text-center">ERICK ODHIAMBO ORWA</p>
-        <p class="text-center">Member No: EIK/1/5046</p>
+        <p class="text-center">{{ $name }}</p>
+        <p class="text-center">Member No: {{$number}}</p>
         <p class="paragraph text-center">
-            Is a practicing Lead member of Environment Institute of Kenya An Institute Founded in the year 2014 to extend and disseminate Environment knowledge and promote the practical application for public good
+            {{$info}}
         </p>
     </div>
-    <img class="QRcode" src="data:image/png;base64,<?php echo base64_encode(QrCode::format('png')->size(250)->generate('This is the data')); ?>" alt="QRcode">
-    <p class="date">2024-06-21</p>
+    <img class="QRcode" src="data:image/png;base64,<?php echo base64_encode(QrCode::format('png')->size(250)->generate($qrData)); ?>" alt="QRcode">
+    <p class="date">{{$date}}</p>
 </body>
 </html>
  
