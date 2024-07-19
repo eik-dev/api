@@ -2,3 +2,4 @@
 [5724]failed to modify error :: Skipping admin user :)
 [5729]failed to modify error :: 'NoneType' object is not subscriptable
 [5755]failed to modify error :: 'NoneType' object is not subscriptable
+[5795]failed to modify error :: 'NoneType' object is not subscriptable
