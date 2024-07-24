@@ -79,6 +79,7 @@ Route::middleware('auth:sanctum')->group(function () {
     //training related routes
     Route::get('/training/all', [TrainingController::class, 'index']);
     Route::get('/training/attended', [TrainingController::class, 'attended']);
+    Route::get('/training/attendee', [TrainingController::class, 'attendee']);
     Route::post('/training/create', [TrainingController::class, 'store']);
     Route::post('/training/members', [TrainingController::class, 'register']);
     Route::get('/training/download', [TrainingController::class, 'download']);

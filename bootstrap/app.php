@@ -35,6 +35,7 @@ return Application::configure(basePath: dirname(__DIR__))
             'api/csv',
             'api/training/members',
             'api/training/create',
+            'api/training/update',
             'api/profile/edit/*'
         ]);
 

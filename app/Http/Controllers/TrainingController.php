@@ -23,6 +23,7 @@ class TrainingController extends Controller
             'data' => $trainings
         ]);
     }
+
     /**
      * Get attended trainings for a user
      */
@@ -58,6 +59,29 @@ class TrainingController extends Controller
             ], 401);
         }
     }
+
+    /**
+     * Get users for a training
+     */
+    public function attendee(Request $request)
+    {
+        try{
+            $user = $request->user();
+            if ($user) {
+                $users = Training::where('Training',$request->id)->get();
+                return response()->json($users);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([ 
+                'error' => $e->getMessage(),
+            ], 401);
+        }
+    }
+
     /**
      * Create a new training
      */
