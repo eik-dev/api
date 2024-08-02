@@ -56,6 +56,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/file/delete/{folder}', [FileController::class, 'destroy']);
     //admin related routes
     Route::get('/summary', [StatsController::class, 'summary']);
+    Route::get('/stats/members', [StatsController::class, 'category']);
     Route::get('/admins', [AdminController::class, 'index']);
     Route::post('/admin/add', [AdminController::class, 'store']);
     Route::post('/admin/modify', [AdminController::class, 'update']);
