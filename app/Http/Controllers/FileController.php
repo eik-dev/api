@@ -20,7 +20,7 @@ class FileController extends Controller
         try{
             $user = $request->user();
             if ($user) {
-                $id = $user->id;
+                $id = $user->role=='Admin'?$request->id:$user->id;
                 $file = $request->file('file');
                 $destinationPath = public_path("uploads/$id/$folder");
                 $name = $file->getClientOriginalName();
@@ -40,7 +40,10 @@ class FileController extends Controller
                 return response()->json(['error' => 'Unauthorized'], 401);
             }
         } catch (\Exception $e) {
-            return response()->json([ 'error' => $e->getMessage() ],401);
+            return response()->json([ 
+                'error' => $e->getMessage(),
+                'request'=>$request->all()
+            ],401);
         }
     }
 

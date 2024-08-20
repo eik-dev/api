@@ -9,6 +9,9 @@ use App\Models\Map;
 
 class Certificates extends Model
 {
+    /**
+     * If certificate exists and is verified then member is active
+     */
     use HasFactory;
     protected $fillable = [
         'user_id',

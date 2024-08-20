@@ -112,7 +112,7 @@ class ProfileController extends Controller
     public function update(Request $request, $section){
         try{
             $user = $request->user();
-            $id = $user->id;
+            $id = $user->role=='Admin'?$request->id:$user->id;
             if ($user) {
                 $profile = Individual::where('user_id',$id)->first();
                 if ($section=='bio'){
@@ -149,6 +149,7 @@ class ProfileController extends Controller
             } else {
                 return response()->json([
                     'error' => 'User not found',
+                    'request' => $request->all()
                 ], 401);
             }
         } catch (\Exception $e) {

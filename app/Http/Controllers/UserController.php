@@ -14,6 +14,7 @@ use App\Models\Files;
 use App\Models\Certificates;
 
 use App\Events\SaveLog;
+use Laravel\Reverb\Certificate;
 
 /**
  * Handle user registration, login, and session management.
@@ -98,6 +99,10 @@ class UserController extends Controller
     {
         $user = $request->user(); // Get the authenticated user
         $photo = Files::where('user_id',$user->id)->where('folder','profile')->first();
+        $certificate = Certificates::where('user_id',$user->id)->first();
+        if($certificate) $isActive = $certificate->verified!=null?true:false;
+        else $isActive = false;
+        $points = 0;
 
         if ($user) {
             return response()->json([
@@ -105,6 +110,8 @@ class UserController extends Controller
                     'role' => $user->role,
                     'name' => $user->name,
                     'photo' => $photo ? $photo->url : null,
+                    'active' => $isActive,
+                    'points' => $points,
                 ],
             ]);
         } else {
