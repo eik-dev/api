@@ -33,9 +33,9 @@ class Profession extends Model
             $profession->Organization = $professions[$i]['Organization'];
             $profession->Location = $professions[$i]['Location'];
             $profession->Position = $professions[$i]['Position'];
-            $profession->Duties = $professions[$i]['note'];
-            $profession->Email = $professions[$i]['email'];
-            $profession->Phone = $professions[$i]['phone'];
+            $profession->Duties = $professions[$i]['Duties'];
+            $profession->Email = $professions[$i]['Email'];
+            $profession->Phone = $professions[$i]['Phone'];
             $profession->start = $professions[$i]['start'];
             $profession->end = $professions[$i]['end'];
             $profession->save();

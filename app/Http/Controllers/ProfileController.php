@@ -81,17 +81,20 @@ class ProfileController extends Controller
     public function get(Request $request, $section){
         try{
             $user = $request->user();
+            $id = $user->role=='Admin'?$request->id:$user->id;
             if ($user) {
-                $profile = Individual::where('user_id',$user->id)->first();
+                $profile = Individual::where('user_id',$id)->first();
                 if ($section=='bio'){
                     return response()->json([
                         'bio' => $profile->bio,
                     ]);
                 } else if ($section=='education'){
-                    $education = Education::where('user_id',$user->id)->get();
+                    $education = Education::where('user_id',$id)->get();
+                    $education->push([]);
                     return response()->json(['education'=>$education]);
                 } else if ($section=='profession'){
-                    $profession = Profession::where('user_id',$user->id)->get();
+                    $profession = Profession::where('user_id',$id)->get();
+                    $profession->push([]);
                     return response()->json(['profession'=>$profession]);
                 } else if ($section=='files'){
                 }
@@ -149,12 +152,12 @@ class ProfileController extends Controller
             } else {
                 return response()->json([
                     'error' => 'User not found',
-                    'request' => $request->all()
                 ], 401);
             }
         } catch (\Exception $e) {
             return response()->json([ 
                 'error' => $e->getMessage(),
+                'request' => $request->all()
             ], 401);
         }
     }    
