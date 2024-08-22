@@ -65,8 +65,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/admin/delete', [AdminController::class, 'destroy']);
     Route::get('/admin/members', [AdminController::class, 'members']);
     Route::get('/admin/member', [AdminController::class, 'member']);
+    Route::get('/admin/firm', [AdminController::class, 'firm']);
     Route::post('/admin/members', [AdminController::class, 'updateMember']);
     Route::get('/admin/member/delete', [AdminController::class, 'deleteMember']);
+    Route::get('/admin/firm/delete', [AdminController::class, 'deleteFirm']);
     Route::get('/admin/firms', [AdminController::class, 'firms']);
     Route::get('/user/verify', [AdminController::class, 'verify']);
     Route::get('/logs', [AdminController::class, 'logs']);

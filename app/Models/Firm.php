@@ -26,7 +26,7 @@ class Firm extends Model
         $firm->user_id = $id;
         $firm->category = $profile['category'];
         $firm->kra = $profile['kra'];
-        $firm->kra = $profile['nationality'];
+        $firm->nationality = $profile['nationality'];
         $firm->alternate = $profile['alternate'];
         $firm->postal = $profile['postal'];
         $firm->town = $profile['town'];

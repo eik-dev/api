@@ -1,0 +1,18 @@
+{
+    "error": "Undefined array key \"\"",
+    "request": {
+        "email": "onyambusamson@gmail.com",
+        "firm": {
+            "alternate": null,
+            "county": null,
+            "nationality": "Kenya",
+            "phone": null,
+            "postal": null,
+            "town": null
+        },
+        "fullName": "sapama ltd",
+        "id": null,
+        "nema": null,
+        "practicing": 1
+    }
+}

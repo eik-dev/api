@@ -245,6 +245,37 @@ class AdminController extends Controller
     }
 
     /**
+     * Get a member
+     */
+    public function firm(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                $id = $user->role=='Admin'?$request->id:$user->id;
+                $member = User::find($id);
+                $firm = Firm::where('user_id', $id)->first();
+                $certificates = Certificates::where('user_id', $id)->first();
+                $files = Files::where('user_id', $id)->get();
+                $photo = Files::where('user_id',$id)->where('folder','profile')->first();
+                return response()->json([
+                    'member' => $member,
+                    'firm' => $firm,
+                    'certificates' => $certificates,
+                    'files' => $files,
+                    'photo' => $photo ? $photo->url : null,
+                ]);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        }
+        catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
+    }
+
+    /**
      * Update member details
      */
     public function updateMember(Request $request){
@@ -257,24 +288,36 @@ class AdminController extends Controller
                 $member->nema = $request->nema;
                 $member->practicing = $request->practicing;
                 $member->save();
-                $individual = Individual::where('user_id', $user->role=='Admin'?$request->id:$user->id)->first();
-                $individual->category = $user->role=='Admin'?$request->individual['category']:$individual->category;
-                $individual->firm = $request->individual['firm'];
-                $individual->alternate = $request->individual['alternate'];
-                $individual->nationality = $request->individual['nationality'];
-                $individual->nationalID = $request->individual['nationalID'];
-                $individual->postal = $request->individual['postal'];
-                $individual->town = $request->individual['town'];
-                $individual->county = $request->individual['county'];
-                $individual->phone = $request->individual['phone'];
-                $individual->save();
+                if($member->role=='Individual'){
+                    $individual = Individual::where('user_id', $user->role=='Admin'?$request->id:$user->id)->first();
+                    $individual->category = $user->role=='Admin'?$request->individual['category']:$individual->category;
+                    $individual->firm = $request->individual['firm'];
+                    $individual->alternate = $request->individual['alternate'];
+                    $individual->nationality = $request->individual['nationality'];
+                    $individual->nationalID = $request->individual['nationalID'];
+                    $individual->postal = $request->individual['postal'];
+                    $individual->town = $request->individual['town'];
+                    $individual->county = $request->individual['county'];
+                    $individual->phone = $request->individual['phone'];
+                    $individual->save();
+                } else if($member->role=='Firm'){
+                    $firm = Firm::where('user_id', $user->role=='Admin'?$request->id:$user->id)->first();
+                    $firm->kra = $request->firm['kra'];
+                    $firm->nationality = $request->firm['nationality'];
+                    $firm->alternate = $request->firm['alternate'];
+                    $firm->postal = $request->firm['postal'];
+                    $firm->town = $request->firm['town'];
+                    $firm->county = $request->firm['county'];
+                    $firm->phone = $request->firm['phone'];
+                    $firm->save();
+                } else{
+                    return response()->json(['error' => 'Invalid Member category',], 401);
+                }
                 return response()->json([
                     'message' => 'Member updated successfully',
                 ]);
             } else {
-                return response()->json([
-                    'error' => 'Unauthorized',
-                ], 401);
+                return response()->json(['error' => 'Unauthorized',], 401);
             }
         }
         catch (\Exception $e) {
@@ -323,6 +366,47 @@ class AdminController extends Controller
                     EmailController::sendDeleteUserEmail($email);
                     return response()->json([
                         'message' => 'Member deleted successfully',
+                    ]);
+                } else {
+                    return response()->json([
+                        'error' => 'Unauthorized',
+                    ], 401);
+                }
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        }
+        catch (\Exception $e) {
+            return response()->json([ 'error' => $e->getMessage() ],401);
+        }
+    }
+
+    /**
+     * Delete firm
+     */
+    public function deleteFirm(Request $request){
+        try{
+            $user = $request->user();
+            if ($user) {
+                if ($user->role=='Admin') {
+                    $firm = Firm::where('user_id', $request->id)->first();
+                    if ($firm) $firm->delete();
+                    $certificates = Certificates::where('user_id', $request->id)->first();
+                    if ($certificates) $certificates->delete();
+                    $files = Files::where('user_id', $request->id)->get();
+                    foreach ($files as $file) {
+                        $file->delete();
+                    }
+                    $member = User::find($request->id);
+                    $email = $member->email;
+                    $member->delete();
+                    //delete folder with name user id from public/uploads
+                    $path = public_path('uploads/'.$request->id);
+                    EmailController::sendDeleteUserEmail($email);
+                    return response()->json([
+                        'message' => 'Firm deleted successfully',
                     ]);
                 } else {
                     return response()->json([

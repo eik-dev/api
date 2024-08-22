@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->string('Title');
-            $table->string('Institution');
+            $table->text('Institution');
             $table->string('Certification');
             $table->date('start')->nullable();
             $table->date('end')->nullable();
