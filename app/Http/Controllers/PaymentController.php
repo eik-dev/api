@@ -15,8 +15,8 @@ class PaymentController extends Controller
     public $passkey = '61cf92bff3cdbe482b9f7d736268c93a765917631b1b5729e6942ed07f8eb468';
     public function getToken(){
         $credentials = [
-            "ConsumerKey" => '87uccYKQ2s4V8D1jWXSFPdMtn9lvIWyv22iR7k2cHFVObOXc',
-            "ConsumerSecret" => 'q7DQlTo40t1ZLjPbMoRINOZLPUX896QvGf7rxXvLhwepTp0vhrlpBLIkAbi4VrRr',
+            "ConsumerKey" => config('app.MPESA_CONSUMER_KEY'),
+            "ConsumerSecret" => config('app.MPESA_CONSUMER_SECRET'),
         ];
 
         $client = new Client();
@@ -62,6 +62,7 @@ class PaymentController extends Controller
                     "TransactionDesc" => "Payment"
                 ]
             ]);
+            Log::info($response->getBody());
             $response = json_decode($response->getBody());
             if ($response->ResponseCode=="0"){
                 Mpesa::create([
@@ -81,6 +82,7 @@ class PaymentController extends Controller
         } catch (\Exception $e) {
             return response()->json(([
                 'error'=>$e->getMessage(),
+                'request' => $request->all()
             ]));
         }
     }

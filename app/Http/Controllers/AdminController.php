@@ -429,13 +429,22 @@ class AdminController extends Controller
      * Verify user
      */
     public function verify(Request $request){
-        try{
-            $user = $request->user();
+        $user = $request->user();
             if ($user) {
                 if ($user->role=='Admin') {
                     $member = User::find($request->user);
                     if ($request->verify == 'true'){
                         $member->email_verified_at = now();
+                        //create certificate and validate
+                        if ($member->role == 'Individual') {
+                            $category = Individual::where('user_id', $member->id)->first()->category;
+                        } else {
+                            $category = Firm::where('user_id', $member->id)->first()->category;
+                        }
+                        $cert = Certificates::create($category, $member->id);
+                        $cert->verified = now();
+                        $cert->expiry = now()->addYear();
+                        $cert->save();
                         EmailController::sendVerifyUserEmail($member->email);
                     }else{
                         $member->email_verified_at = null;
@@ -454,6 +463,8 @@ class AdminController extends Controller
                     'error' => 'Unauthorized',
                 ], 401);
             }
+        try{
+            
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),

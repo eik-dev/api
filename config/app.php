@@ -126,4 +126,7 @@ return [
         'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
     ],
 
+    'MPESA_CONSUMER_SECRET' => env('MPESA_CONSUMER_SECRET'),
+    'MPESA_CONSUMER_KEY' => env('MPESA_CONSUMER_KEY'),
+
 ];
