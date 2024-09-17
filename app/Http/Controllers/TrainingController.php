@@ -8,6 +8,7 @@ use Barryvdh\DomPDF\Facade\Pdf;
 use App\Models\Training;
 use App\Models\AllTrainings;
 use App\Models\User;
+use App\Models\Cart;
 use App\Http\Controllers\EmailController;
 
 class TrainingController extends Controller
@@ -16,6 +17,18 @@ class TrainingController extends Controller
      * Get all trainings
      */
     public function index(Request $request)
+    {
+        $trainings = AllTrainings::get();
+        return response()->json([
+            'message' => 'Success',
+            'data' => $trainings
+        ]);
+    }
+
+     /**
+     * Get all trainings
+     */
+    public function cart(Request $request)
     {
         $trainings = AllTrainings::get();
         return response()->json([
@@ -131,6 +144,65 @@ class TrainingController extends Controller
             'data'=>$response,
             'test'=>$training
         ]);
+    }
+
+    /**
+     * Add Individual to training
+     */
+    public function registerUser(Request $request)
+    {
+        try{
+            $training = $request->training;
+            $startDate = AllTrainings::where('id', $training)->first()->StartDate;
+            $month = date('m', strtotime($startDate));
+            $year = substr(date('Y', strtotime($startDate)), -2);
+            $id = Training::latest('id')->first() ? Training::latest('id')->first()->id + 1 : 1;
+            throw_if(Training::where('Training', $training)->where('Email', $request->email)->first(), "Email exists");
+            // Create a new Training record
+            Training::create([
+                'Training' => $training,
+                'Email' => $request->email,
+                'Name' => $request->fullName,
+                'Number' => 'EIK/' . $month . '/' . $year . '/' . $id,
+            ]);
+
+            $response = Training::where('Training',$training)
+                                ->where('Email',$request->email)
+                                ->get(['Name','Email','Number','Sent']);
+            return response()->json([
+                'message'=>'member added',
+                'data'=>$response,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+                'request' => $request->all()
+            ], 401);
+        }
+    }
+
+     /**
+     * Edit Individual info
+     */
+    public function editUser(Request $request)
+    {
+        try{
+            $training = Training::where('Number', $request->number);
+            $training->update([
+                'Email' => $request->email,
+                'Name' => $request->fullName,
+            ]);
+
+            return response()->json([
+                'message'=>'member updated',
+                'data'=>$training,
+            ]);
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+                'request' => $request->all()
+            ], 401);
+        }
     }
 
     /**

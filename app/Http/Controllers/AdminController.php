@@ -429,7 +429,8 @@ class AdminController extends Controller
      * Verify user
      */
     public function verify(Request $request){
-        $user = $request->user();
+        try{
+            $user = $request->user();
             if ($user) {
                 if ($user->role=='Admin') {
                     $member = User::find($request->user);
@@ -463,8 +464,6 @@ class AdminController extends Controller
                     'error' => 'Unauthorized',
                 ], 401);
             }
-        try{
-            
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),

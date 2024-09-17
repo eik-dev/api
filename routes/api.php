@@ -15,6 +15,9 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\PDFcontroller;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\PeerConnectionController;
+
+Route::post('/connect', [PeerConnectionController::class, 'connect']);
 
 Route::get('/user', [UserController::class, 'show']);
 Route::post('/pay/mpesa', [PaymentController::class, 'mpesaSTK']);
@@ -49,7 +52,7 @@ Route::middleware('auth:sanctum')->group(function () {
     //profile related routes
     Route::get('/profile', [ProfileController::class, 'show']);
     Route::get('/profile/get/{section}', [ProfileController::class, 'get']);
-    Route::post('/profile/edit/{section}', [ProfileController::class, 'update']);
+    Route::post(uri: '/profile/edit/{section}', action: [ProfileController::class, 'update']);
     //files related routes
     Route::post('/csv', [FileController::class, 'csv']);
     Route::post('/files/{folder}', [FileController::class, 'store']);
@@ -86,6 +89,9 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/training/attendee', [TrainingController::class, 'attendee']);
     Route::post('/training/create', [TrainingController::class, 'store']);
     Route::post('/training/members', [TrainingController::class, 'register']);
+    Route::post('/training/member/add', [TrainingController::class, 'registerUser']);
+    Route::post('/training/member/edit', [TrainingController::class, 'editUser']);
     Route::get('/training/download', [TrainingController::class, 'download']);
     Route::get('/training/email', [TrainingController::class, 'send']);
+    Route::get('/training/cart', [TrainingController::class, 'cart']);
 });
