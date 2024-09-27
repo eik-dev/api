@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events\SaveLog;
 use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
@@ -451,6 +452,11 @@ class AdminController extends Controller
                         $member->email_verified_at = null;
                     }
                     $member->save();
+                    SaveLog::dispatch([
+                        'name' => $user->name,
+                        'email' => $user->email,
+                        'action' => ($request->verify == 'true' ? 'User verified' : 'User unverified') . ' '.$member->name.' '.$member->email
+                    ]);
                     return response()->json([
                         'message' => $request->verify == 'true' ? 'User verified' : 'User unverified',
                     ]);

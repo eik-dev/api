@@ -16,6 +16,7 @@ use App\Http\Controllers\PDFcontroller;
 use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\PeerConnectionController;
+use App\Http\Controllers\TWGsController;
 
 Route::post('/connect', [PeerConnectionController::class, 'connect']);
 
@@ -83,6 +84,10 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/request', [CertificatesController::class, 'store']);
     Route::get('/certificate/validate', [CertificatesController::class, 'validate']);
     Route::get('/certificate/delete', [CertificatesController::class, 'delete']);
+    //TWGs related routes
+    Route::get('/twg/index', [TWGsController::class, 'index']);
+    Route::get('/twg/join', [TWGsController::class, 'join']);
+    Route::get('/twg/exit', [TWGsController::class, 'exit']);
     //training related routes
     Route::get('/training/all', [TrainingController::class, 'index']);
     Route::get('/training/attended', [TrainingController::class, 'attended']);
