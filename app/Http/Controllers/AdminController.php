@@ -13,6 +13,8 @@ use App\Models\Profession;
 use App\Models\Certificates;
 use App\Models\Logs;
 use App\Models\Mpesa;
+use App\Models\TWG;
+
 use App\Http\Controllers\EmailController;
 
 //populates dashboard with stats
@@ -334,6 +336,8 @@ class AdminController extends Controller
             $user = $request->user();
             if ($user) {
                 if ($user->role=='Admin') {
+                    $twgs = TWG::where('user_id', $request->id)->first();
+                    if ($twgs) $twgs->delete();
                     $individual = Individual::where('user_id', $request->id)->first();
                     if ($individual) $individual->delete();
                     $certificates = Certificates::where('user_id', $request->id)->first();
@@ -392,6 +396,8 @@ class AdminController extends Controller
             $user = $request->user();
             if ($user) {
                 if ($user->role=='Admin') {
+                    $twgs = TWG::where('user_id', $request->id)->first();
+                    if ($twgs) $twgs->delete();
                     $firm = Firm::where('user_id', $request->id)->first();
                     if ($firm) $firm->delete();
                     $certificates = Certificates::where('user_id', $request->id)->first();
@@ -443,10 +449,10 @@ class AdminController extends Controller
                         } else {
                             $category = Firm::where('user_id', $member->id)->first()->category;
                         }
-                        $cert = Certificates::create($category, $member->id);
-                        $cert->verified = now();
-                        $cert->expiry = now()->addYear();
-                        $cert->save();
+                        // $cert = Certificates::create($category, $member->id);
+                        // $cert->verified = now();
+                        // $cert->expiry = now()->addYear();
+                        // $cert->save();
                         EmailController::sendVerifyUserEmail($member->email);
                     }else{
                         $member->email_verified_at = null;
