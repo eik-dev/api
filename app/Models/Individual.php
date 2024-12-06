@@ -28,10 +28,10 @@ class Individual extends Model
         $individual = new Individual();
         $individual->user_id = $id;
         $individual->category = $profile['category'];
-        $individual->firm = $profile['firm'];
+        // $individual->firm = $profile['firm'];
         $individual->alternate = $profile['alternate'];
         $individual->nationality = $profile['nationality'];
-        $individual->nationalID = $profile['nationalID'];
+        // $individual->nationalID = $profile['nationalID'];
         $individual->postal = $profile['postal'];
         $individual->town = $profile['town'];
         $individual->county = $profile['county'];

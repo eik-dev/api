@@ -14,7 +14,6 @@ use App\Models\Files;
 use App\Models\Certificates;
 
 use App\Events\SaveLog;
-use Laravel\Reverb\Certificate;
 
 /**
  * Handle user registration, login, and session management.

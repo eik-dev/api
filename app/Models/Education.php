@@ -21,13 +21,13 @@ class Education extends Model
     {
         for ($i=0; $i < count($educations); $i++) { 
             if ( !isset($educations[$i]['Title']) ||
-                !isset($educations[$i]['Institution']) ||
+                !isset($educations[$i]['institution']) ||
                 !isset($educations[$i]['Certification'])
             ) continue;
             $education = new Education();
             $education->user_id = $id;
             $education->Title = $educations[$i]['Title'];
-            $education->Institution = $educations[$i]['Institution'];
+            $education->Institution = $educations[$i]['institution'];
             $education->Certification = $educations[$i]['Certification'];
             $education->start = $educations[$i]['start'];
             $education->end = $educations[$i]['end'];

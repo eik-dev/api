@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('category');
             $table->string('alternate')->nullable();
             $table->string('nationality')->nullable();
-            $table->string('nationalID')->unique();
+            $table->string('nationalID')->unique()->nullable();
             $table->string('postal')->nullable();
             $table->string('town')->nullable();
             $table->string('county')->nullable();
