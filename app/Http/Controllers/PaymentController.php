@@ -69,7 +69,7 @@ class PaymentController extends Controller
                     'phone' => $contact,
                     'amount' => $request->amount,
                     'email' => $request->email,
-                    'AccountReference' => 'Registration Fee',
+                    'AccountReference' => $request->AccountReference,
                     'CheckoutRequestID' => $response->CheckoutRequestID
                 ]);
                 SaveLog::dispatch([
@@ -155,7 +155,21 @@ class PaymentController extends Controller
                 'ResultDesc' => $request['Body']['stkCallback']['ResultDesc'],
             ]);
             if ($request['Body']['stkCallback']['ResultCode'] == 0){
-                $transaction->update(['MpesaReceiptNumber' => $request['Body']['stkCallback']['ResultDesc']['CallbackMetadata']['Item'][1]['Value']]);
+                $items = $request['Body']['stkCallback']['CallbackMetadata']['Item'];
+                $mpesaReceiptNumber = null;
+
+                foreach ($items as $item) {
+                    if ($item['Name'] === 'MpesaReceiptNumber') {
+                        $mpesaReceiptNumber = $item['Value'];
+                        break;
+                    }
+                }
+
+                if ($mpesaReceiptNumber !== null) {
+                    $transaction->update(['MpesaReceiptNumber' => $mpesaReceiptNumber]);
+                } else {
+                    $transaction->update(['MpesaReceiptNumber' => "Null"]);
+                }
                 Log::info($request->all());
                 SaveLog::dispatch([
                     'name' => 'System',

@@ -21,7 +21,7 @@ class CertificatesController extends Controller
             $user = $request->user();
             if ($user->role == 'Admin') {
                 $certs = Certificates::with([
-                    'user:id,name,email,nema',
+                    'user:id,name,email',
                 ])
                 ->skip($request->Genesis)
                 ->orderByDesc('created_at')
@@ -60,7 +60,8 @@ class CertificatesController extends Controller
                 } else {
                     $category = Firm::where('user_id', $user->id)->first()->category;
                 }
-                $cert = Certificates::create($category, $user->id);
+                $year = $request->year?$request->year:date('Y');
+                $cert = Certificates::create($category, $user->id, $year);
                 SaveLog::dispatch([
                     'name' => $user->name,
                     'email' => $user->email,
@@ -92,10 +93,8 @@ class CertificatesController extends Controller
                 $cert = Certificates::find($request->id);
                 if ($request->validate=='true'){
                     $cert->verified = now();
-                    $cert->expiry = now()->addYear();
                 } else {
                     $cert->verified = null;
-                    $cert->expiry = null;
                 }
                 $cert->save();
                 return response()->json([

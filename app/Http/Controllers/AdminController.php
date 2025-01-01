@@ -449,9 +449,8 @@ class AdminController extends Controller
                         } else {
                             $category = Firm::where('user_id', $member->id)->first()->category;
                         }
-                        // $cert = Certificates::create($category, $member->id);
+                        // $cert = Certificates::create($category, $member->id); // remember year
                         // $cert->verified = now();
-                        // $cert->expiry = now()->addYear();
                         // $cert->save();
                         EmailController::sendVerifyUserEmail($member->email);
                     }else{

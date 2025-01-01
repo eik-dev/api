@@ -16,7 +16,7 @@ class Certificates extends Model
     protected $fillable = [
         'user_id',
         'number',
-        'expiry',
+        'year',
         'request',
         'verified'
     ];
@@ -65,11 +65,12 @@ class Certificates extends Model
         return $number;
     }
 
-    public static function create($category,$id)
+    public static function create($category,$id, $year)
     {
         $cert = new Certificates();
         $cert->user_id = $id;
         $cert->number = self::generateNumber($category, $id);
+        $cert->year = $year;
         $cert->save();
         return $cert;
     }

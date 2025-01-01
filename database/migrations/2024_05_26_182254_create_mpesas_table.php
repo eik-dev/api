@@ -15,13 +15,13 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('amount');
-            $table->string('phone');
+            $table->string('phone')->nullable();
             $table->string('email')->nullable();
-            $table->string('AccountReference');
+            $table->string('AccountReference')->nullable();
             $table->string('ResultCode')->nullable();
             $table->string('ResultDesc')->nullable();
             $table->string('MpesaReceiptNumber')->nullable();
-            $table->string('CheckoutRequestID');
+            $table->string('CheckoutRequestID')->nullable();
         });
     }
 
