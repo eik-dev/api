@@ -160,5 +160,29 @@ class ProfileController extends Controller
                 'request' => $request->all()
             ], 401);
         }
-    }    
+    }
+    
+    public function history(Request $request){
+        $user = $request->user();
+        if ($user) {
+            if (($request->id && $user->role=='Admin')) {
+                $id = $request->id?$request->id:$user->id;
+                $certs = Certificates::where('user_id', $id)
+                ->orderBy('year', 'desc')
+                ->get();
+                return response()->json([
+                    'message' => '',
+                    'data' => $certs
+                ]);
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } else {
+            return response()->json([
+                'error' => 'Unauthorized',
+            ], 401);
+        }
+    }
 }

@@ -53,6 +53,7 @@ Route::middleware('auth:sanctum')->group(function () {
     //profile related routes
     Route::get('/profile', [ProfileController::class, 'show']);
     Route::get('/profile/get/{section}', [ProfileController::class, 'get']);
+    Route::get('/profile/membership', [ProfileController::class, 'history']);
     Route::post(uri: '/profile/edit/{section}', action: [ProfileController::class, 'update']);
     //files related routes
     Route::post('/csv', [FileController::class, 'csv']);

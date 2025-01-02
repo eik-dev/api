@@ -111,10 +111,14 @@ class CertificatesController extends Controller
     public function download(Request $request)
     {
         try{
+            $year = $request->year?$request->year:date('Y');
             $background = public_path('system/members.jpeg');
             $cert = Certificates::with([
                 'user:id,name,practicing,role,email',
-            ])->where('number', $request->id)->first();
+            ])
+            ->where('number', $request->id)
+            ->where('year', $year)
+            ->first();
             $qrData = 'https://portal.eik.co.ke/verify?id=' . $cert->number;
             if ($cert->user->role == 'Individual') {
                 $category = Individual::where('user_id', $cert->user->id)->first()->category;
