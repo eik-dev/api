@@ -98,7 +98,9 @@ class UserController extends Controller
     {
         $user = $request->user(); // Get the authenticated user
         $photo = Files::where('user_id',$user->id)->where('folder','profile')->first();
-        $certificate = Certificates::where('user_id',$user->id)->first();
+        $certificate = Certificates::where('user_id',$user->id)
+        ->where('year', date('Y'))
+        ->first();
         if($certificate) $isActive = $certificate->verified!=null?true:false;
         else $isActive = false;
         $points = 0;

@@ -22,7 +22,9 @@ class ProfileController extends Controller
         try{
             $user = $request->user();
             $id = ($request->id && $user->role=='Admin')?$request->id:$user->id;
-            $cert = Certificates::where('user_id',$id)->first();
+            $cert = Certificates::where('user_id',$id)
+            ->where('year',date('Y'))
+            ->first();
             if ($user) {
                 if ($user->role=='Individual' || $request->role=='Individual') {
                     $profile = Individual::where('user_id',$id)->first();

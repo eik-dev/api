@@ -12,9 +12,12 @@ Route::get('/', function () {
 });
 Route::get('/view/certificates/member', function (Request $request) {
     $background = asset('system/members.jpeg');
+    $year = $request->year?$request->year:date('Y');
     $cert = Certificates::with([
         'user:id,name,practicing,role',
-    ])->where('number', $request->id)->first();
+    ])->where('number', $request->id)
+    ->where('year', $year)
+    ->first();
     $qrData = 'https://portal.eik.co.ke/verify?id=' . $cert->number;
     if ($cert->user->role == 'Individual') {
         $category = Individual::where('user_id', $cert->user->id)->first()->category;
