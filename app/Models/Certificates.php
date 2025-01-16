@@ -58,6 +58,9 @@ class Certificates extends Model
             case 'Firms':
                 $number = 'EIK/3/' . $id;
                 break;
+            case 'Firm':
+                $number = 'EIK/3/' . $id;
+                break;
             default:
                 $number = 'EIK/0/' . $id;
                 break;
