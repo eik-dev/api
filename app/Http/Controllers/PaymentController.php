@@ -37,7 +37,7 @@ class PaymentController extends Controller
     {
         $timestamp = date('YmdHis');
         $password = base64_encode($this->shortcode . $this->passkey . $timestamp);
-        $contact = '254' . ltrim($request->phone, '+2540');
+        $contact = '254' . preg_replace('/\D/', '', ltrim($request->phone, '+2540'));
 
         try {
             $client = new Client();
