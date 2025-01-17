@@ -82,7 +82,7 @@ class PaymentController extends Controller
         } catch (\Exception $e) {
             return response()->json(([
                 'error'=>$e->getMessage(),
-                'request' => $request->all()
+                'request' => $contact
             ]));
         }
     }
