@@ -150,12 +150,13 @@ class CertificatesController extends Controller
         try{
             if($request->training){
                 $cert = Training::where('number',$request->id)->first();
-                $training = AllTrainings::find($cert->Training)->first();
+                $training = AllTrainings::find($cert->Training);
                 return response()->json([
                     'user'=>[
                         'name'=>$cert->Name,
                     ],
-                    'training'=>$training
+                    'training'=>$training,
+                    'cert'=>$cert
                 ]);
             }
             $cert = Certificates::with([
