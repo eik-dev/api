@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\AllTrainings;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Certificates;
+use App\Models\Training;
 use App\Events\SaveLog;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -146,6 +148,16 @@ class CertificatesController extends Controller
     public function verify(Request $request)
     {
         try{
+            if($request->training){
+                $cert = Training::where('number',$request->id)->first();
+                $training = AllTrainings::find($cert->Training)->first();
+                return response()->json([
+                    'user'=>[
+                        'name'=>$cert->Name,
+                    ],
+                    'training'=>$training
+                ]);
+            }
             $cert = Certificates::with([
                 'user:id,name',
             ])->where('number', $request->id)->first();

@@ -42,5 +42,15 @@ Route::get('/view/certificates/training/{id}', function ($id) {
     $background = asset($training->Background);
     return view($training->View, compact(['background', 'name', 'number','qrData', 'info', 'date']));
 });
+Route::get('/view/certificates/custom', function () {
+    $name = 'Jane Doe';
+    $number = 'EIK/01/24/1234';
+    $qrData = 'https://portal.eik.co.ke/verify?training='.'1'.'&id='.'EIK/1/7';
+    $info = '';
+    $StartDate = '31st MM YYYY';
+    $date = '';
+    $background = asset('/system/custom.jpg');
+    return view('certificates.custom', compact(['background', 'name', 'number','qrData', 'info', 'date']));
+});
 
 require __DIR__.'/auth.php';
