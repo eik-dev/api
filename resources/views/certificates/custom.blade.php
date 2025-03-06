@@ -35,12 +35,12 @@
             font-family: DancingScript;
         }
         .number{
-            font-size: 11px;
+            font-size: 12px;
             color: #587d33;
             line-height: 18px;
             position: absolute;
-            bottom: 51px;
-            left: 525px;
+            bottom: 67px;
+            left: 535px;
         }
         .info{
             display: none;
