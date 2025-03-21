@@ -148,7 +148,7 @@ class CertificatesController extends Controller
     public function verify(Request $request)
     {
         try{
-            if($request->training){
+            if($request->training && $request->training!=null){
                 $cert = Training::where('number',$request->id)->first();
                 $training = AllTrainings::find($cert->Training);
                 return response()->json([
@@ -164,7 +164,7 @@ class CertificatesController extends Controller
             ])->where('number', $request->id)->first();
             return response()->json($cert);
         } catch (\Exception $e) {
-            return response()->json([ 'error' => $e->getMessage() ],401);
+            return response()->json([ 'error' => $e->getMessage() ],400);
         }
     }
 
