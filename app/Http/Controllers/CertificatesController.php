@@ -148,7 +148,7 @@ class CertificatesController extends Controller
     public function verify(Request $request)
     {
         try{
-            if($request->training && $request->training!=null){
+            if($request->training && $request->training!='null'){
                 $cert = Training::where('number',$request->id)->first();
                 $training = AllTrainings::find($cert->Training);
                 return response()->json([
