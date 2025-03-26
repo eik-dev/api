@@ -9,6 +9,7 @@ use App\Models\Individual;
 use App\Models\Firm;
 use App\Models\Certificates;
 use App\Models\Training;
+use App\Models\Conference;
 use App\Events\SaveLog;
 use Barryvdh\DomPDF\Facade\Pdf;
 
@@ -156,6 +157,18 @@ class CertificatesController extends Controller
                         'name'=>$cert->Name,
                     ],
                     'training'=>$training,
+                    'cert'=>$cert
+                ]);
+            }
+            if($request->conference && $request->conference!='null'){
+                $cert = Conference::where('number',$request->id)
+                ->with(['role','conference'])
+                ->first();
+                return response()->json([
+                    'user'=>[
+                        'name'=>$cert->Name,
+                    ],
+                    'training'=>$cert->conference->Name,
                     'cert'=>$cert
                 ]);
             }

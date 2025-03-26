@@ -22,24 +22,7 @@ return Application::configure(basePath: dirname(__DIR__))
         ]);
 
         $middleware->validateCsrfTokens(except: [
-            'api/files/*',
-            'api/connect',
-            'api/login',
-            'api/recover',
-            'api/register',
-            'api/admin/add',
-            'api/admin/modify',
-            'api/admin/members',
-            'api/mpesa/callback',
-            'api/mpesa/mpesaCallback',
-            'api/pay/mpesa',
-            'api/csv',
-            'api/training/members',
-            'api/training/member/add',
-            'api/training/member/edit',
-            'api/training/create',
-            'api/training/update',
-            'api/profile/edit/*'
+            'api/*',
         ]);
 
         //

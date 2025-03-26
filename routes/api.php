@@ -17,6 +17,7 @@ use App\Http\Controllers\TrainingController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\PeerConnectionController;
 use App\Http\Controllers\TWGsController;
+use App\Http\Controllers\ConferenceController;
 
 Route::post('/connect', [PeerConnectionController::class, 'connect']);
 
@@ -50,16 +51,19 @@ Route::get('/certificate/verify', [CertificatesController::class, 'verify']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'show']);
     Route::get('/logout', [UserController::class, 'destroy']);
+    
     //profile related routes
     Route::get('/profile', [ProfileController::class, 'show']);
     Route::get('/profile/get/{section}', [ProfileController::class, 'get']);
     Route::get('/profile/membership', [ProfileController::class, 'history']);
     Route::post(uri: '/profile/edit/{section}', action: [ProfileController::class, 'update']);
+    
     //files related routes
     Route::post('/csv', [FileController::class, 'csv']);
     Route::post('/files/{folder}', [FileController::class, 'store']);
     Route::get('/files/{folder}', [FileController::class, 'show']);
     Route::get('/file/delete/{folder}', [FileController::class, 'destroy']);
+    
     //admin related routes
     Route::get('/summary', [StatsController::class, 'summary']);
     Route::get('/stats/members', [StatsController::class, 'category']);
@@ -78,17 +82,21 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user/verify', [AdminController::class, 'verify']);
     Route::get('/logs', [AdminController::class, 'logs']);
     Route::get('/payments', [AdminController::class, 'payments']);
+
     //firm related routes
     Route::post('/firm/members', [FirmController::class, 'members']);
+    
     //certificate related routes
     Route::get('/certificates', [CertificatesController::class, 'index']);
     Route::get('/request', [CertificatesController::class, 'store']);
     Route::get('/certificate/validate', [CertificatesController::class, 'validate']);
     Route::get('/certificate/delete', [CertificatesController::class, 'delete']);
+    
     //TWGs related routes
     Route::get('/twg/index', [TWGsController::class, 'index']);
     Route::get('/twg/join', [TWGsController::class, 'join']);
     Route::get('/twg/exit', [TWGsController::class, 'exit']);
+    
     //training related routes
     Route::get('/training/all', [TrainingController::class, 'index']);
     Route::get('/training/attended', [TrainingController::class, 'attended']);
@@ -100,4 +108,19 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/training/download', [TrainingController::class, 'download']);
     Route::get('/training/email', [TrainingController::class, 'send']);
     Route::get('/training/cart', [TrainingController::class, 'cart']);
+
+    //conference related routes
+    Route::get('/conference/roles/all', [ConferenceController::class, 'getAllRoles']);
+    Route::post('/conference', [ConferenceController::class, 'store']);
+    Route::get('/conference/all', [ConferenceController::class, 'index']);
+    Route::post('/conference/update/{conference}', [ConferenceController::class, 'updateConference']);
+    Route::get('/conference/{conference}', [ConferenceController::class, 'conference']);
+    Route::post('/conference/roles/{conference}', [ConferenceController::class, 'roles']);
+    Route::get('/conference/roles/{conference}', [ConferenceController::class, 'getRoles']);
+    Route::post('/conference/roles/update/{conferenceRoles}', [ConferenceController::class, 'updateRole']);
+    Route::get('/conference/attendee/{id}', [ConferenceController::class, 'attendee']);
+    Route::post('/conference/member/add', [ConferenceController::class, 'registerUser']);
+    Route::get('/conference/download/{id}', [ConferenceController::class, 'download']);
+    Route::get('/conference/email/{id}', [ConferenceController::class, 'send']);
+    Route::post('/conference/members', [ConferenceController::class, 'register']);
 });

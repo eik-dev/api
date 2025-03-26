@@ -1,11 +1,13 @@
 <?php
 
+use App\Models\Conference;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\AllTrainings;
 use App\Models\Certificates;
 use App\Models\Individual;
 use App\Models\Firm;
+use App\Models\ConferenceRoles;
 
 Route::get('/', function () {
     return ['Laravel' => app()->version()];
@@ -31,6 +33,7 @@ Route::get('/view/certificates/member', function (Request $request) {
     $number = $cert->number;
     return view('certificates.members', compact(['background', 'name', 'number', 'qrData', 'info', 'date']));
 });
+
 Route::get('/view/certificates/training/{id}', function ($id) {
     $training = AllTrainings::findOrFail($id);
     $name = 'Jane Doe';
@@ -42,6 +45,7 @@ Route::get('/view/certificates/training/{id}', function ($id) {
     $background = asset($training->Background);
     return view($training->View, compact(['background', 'name', 'number','qrData', 'info', 'date']));
 });
+
 Route::get('/view/certificates/custom', function () {
     $name = 'Jane Doe';
     $number = 'EIK/01/24/1234';
@@ -51,6 +55,19 @@ Route::get('/view/certificates/custom', function () {
     $date = '';
     $background = asset('/system/custom.jpg');
     return view('certificates.custom', compact(['background', 'name', 'number','qrData', 'info', 'date']));
+});
+
+Route::get('/view/certificates/conference/{id}', function ($id) {
+    $user = Conference::with(['role'])
+    ->findOrFail($id);
+    $name = $user->Name;
+    $number = $user->Number;
+    $qrData = 'https://portal.eik.co.ke/verify?conference='.'1'.'&id='.$number;
+    $info = '';
+    $StartDate = '31st MM YYYY';
+    $date = '';
+    $background = asset($user->role->Background);
+    return view('certificates.conference', compact(['background', 'name', 'number','qrData', 'info', 'date']));
 });
 
 require __DIR__.'/auth.php';

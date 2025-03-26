@@ -9,6 +9,7 @@ use App\Mail\DeleteUser;
 use App\Mail\VerifyUser;
 use App\Mail\Receipt;
 use App\Mail\SendCertificate;
+use App\Mail\SendConferenceCertificate;
 
 class EmailController extends Controller
 {
@@ -37,5 +38,9 @@ class EmailController extends Controller
     public static function sendCertificate($email, $pdf, $payload)
     {
         Mail::to($email)->send(new SendCertificate($pdf, $payload));
+    }
+    public static function sendConferenceCertificate($email, $pdf, $payload)
+    {
+        Mail::to($email)->send(new SendConferenceCertificate($pdf, $payload));
     }
 }

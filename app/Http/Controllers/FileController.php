@@ -59,6 +59,7 @@ class FileController extends Controller
                 //get index of name and email columns
                 $nameIndex = array_search('Name', $data[0]);
                 $emailIndex = array_search('Email', $data[0]);
+                $roleIndex = array_search('Role', $data[0]);
                 //return an array of only name and email
                 $response = [];
                 foreach ($data as $key => $value) {
@@ -68,7 +69,10 @@ class FileController extends Controller
                         $response[] = [
                             'Name' => $value[$nameIndex],
                             'Email' => $value[$emailIndex],
-                            'Number' => $member?$member->number:''
+                            'Number' => $member?$member->number:'',
+                            'role' => [
+                                'Name' => $value[$roleIndex]?$value[$roleIndex]:''
+                            ]
                         ];
                     }
                 }
@@ -77,6 +81,7 @@ class FileController extends Controller
                     'message' => 'CSV file uploaded successfully',
                     'nameIndex' => $nameIndex,
                     'emailIndex' => $emailIndex,
+                    'roleIndex' => $roleIndex,
                 ]);
             } else {
                 return response()->json(['error' => 'Unauthorized'], 401);
