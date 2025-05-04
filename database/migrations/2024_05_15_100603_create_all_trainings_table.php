@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('View')->default('certificates.training');
             $table->string('Background')->default('system/training.jpg');
             $table->string('Style')->nullable();
-            $table->string('Info');
+            $table->longtext('Info');
         });
     }
 

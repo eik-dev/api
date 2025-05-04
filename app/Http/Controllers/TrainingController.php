@@ -101,13 +101,17 @@ class TrainingController extends Controller
     public function store(Request $request)
     {
         try{
-            AllTrainings::create(
-                $request->name,
-                $request->start,
-                $request->end,
-                $request->info,
-            );
-            return response()->json(['message' => 'Succesfully created training']);
+            $training = AllTrainings::create([
+                'Name' => $request->title,
+                'StartDate' => $request->start,
+                'EndDate' => $request->end,
+                'Info' => $request->description,
+            ]);
+            return response()->json([
+                'message' => 'Succesfully created training',
+                'success' => true,
+                'data' => $training
+            ]);
         } catch (\Exception $e) {
             return response()->json([
                 'error' => $e->getMessage(),

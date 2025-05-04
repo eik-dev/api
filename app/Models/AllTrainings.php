@@ -18,13 +18,4 @@ class AllTrainings extends Model
         'Style',
         'Info',
     ];
-
-    public static function create($name, $start, $end, $info){
-        $training = new AllTrainings();
-        $training->Name = $name;
-        $training->StartDate = $start;
-        $training->EndDate = $end;
-        $training->Info = $info;
-        $training->save();
-    }
 }
