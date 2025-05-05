@@ -51,6 +51,7 @@ Route::get('/certificate/verify', [CertificatesController::class, 'verify']);
 Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', [UserController::class, 'show']);
     Route::get('/logout', [UserController::class, 'destroy']);
+    Route::post('/agm/rsvp', [UserController::class, 'rsvp']);
     
     //profile related routes
     Route::get('/profile', [ProfileController::class, 'show']);

@@ -21,6 +21,22 @@ use App\Events\SaveLog;
 class UserController extends Controller
 {
     /**
+     * RSVP for AGM
+     */
+    public function rsvp(Request $request)
+    {
+        $user = $request->user();
+        if ($user->agm) {
+            $user->agm->update(['rsvp' => true]);
+        } else {
+            $user->agm()->create(['rsvp' => true]);
+        }
+        return response()->json([
+            'success' => true,
+            'message' => 'Reservation successful'
+        ]);
+    }
+    /**
      * Login and authenticate a user.
      */
     public function store(Request $request)
@@ -96,7 +112,7 @@ class UserController extends Controller
      */
     public function show(Request $request)
     {
-        $user = $request->user(); // Get the authenticated user
+        $user = $request->user()->load('agm'); // Get the authenticated user
         $photo = Files::where('user_id',$user->id)->where('folder','profile')->first();
         $certificate = Certificates::where('user_id',$user->id)
         ->where('year', date('Y'))
@@ -113,6 +129,7 @@ class UserController extends Controller
                     'photo' => $photo ? $photo->url : null,
                     'active' => $isActive,
                     'points' => $points,
+                    'RSVP' => $user->agm ? true : false,
                 ],
             ]);
         } else {
