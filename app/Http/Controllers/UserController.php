@@ -29,7 +29,10 @@ class UserController extends Controller
         if ($user->agm) {
             $user->agm->update(['rsvp' => true]);
         } else {
-            $user->agm()->create(['rsvp' => true]);
+            $user->agm()->create([
+                'rsvp' => true,
+                'type' => $request->type
+            ]);
         }
         return response()->json([
             'success' => true,

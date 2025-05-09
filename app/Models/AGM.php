@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class AGM extends Model
 {
-    protected $fillable = ['user_id'];
+    protected $fillable = ['user_id', 'type'];
 
     public function user(): BelongsTo
     {
