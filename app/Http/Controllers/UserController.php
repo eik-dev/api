@@ -132,7 +132,7 @@ class UserController extends Controller
                     'photo' => $photo ? $photo->url : null,
                     'active' => $isActive,
                     'points' => $points,
-                    'RSVP' => $user->agm ? true : false,
+                    'RSVP' => $user->agm,
                 ],
             ]);
         } else {
