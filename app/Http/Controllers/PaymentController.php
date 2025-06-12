@@ -180,6 +180,7 @@ class PaymentController extends Controller
             }
         }else{
             Log::info('No transaction found');
+            Log::info($request->all());
         }
     }
 }
