@@ -18,6 +18,42 @@ use App\Http\Controllers\TestController;
 use App\Http\Controllers\PeerConnectionController;
 use App\Http\Controllers\TWGsController;
 use App\Http\Controllers\ConferenceController;
+use App\Http\Controllers\OAuthController;
+
+// OAuth routes for first-party applications
+Route::prefix('oauth')->group(function () {
+    Route::post('/token', [OAuthController::class, 'tokenFirstParty']);
+    Route::get('/authorize', [OAuthController::class, 'authorize']);
+    Route::get('/client/{client_id}', [OAuthController::class, 'clientInfo']);
+    Route::post('/revoke', [OAuthController::class, 'revokeToken']);
+});
+
+// OAuth protected routes
+Route::middleware('auth:passport')->group(function () {
+    Route::get('/oauth/userinfo', [OAuthController::class, 'userInfo']);
+    
+    // Example protected routes with different scopes
+    Route::middleware('scopes:read-profile')->group(function () {
+        Route::get('/oauth/profile', [ProfileController::class, 'show']);
+    });
+    
+    Route::middleware('scopes:read-files')->group(function () {
+        Route::get('/oauth/files', [FileController::class, 'index']);
+    });
+    
+    Route::middleware('scopes:write-files')->group(function () {
+        Route::post('/oauth/files', [FileController::class, 'store']);
+    });
+    
+    Route::middleware('scopes:read-certificates')->group(function () {
+        Route::get('/oauth/certificates', [CertificatesController::class, 'index']);
+    });
+    
+    Route::middleware('scopes:admin')->group(function () {
+        Route::get('/oauth/admin/users', [AdminController::class, 'members']);
+        Route::get('/oauth/admin/stats', [StatsController::class, 'summary']);
+    });
+});
 
 Route::post('/connect', [PeerConnectionController::class, 'connect']);
 

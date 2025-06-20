@@ -39,6 +39,7 @@ class UserController extends Controller
             'message' => 'Reservation successful'
         ]);
     }
+    
     /**
      * Login and authenticate a user.
      */
@@ -66,7 +67,8 @@ class UserController extends Controller
                     ]);
                     return response()->json(['error' => 'Pending admin approval'], 401);
                 }
-                $token = $user->createToken('auth_token')->plainTextToken;
+                $token = $user->createToken('SanctumToken')->plainTextToken;
+                // $token = "";
                 
                 SaveLog::dispatch([
                     'name' => $user->name,
