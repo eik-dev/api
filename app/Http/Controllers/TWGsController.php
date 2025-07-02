@@ -24,7 +24,7 @@ class TWGsController extends Controller
                 ]
             ],
             [
-                'name' => 'Watershed Catchment Management (Blue economy)',
+                'name' => 'Water Resource Management',
                 'text' => 'The Watershed Resource Management TWG aims to promote sustainable management of water resources and ecosystems within a blue economy framework, focusing on watershed management and conservation efforts.',
                 'responsibility' => [
                     'Participate in developing strategies for integrated watershed management, considering ecological, social, and economic factors.',
@@ -40,7 +40,7 @@ class TWGsController extends Controller
                 ]
             ],
             [
-                'name' => 'Sustainable Waste Management',
+                'name' => 'Waste Management',
                 'text' => 'The Waste Management TWG aims to develop strategies and policies to promote waste reduction, recycling, and proper disposal practices, with a focus on achieving a circular economy.',
                 'responsibility' => [
                     'Participate in developing guidelines for waste reduction, segregation, and recycling at the household, community, and industrial levels.',
@@ -56,7 +56,7 @@ class TWGsController extends Controller
                 ]
             ],
             [
-                'name' => 'Climate Science',
+                'name' => 'Climate Change',
                 'text' => 'The Climate Change TWG aims to provide expertise and guidance on climate change science, impacts, and adaptation strategies to inform decision-making and policy development.',
                 'responsibility' => [
                     'Review and synthesize the latest scientific research on climate change and its effects on various sectors.',
@@ -100,7 +100,7 @@ class TWGsController extends Controller
                 ]
             ],
             [
-                'name' => 'Clean Energy and Renewables',
+                'name' => 'Energy - Clean and Renewables',
                 'text' => 'The Energy – Clean and Renewables TWG aims to accelerate the transition to clean and renewable energy sources, while promoting energy efficiency and decarbonization.',
                 'responsibility' => [
                     'Participate in developing strategies to promote renewable energy deployment and energy efficiency improvements across various sectors.',
@@ -129,7 +129,7 @@ class TWGsController extends Controller
                 ]
             ],
             [
-                'name' => 'Environmental Advocacy - Youth & Women Groups',
+                'name' => 'Environmental Advocacy',
                 'text' => 'The Environmental Advocacy Technical Working Group (TWG) is established to promote strategic advocacy on environmental and sustainability issues, with a focus on influencing policy, raising public awareness, and supporting active civic engagement in environmental governance.',
                 'responsibility' => [
                     'Develop and implement advocacy strategies to advance environmental protection, climate action, and sustainable development at local and national levels.',
