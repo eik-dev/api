@@ -483,6 +483,51 @@ class AdminController extends Controller
     }
 
     /**
+     * Activate user
+     */
+    public function activate(Request $request)
+    {
+        try{
+            $user = $request->user();
+            if ($user) {
+                if ($user->role=='Admin') {
+                    $member = User::find($request->user);
+                    //create certificate and validate
+                    if ($member->role == 'Individual') {
+                        $category = Individual::where('user_id', $member->id)->first()->category;
+                    } else {
+                        $category = Firm::where('user_id', $member->id)->first()->category;
+                    }
+                    $cert = Certificates::create($category, $member->id, date('Y'));
+                    $cert->verified = now();
+                    $cert->save();
+                    $member->save();
+                    SaveLog::dispatch([
+                        'name' => $user->name,
+                        'email' => $user->email,
+                        'action' => 'Activated '.$member->name.' '.$member->number
+                    ]);
+                    return response()->json([
+                        'message' => 'User activated'
+                    ]);
+                } else {
+                    return response()->json([
+                        'error' => 'Unauthorized',
+                    ], 401);
+                }
+            } else {
+                return response()->json([
+                    'error' => 'Unauthorized',
+                ], 401);
+            }
+        } catch (\Exception $e) {
+            return response()->json([
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
+
+    /**
      * Get all firms
      */
     public function firms(Request $request){

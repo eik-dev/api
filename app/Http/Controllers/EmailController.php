@@ -10,6 +10,7 @@ use App\Mail\VerifyUser;
 use App\Mail\Receipt;
 use App\Mail\SendCertificate;
 use App\Mail\SendConferenceCertificate;
+use App\Mail\AdminNotification;
 
 class EmailController extends Controller
 {
@@ -42,5 +43,10 @@ class EmailController extends Controller
     public static function sendConferenceCertificate($email, $pdf, $payload)
     {
         Mail::to($email)->send(new SendConferenceCertificate($pdf, $payload));
+    }
+
+    public static function sendAdminNotification($number)
+    {
+        Mail::to('info@eik.co.ke')->send(new AdminNotification($number));
     }
 }

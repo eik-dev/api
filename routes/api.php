@@ -19,6 +19,7 @@ use App\Http\Controllers\PeerConnectionController;
 use App\Http\Controllers\TWGsController;
 use App\Http\Controllers\ConferenceController;
 use App\Http\Controllers\OAuthController;
+use App\Http\Controllers\ActionsController;
 
 // OAuth routes for first-party applications
 Route::prefix('oauth')->group(function () {
@@ -117,6 +118,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/admin/firm/delete', [AdminController::class, 'deleteFirm']);
     Route::get('/admin/firms', [AdminController::class, 'firms']);
     Route::get('/user/verify', [AdminController::class, 'verify']);
+    Route::get('/user/activate', [AdminController::class, 'activate']);
     Route::get('/logs', [AdminController::class, 'logs']);
     Route::get('/payments', [AdminController::class, 'payments']);
 
@@ -160,4 +162,8 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/conference/download/{id}', [ConferenceController::class, 'download']);
     Route::get('/conference/email/{id}', [ConferenceController::class, 'send']);
     Route::post('/conference/members', [ConferenceController::class, 'register']);
+
+    //new quick action buttons
+    Route::post('/actions/notify', [ActionsController::class, 'triggerNotification']);
+
 });
