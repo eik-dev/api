@@ -221,11 +221,11 @@ class TrainingController extends Controller
             $name = $certificate->Name;
             $number = $certificate->Number;
             $qrData = 'https://portal.eik.co.ke/verify?training='.$certificate->Training.'&id='.$number;
-            $background = $request->training==2?$background = public_path('/system/custom.jpg'):public_path($training->Background);
+            $background = true?$background = public_path('/system/esg.png'):public_path($training->Background);
             $info = $training->Info;
             $StartDate = new DateTime($training->StartDate);
             $date = 'Date '. $StartDate->format('jS F Y');
-            $pdf = Pdf::loadView($request->training==2?'certificates.custom':'certificates.training', compact(['background', 'name', 'number','qrData', 'info', 'date']));
+            $pdf = Pdf::loadView(true?'certificates.esg':'certificates.training', compact(['background', 'name', 'number','qrData', 'info', 'date']));
             $pdf->render();
             return $pdf->stream($name.'.pdf');
         } catch (\Exception $e) {

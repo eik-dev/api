@@ -53,8 +53,8 @@ Route::get('/view/certificates/custom', function () {
     $info = '';
     $StartDate = '31st MM YYYY';
     $date = '';
-    $background = asset('/system/custom.jpg');
-    return view('certificates.custom', compact(['background', 'name', 'number','qrData', 'info', 'date']));
+    $background = asset('/system/esg.png');
+    return view('certificates.esg', compact(['background', 'name', 'number','qrData', 'info', 'date']));
 });
 
 Route::get('/view/certificates/conference/{id}', function ($id) {
