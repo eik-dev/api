@@ -159,6 +159,25 @@ class TWGsController extends Controller
                     'Regulatory bodies, academic institutions, and training organizations specializing in EHS.',
                     'Organizations and consultants involved in workplace safety, environmental monitoring, and emergency preparedness.'
                 ]
+            ],
+            [
+                'name' => 'Environmental Impact Assessment (EIA)',
+                'text' => 'The Environmental Impact Assessment (EIA) Technical Working Group (TWG) is established to uphold and strengthen the integrity, credibility, and technical rigor of Environmental Impact Assessment processes in Kenya. It seeks to harmonize practice, promote compliance with regulatory frameworks, and advance best-in-class methodologies that ensure environmental sustainability across all sectors of development.',
+                'responsibility' => [
+                    'Develop and disseminate standardized guidelines and tools for conducting EIAs and Environmental Audits (EAs) in alignment with national legislation and global best practices.',
+                    'Facilitate peer review mechanisms and quality assurance systems to improve the robustness of EIA reports submitted by practitioners.',
+                    'Engage in capacity-building initiatives targeting registered EIA experts, regulators, and project proponents.',
+                    'Provide technical support on emerging trends such as Strategic Environmental Assessment (SEA), Social Impact Assessment (SIA), and any other matter affecting experts.',
+                    'Contribute to national and county policy reforms that seek to improve the EIA/EA system, including licensing, monitoring, and enforcement.',
+                    'Collaborate with NEMA, county governments, and sector-specific regulators to promote coordinated decision-making in the EIA process.'
+                ],
+                'membership' => [
+                    'Licensed EIA/EA experts and lead experts registered with NEMA.',
+                    'Academics and researchers specializing in environmental planning and impact assessment.',
+                    'Officials from regulatory agencies and approving authorities.',
+                    'Consultants and firms actively engaged in the preparation of EIA/EA reports.',
+                    'Stakeholders with an interest in EIA policy reform, quality assurance, and monitoring.'
+                ]
             ]
         ];
         
